@@ -22,12 +22,12 @@ Nikolay Karadzhov
 <hr>
 <hr>
 <details>
-  <table class="table table-bordered" width="100%" cellspacing="1" cellpadding="3" align="center">
+  <table class="table table-bordered">
      <thead>
       <tr>
         <th>Programming Basics with Java - February 2018</th>
         <th>Grade: 5.64 out of 6.00</th>
-        <th><a href = "https://softuni.bg/certificates/details/53208/8db575b9">Certificate</a></th>
+        <th width = "40%"><a href = "https://softuni.bg/certificates/details/53208/8db575b9">Certificate</a></th>
         </tr>
     </thead>
     </table>
