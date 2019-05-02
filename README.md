@@ -44,8 +44,8 @@ Nikolay Karadzhov
     </thead>
     <tbody>
       <tr>
-        <td width="20%">John</td>
-        <td width="50%>Doe</td>
+        <td>John</td>
+        <td>Doe</td>
         <td width="50%">john@example.com</td>
       </tr>
       <tr>
