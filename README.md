@@ -26,7 +26,7 @@ Nikolay Karadzhov
   <summary>
     Programming Basics with Java - February 2018</b>
   </summary>  
-  <table>
+  <table width = "100%">
      <thead>
       <tr>
         <th>Programming Basics with Java - February 2018</th>
