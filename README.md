@@ -37,9 +37,9 @@ Nikolay Karadzhov
   <table>
     <thead>
       <tr>
-        <th>Topic</th>
-        <th>Lab</th>
-        <th>Exercise</th>
+        <th align="center" width="50%">Topic</th>
+        <th width = "50%">Lab</th>
+        <th width = "20%">Exercise</th>
       </tr>
     </thead>
     <tbody>
