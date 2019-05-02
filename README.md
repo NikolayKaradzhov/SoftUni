@@ -61,7 +61,7 @@ Nikolay Karadzhov
     </tbody>
   </table>
 
-First Header | Second Header
------------- | -------------
+Topic | Lab | Exercise
+------------ | ------------- | -------------
 Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
