@@ -22,7 +22,7 @@ Nikolay Karadzhov
 <hr>
 <hr>
 <details>
-<summary>Click here!</summary>
+<summary>https://github.com/NikolayKaradzhov/SoftUniJavaBasics/tree/master/FirstStepsInCoding</summary>
  <h2>Bordered Table</h2>
   <p>The .table-bordered class adds borders to a table:</p>            
   <table class="table table-bordered">
