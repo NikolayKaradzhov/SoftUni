@@ -1,6 +1,7 @@
 <!-- CSS -- >
-.summary {
-font-size:13px;
+
+.sqs-block-summary-v2 {
+  font-size:13px;
 }
 
 
