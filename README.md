@@ -21,7 +21,7 @@ Nikolay Karadzhov
 </table>
 <hr>
 <hr>
-<details>
+<details><p>Click for more info!
   <table class="table table-bordered">
      <thead>
       <tr>
