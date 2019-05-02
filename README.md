@@ -74,5 +74,10 @@ Nikolay Karadzhov
         <td>Doe</td>
         <td>john@example.com</td>
       </tr>
+      <tr>
+        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7265">More Complex Loops</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
     </tbody>
   </table>
