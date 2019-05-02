@@ -49,7 +49,7 @@ Nikolay Karadzhov
         <td>john@example.com</td>
       </tr>
       <tr>
-        <td>Mary</td>
+        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7260">Simple Calculations</a></td>
         <td>Moe</td>
         <td>mary@example.com</td>
       </tr>
