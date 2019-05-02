@@ -27,9 +27,9 @@ Nikolay Karadzhov
       <tr>
         <th>Programming Basics with Java - February 2018</th>
         <th>Grade: 5.64 out of 6.00</th>
+        <th><a href = "https://softuni.bg/certificates/details/53208/8db575b9">Certificate</a></th>
         </tr>
-    </thead>
-  <p>The .table-bordered class adds borders to a table:</p>            
+    </thead>        
   <table class="table table-bordered">
     <thead>
       <tr>
