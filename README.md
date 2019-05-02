@@ -29,9 +29,9 @@ Nikolay Karadzhov
   <table class="table table-bordered">
      <thead>
       <tr>
-        <th width = "50%">Programming Basics with Java - February 2018</th>
-        <th width = "40%">Grade: 5.64 out of 6.00</th>
-        <th width = "30%"><a href = "https://softuni.bg/certificates/details/53208/8db575b9">Certificate</a></th>
+        <th width = "30%">Programming Basics with Java - February 2018</th>
+        <th width = "50%">Grade: 5.64 out of 6.00</th>
+        <th width = "50%"><a href = "https://softuni.bg/certificates/details/53208/8db575b9">Certificate</a></th>
         </tr>
     </thead>
     </table>
