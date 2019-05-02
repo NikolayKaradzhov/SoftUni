@@ -24,7 +24,7 @@ Nikolay Karadzhov
 <hr>
 <details>
   <summary>
-### Programming Basics with Java - February 2018</b>
+    Programming Basics with Java - February 2018</b>
   </summary>  
   <table class="table table-bordered">
      <thead>
