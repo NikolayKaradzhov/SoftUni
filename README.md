@@ -44,7 +44,7 @@ Nikolay Karadzhov
     </thead>
     <tbody>
       <tr>
-        <td>John</td>
+        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7259">First steps in Coding</a></td>
         <td>Doe</td>
         <td>john@example.com</td>
       </tr>
@@ -60,8 +60,3 @@ Nikolay Karadzhov
       </tr>
     </tbody>
   </table>
-
-Topic | Lab | Exercise
------------- | ------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
