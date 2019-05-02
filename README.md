@@ -26,7 +26,7 @@ Nikolay Karadzhov
   <summary>
     <b>Programming Basics with Java - February 2018</b>
   </summary>  
-  <table class="table table-bordered">
+  <table class="table table-bordered" font-family: proxima nova;>
      <thead>
       <tr>
         <th width = "50%">Programming Basics with Java - February 2018</th>
