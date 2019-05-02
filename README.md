@@ -38,9 +38,9 @@ Nikolay Karadzhov
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th>Topic</th>
+        <th>Lab</th>
+        <th>Exercise</th>
       </tr>
     </thead>
     <tbody>
