@@ -36,15 +36,15 @@ Nikolay Karadzhov
     </table>
   <table>
     <thead>
-      <tr>
-        <th align="center" width="40%">Topic</th>
+      <tr width = "100%">
+        <th align="center" width="20%">Topic</th>
         <th width = "40%">Lab</th>
         <th width = "40%">Exercise</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td align="center" width="40%">John</td>
+      <tr width = "100%">
+        <td align="center" width="20%">John</td>
         <td width = "40%">Doe</td>
         <td width = "40%">john@example.com</td>
       </tr>
