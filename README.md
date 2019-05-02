@@ -29,7 +29,8 @@ Nikolay Karadzhov
         <th>Grade: 5.64 out of 6.00</th>
         <th><a href = "https://softuni.bg/certificates/details/53208/8db575b9">Certificate</a></th>
         </tr>
-    </thead>        
+    </thead>
+    </table>
   <table class="table table-bordered">
     <thead>
       <tr>
