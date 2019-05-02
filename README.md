@@ -1,9 +1,11 @@
 <!-- CSS -- >
 
 <style>
-summary {
-  font-size:13px;
-  }
+details summary::-webkit-details-marker {
+  background: red;
+  color: #fff;
+  font-size: 500%;
+}
 </style>
 
 <!-- Head Start -->
