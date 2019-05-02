@@ -27,7 +27,7 @@ Nikolay Karadzhov
       <tr>
         <th>Programming Basics with Java - February 2018</th>
         <th>Grade: 5.64 out of 6.00</th>
-        <th width = "40%"><a href = "https://softuni.bg/certificates/details/53208/8db575b9">Certificate</a></th>
+        <th width = "20%"><a href = "https://softuni.bg/certificates/details/53208/8db575b9">Certificate</a></th>
         </tr>
     </thead>
     </table>
