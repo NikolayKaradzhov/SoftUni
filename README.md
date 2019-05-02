@@ -1,12 +1,3 @@
-<!-- CSS -- >
-
-<style>
-details summary::-webkit-details-marker {
-  background: red;
-  color: #fff;
-  font-size: 500%;
-}
-</style>
 
 <!-- Head Start -->
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
@@ -33,7 +24,7 @@ Nikolay Karadzhov
 <hr>
 <details>
   <summary>
-    Programming Basics with Java - February 2018
+    <strong>Programming Basics with Java - February 2018</strong>
   </summary>  
   <table class="table table-bordered">
      <thead>
