@@ -44,7 +44,7 @@ Nikolay Karadzhov
     </thead>
     <tbody>
       <tr>
-        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7259">First steps in Coding</a></td>
+        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7259">First Steps in Coding</a></td>
         <td>Doe</td>
         <td>john@example.com</td>
       </tr>
@@ -58,5 +58,17 @@ Nikolay Karadzhov
         <td>Dooley</td>
         <td>july@example.com</td>
       </tr>
+       <tr>
+        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7262">More Complex Logical Checks</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+         <tr>
+        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7263">Loops</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
     </tbody>
   </table>
