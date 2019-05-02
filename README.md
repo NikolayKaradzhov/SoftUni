@@ -22,6 +22,10 @@ Nikolay Karadzhov
 </table>
 <hr>
 <hr>
+
+<!-- PROGRAMMING BASICS Start -->
+
+
 <details>
   <summary>
     <b>Programming Basics with Java - February 2018</b>
@@ -81,3 +85,6 @@ Nikolay Karadzhov
       </tr>
     </tbody>
   </table>
+
+
+<!-- PROGRAMMING BASICS END -->
