@@ -45,19 +45,20 @@ Nikolay Karadzhov
     </thead>
     <tbody>
       <tr>
-        <td width = "20%">John</td>
-        <td width = "50%">Doe</td>
-        <td width = "60%">john@example.com</td>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
       </tr>
       <tr>
-        <td width = "20%">Mary</td>
-        <td width = "50%">Moe</td>
-        <td width = "60%">mary@example.com</td>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
       </tr>
       <tr>
-        <td width = "20%">July</td>
-        <td width = "50%">Dooley</td>
-        <td width = "60%">july@example.com</td>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
       </tr>
     </tbody>
   </table>
+## HEADING
