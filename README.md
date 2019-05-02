@@ -23,7 +23,7 @@ Nikolay Karadzhov
 <hr>
 <details>
   <summary>
-    <h3>Programming Basics with Java - February 2018</h3>
+    <font size="6">Programming Basics with Java - February 2018</font>
   </summary>  
   <table class="table table-bordered">
      <thead>
