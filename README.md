@@ -54,7 +54,7 @@ Nikolay Karadzhov
         <td>mary@example.com</td>
       </tr>
       <tr>
-        <td>July</td>
+        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7261">Logical Checks</a></td>
         <td>Dooley</td>
         <td>july@example.com</td>
       </tr>
