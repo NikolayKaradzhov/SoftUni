@@ -26,21 +26,21 @@ Nikolay Karadzhov
   <summary>
     Programming Basics with Java - February 2018</b>
   </summary>  
-  <table class="table table-bordered">
+  <table>
      <thead>
       <tr>
-        <th width = "50%">Programming Basics with Java - February 2018</th>
-        <th width = "40%">Grade: 5.64 out of 6.00</th>
-        <th width = "30%"><a href = "https://softuni.bg/certificates/details/53208/8db575b9">Certificate</a></th>
+        <th>Programming Basics with Java - February 2018</th>
+        <th>Grade: 5.64 out of 6.00</th>
+        <th><a href = "https://softuni.bg/certificates/details/53208/8db575b9">Certificate</a></th>
         </tr>
     </thead>
     </table>
   <table>
     <thead>
       <tr>
-        <th width = "20%">Topic</th>
-        <th width = "60%">Lab</th>
-        <th width = "75%">Exercise</th>
+        <th>Topic</th>
+        <th>Lab</th>
+        <th>Exercise</th>
       </tr>
     </thead>
     <tbody>
