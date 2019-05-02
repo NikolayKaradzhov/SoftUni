@@ -21,6 +21,7 @@ Nikolay Karadzhov
 </table>
 <hr>
 <hr>
+<details>
 <summary>Click here!</summary>
  <h2>Bordered Table</h2>
   <p>The .table-bordered class adds borders to a table:</p>            
