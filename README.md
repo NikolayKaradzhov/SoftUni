@@ -21,7 +21,10 @@ Nikolay Karadzhov
 </table>
 <hr>
 <hr>
-<details><p>Click for more info!
+<details>
+  <summary>
+    Programming Basics with Java - February 2018
+  </summary>  
   <table class="table table-bordered">
      <thead>
       <tr>
