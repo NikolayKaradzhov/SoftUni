@@ -22,7 +22,7 @@ Nikolay Karadzhov
 <hr>
 <hr>
 <details>
-  <table class="table table-bordered">
+  <table class="table table-bordered" width = "100%">
      <thead>
       <tr>
         <th>Programming Basics with Java - February 2018</th>
