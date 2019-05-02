@@ -34,19 +34,19 @@ Nikolay Karadzhov
         <th width = "20%"><a href = "https://softuni.bg/certificates/details/53208/8db575b9">Certificate</a></th>
         </tr>
     </table>
-  <table>
-    <thead width = "100%">
+  <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+    <thead>
       <tr>
-        <th>Topic</th>
-        <th>Lab</th>
-        <th>Exercise</th>
+        <th width="20%">Topic</th>
+        <th width="40%">Lab</th>
+        <th width="40%">Exercise</th>
       </tr>
     </thead>
-    <tbody width = "100%">
+    <tbody>
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td width="200%">John</td>
+        <td width="40%">Doe</td>
+        <td width="40%">john@example.com</td>
       </tr>
       <tr>
         <td>Mary</td>
