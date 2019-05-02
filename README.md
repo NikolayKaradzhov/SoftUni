@@ -38,15 +38,15 @@ Nikolay Karadzhov
     <thead>
       <tr>
         <th width="20%">Topic</th>
-        <th width="60%">Lab</th>
-        <th width="50%">Exercise</th>
+        <th>Lab</th>
+        <th>Exercise</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>John</td>
         <td>Doe</td>
-        <td width="50%">john@example.com</td>
+        <td>john@example.com</td>
       </tr>
       <tr>
         <td>Mary</td>
