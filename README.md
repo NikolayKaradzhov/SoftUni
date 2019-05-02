@@ -38,8 +38,8 @@ Nikolay Karadzhov
     <thead>
       <tr>
         <th width="50%">Topic</th>
-        <th>Lab</th>
-        <th>Exercise</th>
+        <th width="50%">Lab</th>
+        <th width="50%">Exercise</th>
       </tr>
     </thead>
     <tbody>
