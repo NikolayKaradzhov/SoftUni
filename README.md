@@ -22,7 +22,15 @@ Nikolay Karadzhov
 <hr>
 <hr>
 <details>
-<summary><b>Programming Basics with Java - February 2018<b></summary>
+<summary>
+  <table class="table table-bordered">Programming Basics with Java - February 2018
+     <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        </tr>
+    </thead>
+    </summary>
   <p>The .table-bordered class adds borders to a table:</p>            
   <table class="table table-bordered">
     <thead>
