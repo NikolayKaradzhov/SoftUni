@@ -36,7 +36,7 @@ Nikolay Karadzhov
     </thead>
     </table>
   <table class="table table-bordered">
-    <thead width = "100%">
+    <thead>
       <tr>
         <th width = "20%">Topic</th>
         <th width = "60%">Lab</th>
