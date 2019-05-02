@@ -39,7 +39,7 @@ Nikolay Karadzhov
     <thead width = "100%">
       <tr>
         <th width = "20%">Topic</th>
-        <th width = "50%">Lab</th>
+        <th width = "60%">Lab</th>
         <th width = "60%">Exercise</th>
       </tr>
     </thead>
