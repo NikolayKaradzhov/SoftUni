@@ -223,4 +223,4 @@ Nikolay Karadzhov
         <th>Exercise</th>
       </tr>
     </thead>
-    <tbody>
+    </tbody>
