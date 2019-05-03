@@ -49,7 +49,7 @@ Nikolay Karadzhov
     <tbody>
       <tr>
         <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7259">First Steps in Coding</a></td>
-        <td>Doe</td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUniJavaBasics/tree/master/FirstStepsInCoding">Link</a></td>
         <td>john@example.com</td>
       </tr>
       <tr>
