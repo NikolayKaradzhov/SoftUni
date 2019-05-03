@@ -202,21 +202,39 @@ Nikolay Karadzhov
   </table>
   </details>
 
-
+<!-- C# ADVANCED START -->
 
 <details>
   <summary>
-    <b>Technology Fundamentals with C# - January 2019</b>
+    <b>C# Advanced - May 2019</b>
   </summary>  
   <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
      <tbody>
       <tr>
-        <th align="center" width="50%">Technology Fundamentals with C# - January 2019</th>
-        <th width = "50%">Grade: 5.93 out of 6.00</th>
+        <th align="center" width="50%">C# Advanced - May 2019</th>
+        <th width = "50%">Grade: Currently taking this course</th>
         <th width = "20%"><a href = "https://softuni.bg/certificates/details/65322/ef9ac5ff">Certificate</a></th>
         </tr>
     </table>
   
+ <!-- C# ADVANCED COURSES START -->
+ 
+ 
+   <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th>Lab</th>
+        <th>Exercise</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11613">Stacks and Queues</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+ 
  
 <hr>
 <hr>
