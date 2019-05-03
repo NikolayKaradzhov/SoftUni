@@ -213,7 +213,7 @@ Nikolay Karadzhov
       <tr>
         <th align="center" width="50%">C# Advanced - May 2019</th>
         <th width = "50%">Grade: Currently taking this course</th>
-        <th width = "20%"><a href = "https://softuni.bg/certificates/details/65322/ef9ac5ff">Certificate</a></th>
+        <th width = "20%"><a href = "">...</a></th>
         </tr>
     </table>
   
