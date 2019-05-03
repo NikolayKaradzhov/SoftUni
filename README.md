@@ -203,7 +203,6 @@ Nikolay Karadzhov
   </details>
 
 
-<!-- START C# ADVANCED -- >
 
 <details>
   <summary>
@@ -218,7 +217,6 @@ Nikolay Karadzhov
         </tr>
     </table>
   
-  <!-- C# Advanced COURSES AND GITHUB C# -->
  
 <hr>
 <hr>
