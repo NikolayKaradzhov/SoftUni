@@ -237,4 +237,3 @@ Nikolay Karadzhov
       </tr>
       </tbody>
   </table>
-</details>
