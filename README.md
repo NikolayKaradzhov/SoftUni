@@ -217,7 +217,11 @@ Nikolay Karadzhov
         <th width = "20%"><a href = "">...</a></th>
         </tr>
     </table>
-  <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+  
+  <!-- TECHNOLOGY FUNDAMENTALS COURSES AND GITHUB C# -->
+ 
+  
+   <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
     <thead>
       <tr>
         <th>Topic</th>
@@ -225,5 +229,9 @@ Nikolay Karadzhov
         <th>Exercise</th>
       </tr>
     </thead>
-    </tbody>
-</details>
+    <tbody>
+      <tr>
+        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11613">Stacks and Queues</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
