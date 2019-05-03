@@ -199,3 +199,28 @@ Nikolay Karadzhov
     </tbody>
   </table>
   </details>
+
+
+<!-- START C# ADVANCED -- >
+
+<details>
+  <summary>
+    <b>C# Advanced - May 2019</b>
+  </summary>  
+  <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+     <tbody>
+      <tr>
+        <th align="center" width="50%">C# Advanced - May 2019</th>
+        <th width = "50%">Grade: Currently taking this course</th>
+        <th width = "20%"><a href = "">...</a></th>
+        </tr>
+    </table>
+  <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th>Lab</th>
+        <th>Exercise</th>
+      </tr>
+    </thead>
+    <tbody>
