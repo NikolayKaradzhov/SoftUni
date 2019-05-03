@@ -121,7 +121,7 @@ Nikolay Karadzhov
         <td>john@example.com</td>
       </tr>
       <tr>
-        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7260">Simple Calculations</a></td>
+        <td><a href = "https://softuni.bg/trainings/2237/technology-fundamentals-with-csharp-january-2019?fbclid=IwAR1YwNWdnGAYK-SHxAQfxzDbxmCzz1SJrSBkXHQ0Io3ZrCcHYEvr93KxVoQ#lesson-10252">Data Types and Variables</a></td>
         <td>Moe</td>
         <td>mary@example.com</td>
       </tr>
