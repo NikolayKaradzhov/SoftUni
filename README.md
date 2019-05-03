@@ -220,20 +220,3 @@ Nikolay Karadzhov
   
   <!-- C# Advanced COURSES AND GITHUB C# -->
  
-  
-   <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
-    <thead>
-      <tr>
-        <th>Topic</th>
-        <th>Lab</th>
-        <th>Exercise</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11613">Stacks and Queues</a></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      </tbody>
-  </table>
