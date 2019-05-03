@@ -88,6 +88,8 @@ Nikolay Karadzhov
   </details>
 
 <!-- PROGRAMMING BASICS END -->
+
+
 <!-- PROGRAMMING FUNDAMENTALS(TECH MODULE) START -->
 
 <details>
@@ -224,3 +226,4 @@ Nikolay Karadzhov
       </tr>
     </thead>
     </tbody>
+</details>
