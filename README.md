@@ -85,7 +85,7 @@ Nikolay Karadzhov
       </tr>
     </tbody>
   </table>
-
+  </details>
 
 <!-- PROGRAMMING BASICS END -->
 <!-- PROGRAMMING FUNDAMENTALS(TECH MODULE) START -->
@@ -102,3 +102,4 @@ Nikolay Karadzhov
         <th width = "20%"><a href = "https://softuni.bg/certificates/details/65322/ef9ac5ff">Certificate</a></th>
         </tr>
     </table>
+  </details>
