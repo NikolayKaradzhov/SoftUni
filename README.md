@@ -126,28 +126,73 @@ Nikolay Karadzhov
         <td>mary@example.com</td>
       </tr>
       <tr>
-        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7261">Logical Checks</a></td>
+        <td><a href = "https://softuni.bg/trainings/2237/technology-fundamentals-with-csharp-january-2019?fbclid=IwAR1YwNWdnGAYK-SHxAQfxzDbxmCzz1SJrSBkXHQ0Io3ZrCcHYEvr93KxVoQ#lesson-10255">Arrays</a></td>
         <td>Dooley</td>
         <td>july@example.com</td>
       </tr>
        <tr>
-        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7262">More Complex Logical Checks</a></td>
+        <td><a href = "https://softuni.bg/trainings/2237/technology-fundamentals-with-csharp-january-2019?fbclid=IwAR1YwNWdnGAYK-SHxAQfxzDbxmCzz1SJrSBkXHQ0Io3ZrCcHYEvr93KxVoQ#lesson-10258">Methods/Functions</a></td>
         <td>Doe</td>
         <td>john@example.com</td>
       </tr>
       <tr>
          <tr>
-        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7263">Loops</a></td>
+        <td><a href = "https://softuni.bg/trainings/2237/technology-fundamentals-with-csharp-january-2019?fbclid=IwAR1YwNWdnGAYK-SHxAQfxzDbxmCzz1SJrSBkXHQ0Io3ZrCcHYEvr93KxVoQ#lesson-10261">Lists</a></td>
         <td>Doe</td>
         <td>john@example.com</td>
       </tr>
          <tr>
-        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7264">Drawing Figures with Loops</a></td>
+        <td><a href = "https://softuni.bg/trainings/2237/technology-fundamentals-with-csharp-january-2019?fbclid=IwAR1YwNWdnGAYK-SHxAQfxzDbxmCzz1SJrSBkXHQ0Io3ZrCcHYEvr93KxVoQ#lesson-10264">Objects and Classes</a></td>
         <td>Doe</td>
         <td>john@example.com</td>
       </tr>
       <tr>
-        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7265">More Complex Loops</a></td>
+        <td><a href = "https://softuni.bg/trainings/2237/technology-fundamentals-with-csharp-january-2019?fbclid=IwAR1YwNWdnGAYK-SHxAQfxzDbxmCzz1SJrSBkXHQ0Io3ZrCcHYEvr93KxVoQ#lesson-10266">Exam Preparation Online</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+       <tr>
+        <td><a href = "https://softuni.bg/trainings/2237/technology-fundamentals-with-csharp-january-2019?fbclid=IwAR1YwNWdnGAYK-SHxAQfxzDbxmCzz1SJrSBkXHQ0Io3ZrCcHYEvr93KxVoQ#lesson-11325">Demo Online Exam</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+       <tr>
+        <td><a href = "https://softuni.bg/trainings/2237/technology-fundamentals-with-csharp-january-2019?fbclid=IwAR1YwNWdnGAYK-SHxAQfxzDbxmCzz1SJrSBkXHQ0Io3ZrCcHYEvr93KxVoQ#lesson-10268">Mid Exam</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+       <tr>
+        <td><a href = "https://softuni.bg/trainings/2237/technology-fundamentals-with-csharp-january-2019?fbclid=IwAR1YwNWdnGAYK-SHxAQfxzDbxmCzz1SJrSBkXHQ0Io3ZrCcHYEvr93KxVoQ#lesson-10269">Associative Arrays/Dictionaries</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+       <tr>
+        <td><a href = "https://softuni.bg/trainings/2237/technology-fundamentals-with-csharp-january-2019?fbclid=IwAR1YwNWdnGAYK-SHxAQfxzDbxmCzz1SJrSBkXHQ0Io3ZrCcHYEvr93KxVoQ#lesson-10272">Text Processing and Regular Expressions</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+       <tr>
+        <td><a href = "https://softuni.bg/trainings/2237/technology-fundamentals-with-csharp-january-2019?fbclid=IwAR1YwNWdnGAYK-SHxAQfxzDbxmCzz1SJrSBkXHQ0Io3ZrCcHYEvr93KxVoQ#lesson-10275">Basic Web</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+       <tr>
+        <td><a href = "https://softuni.bg/trainings/2237/technology-fundamentals-with-csharp-january-2019?fbclid=IwAR1YwNWdnGAYK-SHxAQfxzDbxmCzz1SJrSBkXHQ0Io3ZrCcHYEvr93KxVoQ#lesson-10278">Basic CRUD</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+       <tr>
+        <td><a href = "https://softuni.bg/trainings/2237/technology-fundamentals-with-csharp-january-2019?fbclid=IwAR1YwNWdnGAYK-SHxAQfxzDbxmCzz1SJrSBkXHQ0Io3ZrCcHYEvr93KxVoQ#lesson-10281">Web Project</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+       <tr>
+        <td><a href = "https://softuni.bg/trainings/2237/technology-fundamentals-with-csharp-january-2019?fbclid=IwAR1YwNWdnGAYK-SHxAQfxzDbxmCzz1SJrSBkXHQ0Io3ZrCcHYEvr93KxVoQ#lesson-10283">Exam Preparation-Web-Online</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+       <tr>
+        <td><a href = "https://softuni.bg/trainings/2237/technology-fundamentals-with-csharp-january-2019?fbclid=IwAR1YwNWdnGAYK-SHxAQfxzDbxmCzz1SJrSBkXHQ0Io3ZrCcHYEvr93KxVoQ#lesson-10285">Practical Exam</a></td>
         <td>Doe</td>
         <td>john@example.com</td>
       </tr>
