@@ -97,7 +97,7 @@ Nikolay Karadzhov
   <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
      <tbody>
       <tr>
-        <th align="center" width="50%">Programming Basics with Java - February 2018</th>
+        <th align="center" width="50%">Technology Fundamentals with C# - January 2019</th>
         <th width = "50%">Grade: 5.93 out of 6.00</th>
         <th width = "20%"><a href = "https://softuni.bg/certificates/details/65322/ef9ac5ff">Certificate</a></th>
         </tr>
@@ -116,7 +116,7 @@ Nikolay Karadzhov
     </thead>
     <tbody>
       <tr>
-        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7259">First Steps in Coding</a></td>
+        <td><a href = "https://softuni.bg/trainings/2237/technology-fundamentals-with-csharp-january-2019?fbclid=IwAR1YwNWdnGAYK-SHxAQfxzDbxmCzz1SJrSBkXHQ0Io3ZrCcHYEvr93KxVoQ#lesson-10249">Basic Syntax, Conditional Statements and Loops</a></td>
         <td>Doe</td>
         <td>john@example.com</td>
       </tr>
