@@ -218,7 +218,7 @@ Nikolay Karadzhov
         </tr>
     </table>
   
-  <!-- TECHNOLOGY FUNDAMENTALS COURSES AND GITHUB C# -->
+  <!-- C# Advanced COURSES AND GITHUB C# -->
  
   
    <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
@@ -235,3 +235,4 @@ Nikolay Karadzhov
         <td>Doe</td>
         <td>john@example.com</td>
       </tr>
+</details>
