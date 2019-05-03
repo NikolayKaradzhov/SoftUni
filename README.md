@@ -234,7 +234,7 @@ Nikolay Karadzhov
         <td>Doe</td>
         <td>john@example.com</td>
       </tr>
- 
+ </details>
  
 <hr>
 <hr>
