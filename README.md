@@ -88,3 +88,17 @@ Nikolay Karadzhov
 
 
 <!-- PROGRAMMING BASICS END -->
+<!-- PROGRAMMING FUNDAMENTALS(TECH MODULE) START -->
+
+<details>
+  <summary>
+    <b>Technology Fundamentals with C# - January 2019</b>
+  </summary>  
+  <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+     <tbody>
+      <tr>
+        <th align="center" width="50%">Programming Basics with Java - February 2018</th>
+        <th width = "50%">Grade: 5.93 out of 6.00</th>
+        <th width = "20%"><a href = "https://softuni.bg/certificates/details/65322/ef9ac5ff">Certificate</a></th>
+        </tr>
+    </table>
