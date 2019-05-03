@@ -102,4 +102,55 @@ Nikolay Karadzhov
         <th width = "20%"><a href = "https://softuni.bg/certificates/details/65322/ef9ac5ff">Certificate</a></th>
         </tr>
     </table>
+  
+  <!-- TECHNOLOGY FUNDAMENTALS COURSES AND GITHUB C# -->
+ 
+  
+   <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th>Lab</th>
+        <th>Exercise</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7259">First Steps in Coding</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7260">Simple Calculations</a></td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7261">Logical Checks</a></td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+       <tr>
+        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7262">More Complex Logical Checks</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+         <tr>
+        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7263">Loops</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+         <tr>
+        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7264">Drawing Figures with Loops</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7265">More Complex Loops</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+    </tbody>
+  </table>
   </details>
