@@ -237,11 +237,28 @@ Nikolay Karadzhov
   <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
      <tbody>
       <tr>
-        <th align="center" width="50%">C# Advanced - May 2019</th>
+        <th align="center" width="50%">C# OOP - June 2019</th>
         <th width = "50%">Grade: Currently taking this course</th>
         <th width = "20%"><a href = "">...</a></th>
         </tr>
     </table>
+    
+   <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th>Lab</th>
+        <th>Exercise</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11637">Working With Abstraction</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      </tbody>
+  </table>
   
  </details>
 
