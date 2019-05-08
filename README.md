@@ -43,7 +43,6 @@ Nikolay Karadzhov
       <tr>
         <th>Topic</th>
         <th>Lab</th>
-        <th>Exercise</th>
       </tr>
     </thead>
     <tbody>
