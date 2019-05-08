@@ -286,6 +286,11 @@ Nikolay Karadzhov
         <td>Doe</td>
         <td>john@example.com</td>
       </tr>
+      <tr>
+        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11634">Exam</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
       </tbody>
   </table>
   
