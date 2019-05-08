@@ -228,11 +228,10 @@ Nikolay Karadzhov
       </tr>
       </tbody>
   </table>
- </details>
- 
- <!-- C# OOP - June 2019 START -->
- 
- <summary>
+  
+   <!-- C# OOP - June 2019 START -->
+  
+  <summary>
     <b>C# Advanced(OOP) - May 2019</b>
   </summary>  
   <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
@@ -243,6 +242,8 @@ Nikolay Karadzhov
         <th width = "20%"><a href = "">...</a></th>
         </tr>
     </table>
- 
+  
+ </details>
+
 <hr>
 <hr>
