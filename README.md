@@ -231,6 +231,61 @@ Nikolay Karadzhov
         <td>Doe</td>
         <td>john@example.com</td>
       </tr>
+      <tr>
+        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11617">Sets And Dictionaries Advanced</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+       <tr>
+        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11619">Streams, Files and Directories</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11621">Functional Programming</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+       <tr>
+        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11623">Defining Classes</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+       <tr>
+        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11625">Workshop pt.1</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11626">Workshop pt.2</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11627">Generics</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11629">Iterators and Comparators</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11631">Exam Preparation pt.1</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+       <tr>
+        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11632">Exam Preparation pt.2</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11633">Workshop pt.3</a></td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
       </tbody>
   </table>
   
