@@ -230,5 +230,19 @@ Nikolay Karadzhov
   </table>
  </details>
  
+ <!-- C# OOP - June 2019 START -->
+ 
+ <summary>
+    <b>C# Advanced(OOP) - May 2019</b>
+  </summary>  
+  <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+     <tbody>
+      <tr>
+        <th align="center" width="50%">C# Advanced - May 2019</th>
+        <th width = "50%">Grade: Currently taking this course</th>
+        <th width = "20%"><a href = "">...</a></th>
+        </tr>
+    </table>
+ 
 <hr>
 <hr>
