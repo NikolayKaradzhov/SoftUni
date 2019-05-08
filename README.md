@@ -50,38 +50,31 @@ Nikolay Karadzhov
       <tr>
         <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7259">First Steps in Coding</a></td>
         <td><a href = "https://github.com/NikolayKaradzhov/SoftUniJavaBasics/tree/master/FirstStepsInCoding">Link</a></td>
-        <td>john@example.com</td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7260">Simple Calculations</a></td>
         <td><a href = "https://github.com/NikolayKaradzhov/SoftUniJavaBasics/tree/master/Simple%20Calculations">Link</a></td>
-        <td>mary@example.com</td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7261">Conditional Statements/Logical Checks</a></td>
         <td><a href = "https://github.com/NikolayKaradzhov/SoftUniJavaBasics/tree/master/Simple%20Conditional%20Statements">Link</a></td>
-        <td>july@example.com</td>
       </tr>
        <tr>
         <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7262">More Complex Logical Checks</a></td>
         <td><a href = "https://github.com/NikolayKaradzhov/SoftUniJavaBasics/tree/master/Complex%20Conditional%20Statements">Link</a></td>
-        <td>john@example.com</td>
       </tr>
       <tr>
          <tr>
         <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7263">Loops</a></td>
         <td><a href = "https://github.com/NikolayKaradzhov/SoftUniJavaBasics/tree/master/Simple%20Loops">Link</a></td>
-        <td>john@example.com</td>
       </tr>
          <tr>
         <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7264">Drawing Figures with Loops</a></td>
         <td><a href = "https://github.com/NikolayKaradzhov/SoftUniJavaBasics/tree/master/DrawingWithLoops">Link</a></td>
-        <td>john@example.com</td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/1829/programming-basics-with-java-january-2018/open#lesson-7265">More Complex Loops</a></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td>Link</td>
       </tr>
     </tbody>
   </table>
