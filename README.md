@@ -224,72 +224,72 @@ Nikolay Karadzhov
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11613">Stacks and Queues</a></td>
         <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Stacks%20and%20Queues/Lab">Link</a></td>
-        <td>john@example.com</td>
+        <td><a href = "">Link</a></td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11615">Multidimentional Arrays</a></td>
         <td>Doe</td>
-        <td>john@example.com</td>
+        <td><a href = "">Link</a></td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11617">Sets And Dictionaries Advanced</a></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
       </tr>
        <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11619">Streams, Files and Directories</a></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11621">Functional Programming</a></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
       </tr>
        <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11623">Defining Classes</a></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
       </tr>
        <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11625">Workshop pt.1</a></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11626">Workshop pt.2</a></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11627">Generics</a></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11629">Iterators and Comparators</a></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11631">Exam Preparation pt.1</a></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
       </tr>
        <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11632">Exam Preparation pt.2</a></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11633">Workshop pt.3</a></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11634">Exam</a></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
       </tr>
       </tbody>
   </table>
