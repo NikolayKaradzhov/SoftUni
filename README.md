@@ -228,7 +228,7 @@ Nikolay Karadzhov
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11615">Multidimentional Arrays</a></td>
-        <td>Doe</td>
+        <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
       <tr>
