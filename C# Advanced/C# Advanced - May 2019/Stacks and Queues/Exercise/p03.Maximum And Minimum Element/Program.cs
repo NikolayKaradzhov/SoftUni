@@ -29,11 +29,11 @@ namespace p03.Maximum_And_Minimum_Element
                     {
                         stack.Pop();
                     }
-                    else if (query == "3")
+                    else if (query == "3" && stack.Count != 0)
                     {
                         Console.WriteLine(stack.Max());
                     }
-                    else if (query == "4")
+                    else if (query == "4" && stack.Count != 0)
                     {
                         Console.WriteLine(stack.Min());
                     }
