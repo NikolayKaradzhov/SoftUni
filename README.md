@@ -198,7 +198,7 @@ Nikolay Karadzhov
 
 <details>
   <summary>
-    <b>C# Advanced(OOP) - May 2019</b>
+    <b>C# Advanced(OOP) - May-August 2019</b>
   </summary>  
   <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
      <tbody>
