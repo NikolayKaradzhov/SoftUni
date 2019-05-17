@@ -203,7 +203,7 @@ Nikolay Karadzhov
   <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
      <tbody>
       <tr>
-        <th align="center" width="50%">C# Advanced - May 2019</th>
+        <th align="center" width="50%">C# Advanced - May-June 2019</th>
         <th width = "50%">Grade: Currently taking this course</th>
         <th width = "20%"><a href = "">...</a></th>
         </tr>
