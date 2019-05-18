@@ -21,27 +21,20 @@ namespace p04.Fast_Food
 
             while (queue.Count > 0)
             {
-                if (foodQuantity < queue.Peek())
+                var currentOrder = queue.Peek();
+
+                if (foodQuantity - currentOrder >= 0)
                 {
-                    break;
+                    foodQuantity -= currentOrder;
+                    queue.Dequeue();
                 }
                 else
                 {
-                    foodQuantity -= queue.Dequeue();
+                    Console.Write($"Orders left: {string.Join(" ", queue)}");
+                    return;
                 }
             }
-
-            if (queue.Count == 0)
-            {
-                Console.WriteLine("Orders complete");
-            }
-            else
-            {
-                while (queue.Count() != 0)
-                {
-                    Console.WriteLine($"Orders left: {queue.Dequeue()}");
-                }
-            }
+            Console.WriteLine($"Orders complete");
         }
     }
 }
