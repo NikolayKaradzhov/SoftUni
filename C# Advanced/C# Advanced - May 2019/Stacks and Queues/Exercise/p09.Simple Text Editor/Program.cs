@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace p09.Simple_Text_Editor
 {
@@ -8,38 +9,37 @@ namespace p09.Simple_Text_Editor
         static void Main(string[] args)
         {
             Stack<string> stack = new Stack<string>();
-            string text = string.Empty;
+            StringBuilder text = new StringBuilder();
 
             int numberOfOperations = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < numberOfOperations; i++)
             {
-                string command = Console.ReadLine();
+                string[] input = Console.ReadLine()
+                    .Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
-                if (command == "4")
+                string command = input[0];
+
+                if (command == "1")
                 {
-                    text = stack.Pop();
+                    stack.Push(text.ToString());
+                    text.Append(input[1]);
                 }
-                else
+                else if (command == "2")
                 {
-                    string[] tokens = command.Split(" ");
-
-                    if (tokens[0] == "1")
-                    {
-                        stack.Push(text);
-                        text += tokens[1];
-                    }
-                    else if (tokens[0] == "2")
-                    {
-                        int index = int.Parse(tokens[1]);
-                        stack.Push(text);
-                        text = text.Substring(0, text.Length - index);
-                    }
-                    else if (tokens[0] == "3")
-                    {
-                        int index = int.Parse(tokens[1]);
-                        Console.WriteLine(text[index - 1]);
-                    }
+                    int index = int.Parse(input[1]);
+                    stack.Push(text.ToString());
+                    text.Remove(text.Length - index, index);
+                }
+                else if (command == "3")
+                {
+                    int index = int.Parse(input[1]);
+                    Console.WriteLine(text[index - 1]);
+                }
+                else if (command == "4")
+                {
+                    text.Clear();
+                    text.Append(stack.Pop());
                 }
             }
         }
