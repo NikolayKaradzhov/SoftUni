@@ -42,10 +42,12 @@ namespace p06.Auto_Repair_And_Service
                 }
                 command = Console.ReadLine();
             }
-            Console.Write("Vehicles for service: ");
-            Console.Write(string.Join(", ", queue));
-
-            Console.WriteLine();
+            if (queue.Count > 0)
+            {
+                Console.Write("Vehicles for service: ");
+                Console.Write(string.Join(", ", queue));
+                Console.WriteLine();
+            }
 
             Console.Write("Served vehicles: ");
             Console.Write(string.Join(", ", servedVehiclesList));

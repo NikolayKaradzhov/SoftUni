@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p05.Fashion Boutique", "p05
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p06.Auto Repair And Service", "p06.Auto Repair And Service\p06.Auto Repair And Service.csproj", "{7BA027A1-3661-42D9-8715-77525CC760C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p07.Truck Tour", "p07.Truck Tour\p07.Truck Tour.csproj", "{EE7F8DCF-311E-45A7-A8CB-2D69A0C35BAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p08.Balanced Parenthesis", "p08.Balanced Parenthesis\p08.Balanced Parenthesis.csproj", "{4218BE12-C58A-437F-8FBD-596729046438}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{7BA027A1-3661-42D9-8715-77525CC760C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BA027A1-3661-42D9-8715-77525CC760C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BA027A1-3661-42D9-8715-77525CC760C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE7F8DCF-311E-45A7-A8CB-2D69A0C35BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE7F8DCF-311E-45A7-A8CB-2D69A0C35BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE7F8DCF-311E-45A7-A8CB-2D69A0C35BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE7F8DCF-311E-45A7-A8CB-2D69A0C35BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4218BE12-C58A-437F-8FBD-596729046438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4218BE12-C58A-437F-8FBD-596729046438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4218BE12-C58A-437F-8FBD-596729046438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4218BE12-C58A-437F-8FBD-596729046438}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
