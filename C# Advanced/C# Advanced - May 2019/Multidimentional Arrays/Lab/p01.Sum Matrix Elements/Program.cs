@@ -31,9 +31,12 @@ namespace p01.Sum_Matrix_Elements
             Console.WriteLine(matrix.GetLength(0));
             Console.WriteLine(matrix.GetLength(1));
 
-            foreach (var number in matrix)
+            for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                matrixTotalSum += number;
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    matrixTotalSum += matrix[i, j];
+                }
             }
             Console.WriteLine(matrixTotalSum);
         }
