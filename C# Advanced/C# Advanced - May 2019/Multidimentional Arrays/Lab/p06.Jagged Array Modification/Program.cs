@@ -38,7 +38,6 @@ namespace p06.Jagged_Array_Modification
                     || col > matrix[row].Length)
                 {
                     Console.WriteLine("Invalid coordinates");
-                    continue;
                 }
                 else if (command == "Add")
                 {
