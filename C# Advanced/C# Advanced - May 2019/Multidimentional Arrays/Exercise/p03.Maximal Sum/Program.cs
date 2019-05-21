@@ -20,7 +20,7 @@ namespace p03.Maximal_Sum
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
                 int[] inputNumbers = Console.ReadLine()
-                    .Split()
+                    .Split(" ", StringSplitOptions.RemoveEmptyEntries)
                     .Select(int.Parse)
                     .ToArray();
 
@@ -30,10 +30,10 @@ namespace p03.Maximal_Sum
                 }
             }
 
-            int maxSum = 0;
+            int maxSum = int.MinValue;
             int targetRow = -1;
             int targetCol = -1;
-
+            
             for (int row = 0; row < matrix.GetLength(0) - 2; row++)
             {
                 for (int col = 0; col < matrix.GetLength(1) - 2; col++)
@@ -44,6 +44,7 @@ namespace p03.Maximal_Sum
 
                     if (currentSum > maxSum)
                     {
+                        //When max sum is found, we save the row and the col to start printing at
                         maxSum = currentSum;
                         targetRow = row;
                         targetCol = col;
