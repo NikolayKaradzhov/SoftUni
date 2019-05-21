@@ -41,10 +41,6 @@ namespace p04.Symbol_In_Matrix
                         symbolCol = j;
                         isSymbolFound = true;
                     }
-                    else
-                    {
-                        isSymbolFound = false;
-                    }
                 }
             }
             if (isSymbolFound)
