@@ -5,4 +5,4 @@ obj/
 *.ide
 *.lock
 *.suo
-C# Advanced/C# Advanced - May 2019/Stacks and Queues/Lab/.vs/p01.Stacks and Queues-Lab/DesignTimeBuild/.dtbcache
+*.dtbcache
