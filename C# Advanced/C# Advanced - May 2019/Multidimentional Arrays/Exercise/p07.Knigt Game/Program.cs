@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace p07.Knigt_Game
 {
@@ -11,8 +12,7 @@ namespace p07.Knigt_Game
 
             for (int row = 0; row < rows; row++)
             {
-                char[] inputRow = Console.ReadLine()
-                    .ToCharArray();
+                char[] inputRow = Console.ReadLine().ToCharArray();
 
                 for (int col = 0; col < rows; col++)
                 {
