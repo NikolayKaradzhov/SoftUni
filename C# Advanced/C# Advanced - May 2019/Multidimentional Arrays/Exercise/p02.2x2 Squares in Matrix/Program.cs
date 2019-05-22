@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 
 namespace p02._2x2_Squares_in_Matrix
@@ -42,16 +42,7 @@ namespace p02._2x2_Squares_in_Matrix
 
                     if ((pointA == pointB) 
                         && (pointA == pointC)
-                        && (pointA == pointD)
-                        && (pointB == pointA)
-                        && (pointB == pointC)
-                        && (pointB == pointD)
-                        && (pointC == pointA)
-                        && (pointC == pointB)
-                        && (pointC == pointD)
-                        && (pointD == pointA)
-                        && (pointD == pointB)
-                        && (pointD == pointC))
+                        && (pointA == pointD))
                     {
                         counter++;
                     }
