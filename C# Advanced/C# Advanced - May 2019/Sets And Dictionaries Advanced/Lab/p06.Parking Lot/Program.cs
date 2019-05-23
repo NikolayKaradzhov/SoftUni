@@ -30,10 +30,18 @@ namespace p06.Parking_Lot
                 input = Console.ReadLine();
             }
 
-            foreach (var carNumber in parkingInfo)
+            if (parkingInfo.Count > 0)
             {
-                Console.WriteLine(carNumber);
+                foreach (var carNumber in parkingInfo)
+                {
+                    Console.WriteLine(carNumber);
+                }
             }
+            else
+            {
+                Console.WriteLine("Parking Lot is Empty");
+            }
+            
         }
     }
 }
