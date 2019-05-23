@@ -29,6 +29,7 @@ namespace p03.Periodic_Table
             {
                 Console.Write($"{chemical} ");
             }
+            Console.WriteLine();
         }
     }
 }
