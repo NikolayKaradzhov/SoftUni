@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace p04.Cities_by_Continent_and_Cou
+namespace p04.Cities_by_Continent_and_Countries
 {
     class Program
     {
