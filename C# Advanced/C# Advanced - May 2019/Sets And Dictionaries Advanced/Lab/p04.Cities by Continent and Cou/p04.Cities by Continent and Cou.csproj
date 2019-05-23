@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RootNamespace>p04.Cities_by_Continent_and_Cou</RootNamespace>
+    <RootNamespace>p04.Cities_by_Continent_and_Countries</RootNamespace>
   </PropertyGroup>
 
 </Project>
