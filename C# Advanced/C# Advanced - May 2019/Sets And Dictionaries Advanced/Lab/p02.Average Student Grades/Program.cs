@@ -12,8 +12,6 @@ namespace p02.Average_Student_Grades
 
             int kidsCount = int.Parse(Console.ReadLine());
 
-            
-
             for (int i = 0; i < kidsCount; i++)
             {
                 string[] input = Console.ReadLine()
