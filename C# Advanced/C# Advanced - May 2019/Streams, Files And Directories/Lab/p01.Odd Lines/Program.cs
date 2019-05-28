@@ -11,20 +11,26 @@ namespace p01.Odd_Lines
             string fileName = "input.txt";
             string filePath = Path.Combine(path, fileName);
 
+            string outputFile = "output.txt";
+
             using (var reader = new StreamReader(filePath))
             {
                 int counter = 0;
 
                 string line = reader.ReadLine();
 
-                while (line != null)
+                using (var writer = new StreamWriter(Path.Combine(path, outputFile)))
                 {
-                    if (counter % 2 != 0)
+                    while (line != null)
                     {
-                        Console.WriteLine(line);
+                        if (counter % 2 != 0)
+                        {
+                            Console.WriteLine(line);
+                            writer.WriteLine(line);
+                        }
+                        counter++;
+                        line = reader.ReadLine();
                     }
-                    counter++;
-                    line = reader.ReadLine();
                 }
             }
         }
