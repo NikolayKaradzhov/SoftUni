@@ -6,7 +6,7 @@ namespace p03.Product_Shop
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
