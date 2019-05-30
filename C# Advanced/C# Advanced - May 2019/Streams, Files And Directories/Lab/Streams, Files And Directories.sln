@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "p05.Slice a File", "p05.Sli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p03.Word Count", "p03.Word Count\p03.Word Count.csproj", "{16CEDBCD-C621-427B-A87F-F9B81DC8CC4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p04.Merge Files", "p04.Merge Files\p04.Merge Files.csproj", "{89B8B9C8-EF3B-43A1-8DFF-1457B3D6CFCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{16CEDBCD-C621-427B-A87F-F9B81DC8CC4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16CEDBCD-C621-427B-A87F-F9B81DC8CC4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16CEDBCD-C621-427B-A87F-F9B81DC8CC4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89B8B9C8-EF3B-43A1-8DFF-1457B3D6CFCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89B8B9C8-EF3B-43A1-8DFF-1457B3D6CFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89B8B9C8-EF3B-43A1-8DFF-1457B3D6CFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89B8B9C8-EF3B-43A1-8DFF-1457B3D6CFCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
