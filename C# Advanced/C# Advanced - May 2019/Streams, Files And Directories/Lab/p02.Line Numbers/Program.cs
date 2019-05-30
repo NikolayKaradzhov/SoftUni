@@ -7,11 +7,11 @@ namespace p02.Line_Numbers
     {
         static void Main(string[] args)
         {
-            string path = "C:\\SoftUni\\C# Advanced\\C# Advanced - May 2019\\Streams, Files And Directories\\Lab\\Resources\\01. Odd Lines";
+            string path = @"C:\SoftUni\C# Advanced\C# Advanced - May 2019\Streams, Files And Directories\Lab\Resources\02. Line Numbers";
             string fileName = "input.txt";
             string filePath = Path.Combine(path, fileName);
 
-            string outputFile = "output2.txt";
+            string outputFile = "output.txt";
 
             using (var reader = new StreamReader(filePath))
             {

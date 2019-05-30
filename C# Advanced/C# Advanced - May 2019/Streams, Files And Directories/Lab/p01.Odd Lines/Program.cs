@@ -7,7 +7,7 @@ namespace p01.Odd_Lines
     {
         static void Main(string[] args)
         {
-            string path = "C:\\SoftUni\\C# Advanced\\C# Advanced - May 2019\\Streams, Files And Directories\\Lab\\Resources\\01. Odd Lines";
+            string path = @"C:\SoftUni\C# Advanced\C# Advanced - May 2019\Streams, Files And Directories\Lab\Resources\01. Odd Lines";
             string fileName = "input.txt";
             string filePath = Path.Combine(path, fileName);
 
@@ -32,6 +32,7 @@ namespace p01.Odd_Lines
                         line = reader.ReadLine();
                     }
                 }
+
             }
         }
     }
