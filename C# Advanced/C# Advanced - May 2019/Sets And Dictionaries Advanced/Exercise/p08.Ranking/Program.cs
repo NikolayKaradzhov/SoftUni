@@ -96,7 +96,7 @@ namespace p08.Ranking
 
                 foreach (var item in orderByPoints)
                 {
-                    Console.WriteLine($"# {item.Key} -> {item.Value}");
+                    Console.WriteLine($"#  {item.Key} -> {item.Value}");
                 }
             }
         }
