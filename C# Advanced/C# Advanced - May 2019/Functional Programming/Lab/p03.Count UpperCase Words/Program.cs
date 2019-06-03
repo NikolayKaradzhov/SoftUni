@@ -12,8 +12,6 @@ namespace p03.Count_UpperCase_Words
                 .Where(x => char.IsUpper(x[0]))
                 .ToList()
                 .ForEach(w => Console.WriteLine(w));
-
-            
         }
     }
 }
