@@ -6,7 +6,13 @@ namespace p02.Knights_of_Honor
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string[] inputNames = Console.ReadLine()
+                .Split(" ", StringSplitOptions.RemoveEmptyEntries);
+
+            Action<string[]> printNames = names =>
+                Console.WriteLine("Sir " + string.Join(Environment.NewLine + "Sir ", names));
+
+            printNames(inputNames);
         }
     }
 }
