@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p05.Applied Arithmetics", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p06.Reverse And Exclude", "p06.Reverse And Exclude\p06.Reverse And Exclude.csproj", "{F6BF7F4D-E36A-49A2-A6F1-CFA6681F706B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p11.Party Reservation Filter Modul", "p11.Party Reservation Filter Modul\p11.Party Reservation Filter Modul.csproj", "{6D1896CE-6D72-43A9-9336-F1510AC71EE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{F6BF7F4D-E36A-49A2-A6F1-CFA6681F706B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6BF7F4D-E36A-49A2-A6F1-CFA6681F706B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6BF7F4D-E36A-49A2-A6F1-CFA6681F706B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D1896CE-6D72-43A9-9336-F1510AC71EE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D1896CE-6D72-43A9-9336-F1510AC71EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D1896CE-6D72-43A9-9336-F1510AC71EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D1896CE-6D72-43A9-9336-F1510AC71EE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
