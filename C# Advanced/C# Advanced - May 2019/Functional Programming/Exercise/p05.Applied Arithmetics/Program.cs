@@ -38,7 +38,6 @@ namespace p05.Applied_Arithmetics
                 else if (command == "print")
                 {
                     printAllNumbers(numbers);
-                    break;
                 }
 
                 command = Console.ReadLine(); 
