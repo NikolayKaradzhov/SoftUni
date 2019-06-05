@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p06.Reverse And Exclude", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p11.Party Reservation Filter Modul", "p11.Party Reservation Filter Modul\p11.Party Reservation Filter Modul.csproj", "{6D1896CE-6D72-43A9-9336-F1510AC71EE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p12.TriFunction", "p12.TriFunction\p12.TriFunction.csproj", "{1A03D9E5-36C4-436C-AC75-D4E9797DD9A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{6D1896CE-6D72-43A9-9336-F1510AC71EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D1896CE-6D72-43A9-9336-F1510AC71EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D1896CE-6D72-43A9-9336-F1510AC71EE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A03D9E5-36C4-436C-AC75-D4E9797DD9A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A03D9E5-36C4-436C-AC75-D4E9797DD9A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A03D9E5-36C4-436C-AC75-D4E9797DD9A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A03D9E5-36C4-436C-AC75-D4E9797DD9A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
