@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace CarManufacturer
 {
@@ -15,7 +16,7 @@ namespace CarManufacturer
             get { return this.make; }
             set { this.make = value; }
         }
-        public string  Model
+        public string Model
         {
             get { return this.model; }
             set { this.model = value; }
@@ -35,7 +36,6 @@ namespace CarManufacturer
             get { return this.fuelConsuption; }
             set { this.fuelConsuption = value; }
         }
-
         public void Drive(double distance)
         {
             if (distance * this.FuelConsumption / 100 > this.FuelQuantity)
@@ -50,8 +50,14 @@ namespace CarManufacturer
 
         public string WhoAmI()
         {
-            return ($"Make: {this.Make}\nModel: {this.Model}\nYear: " +
-                $"{this.Year}\nFuel: {this.FuelQuantity:F2}L");
+            StringBuilder carInfo = new StringBuilder();
+
+            carInfo.AppendLine($"Make: {this.Make}");
+            carInfo.AppendLine($"Model: {this.Model}");
+            carInfo.AppendLine($"Year: {this.Year}");
+            carInfo.Append($"Fuel: {this.FuelQuantity:F2}L");
+
+            return carInfo.ToString();
         }
     }
 }
