@@ -3,14 +3,46 @@ using System.Text;
 
 namespace CarManufacturer
 {
-    class Car
+    public class Car
     {
         private string make;
         private string model;
         private int year;
         private double fuelQuantity;
         private double fuelConsuption;
+        private Engine engine;
+        private Tire[] tires;
 
+        public Car()
+        {
+            this.Make = "VW";
+            this.Model = "Golf";
+            this.Year = 2025;
+            this.FuelQuantity = 200;
+            this.fuelConsuption = 10;
+        }
+
+        public Car(string make, string model, int year)
+            : this()
+        {
+            this.Make = make;
+            this.Model = model;
+            this.Year = year;
+        }
+
+        public Car(string make, string model, int year, double fuelQuantity, double fuelConsumption)
+            : this(make, model, year)
+        {
+            this.FuelQuantity = fuelQuantity;
+            this.FuelConsumption = fuelConsumption;
+        }
+
+        public Car(string make, string model, int year, double fuelQuantity, double fuelConsumption, Engine engine, Tire[] tires)
+            : this(make, model, year, fuelQuantity, fuelConsumption)
+        {
+            this.Engine = engine;
+            this.Tires = tires;
+        }
         public string Make
         {
             get { return this.make; }
@@ -35,6 +67,30 @@ namespace CarManufacturer
         {
             get { return this.fuelConsuption; }
             set { this.fuelConsuption = value; }
+        }
+
+        public Engine Engine
+        {
+            get
+            {
+                return this.engine;
+            }
+            set
+            {
+                this.engine = value;
+            }
+        }
+
+        public Tire[] Tires
+        {
+            get
+            {
+                return this.tires;
+            }
+            set
+            {
+                this.tires = value;
+            }
         }
         public void Drive(double distance)
         {
