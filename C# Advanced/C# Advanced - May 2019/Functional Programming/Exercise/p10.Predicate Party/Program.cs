@@ -65,7 +65,6 @@ namespace p10.Predicate_Party
                         guests.Insert(index, name);
                     }
                 }
-
                 command = Console.ReadLine();
             }
 
