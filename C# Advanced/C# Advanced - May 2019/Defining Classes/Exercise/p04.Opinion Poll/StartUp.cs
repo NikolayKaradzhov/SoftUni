@@ -8,7 +8,8 @@ namespace DefiningClasses
     {
         static void Main(string[] args)
         {
-            List<Person> members = new List<Person>();
+            Family members = new Family();
+
             int peopleCount = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < peopleCount; i++)
@@ -21,17 +22,14 @@ namespace DefiningClasses
 
                 Person person = new Person(name, age);
 
-                members.Add(person);
+                members.AddMember(person);
             }
 
-            var orderedPersons = members.OrderBy(x => x.Name);
-            
-            foreach (var person in orderedPersons)
+            List<Person> over30s = members.FilterPersonByAgeOver30();
+
+            foreach (var member in over30s)
             {
-                if (person.Age > 30)
-                {
-                    Console.WriteLine($"{person.Name} - {person.Age}");
-                }
+                Console.WriteLine($"{member.Name} - {member.Age}");
             }
         }
     }
