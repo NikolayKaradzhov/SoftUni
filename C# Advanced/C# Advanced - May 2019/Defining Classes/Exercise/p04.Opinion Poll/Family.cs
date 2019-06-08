@@ -7,34 +7,31 @@ namespace DefiningClasses
 {
     public class Family
     {
-        private List<Person> member = new List<Person>();
-        public List<Person> Member
+        private List<Person> members = new List<Person>();
+
+        public Family()
         {
-            get
-            {
-                return this.member;
-            }
-            set
-            {
-                this.member = value;
-            }
+            members = new List<Person>();
         }
 
         public void AddMember(Person person)
         {
-            member.Add(person);
+            members.Add(person);
         }
 
         public Person GetOldestMember()
         {
-            Person oldestPerson = member.OrderByDescending(x => x.Age).FirstOrDefault();
+            Person oldestPerson = members.OrderByDescending(x => x.Age).FirstOrDefault();
 
             return oldestPerson;
         }
 
         public List<Person> FilterPersonByAgeOver30()
         {
-            List<Person> peopleOver30 = member.OrderBy(x => x.Name).Where(x => x.Age > 30).ToList();
+            List<Person> peopleOver30 = members
+                .OrderBy(x => x.Name)
+                .Where(x => x.Age > 30)
+                .ToList();
 
             return peopleOver30;
         }
