@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p02.Creating Constructors",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p03.OldestFamilyMember", "p03.OldestFamilyMember\p03.OldestFamilyMember.csproj", "{1664954F-65A8-4737-83F7-45844E95E529}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p04.Opinion Poll", "p04.Opinion Poll\p04.Opinion Poll.csproj", "{7E4CF32D-68B2-42A4-AB80-78359D49A48B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p04.OpinionPoll", "p04.Opinion Poll\p04.OpinionPoll.csproj", "{7E4CF32D-68B2-42A4-AB80-78359D49A48B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p05.DateModifier", "p05.DateModifier\p05.DateModifier.csproj", "{21841DFF-8DAF-42A7-B719-66D7A969881A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7E4CF32D-68B2-42A4-AB80-78359D49A48B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E4CF32D-68B2-42A4-AB80-78359D49A48B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E4CF32D-68B2-42A4-AB80-78359D49A48B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21841DFF-8DAF-42A7-B719-66D7A969881A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21841DFF-8DAF-42A7-B719-66D7A969881A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21841DFF-8DAF-42A7-B719-66D7A969881A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21841DFF-8DAF-42A7-B719-66D7A969881A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
