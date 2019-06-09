@@ -7,7 +7,7 @@ namespace DefiningClasses
 {
     public class Family
     {
-        private List<Person> members = new List<Person>();
+        private List<Person> members;
 
         public Family()
         {
