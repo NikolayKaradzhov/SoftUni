@@ -5,13 +5,17 @@ VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "p01.Define a Class Person", "p01.Define a Class Person\p01.Define a Class Person.csproj", "{3898C925-4F24-4C1A-8843-F437BF5D7D56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p02.Creating Constructors", "p02.Creating Constructors\p02.Creating Constructors.csproj", "{ABFEAE09-4EEC-4C06-AB97-B6A3FF6A5603}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "p02.Creating Constructors", "p02.Creating Constructors\p02.Creating Constructors.csproj", "{ABFEAE09-4EEC-4C06-AB97-B6A3FF6A5603}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p03.OldestFamilyMember", "p03.OldestFamilyMember\p03.OldestFamilyMember.csproj", "{1664954F-65A8-4737-83F7-45844E95E529}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "p03.OldestFamilyMember", "p03.OldestFamilyMember\p03.OldestFamilyMember.csproj", "{1664954F-65A8-4737-83F7-45844E95E529}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p04.OpinionPoll", "p04.Opinion Poll\p04.OpinionPoll.csproj", "{7E4CF32D-68B2-42A4-AB80-78359D49A48B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "p04.OpinionPoll", "p04.Opinion Poll\p04.OpinionPoll.csproj", "{7E4CF32D-68B2-42A4-AB80-78359D49A48B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p05.DateModifier", "p05.DateModifier\p05.DateModifier.csproj", "{21841DFF-8DAF-42A7-B719-66D7A969881A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "p05.DateModifier", "p05.DateModifier\p05.DateModifier.csproj", "{21841DFF-8DAF-42A7-B719-66D7A969881A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p06.SpeedRacing", "p06.SpeedRacing\p06.SpeedRacing.csproj", "{CBE62CD8-0070-471E-9506-8EDEC59A1EBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p07.RawData", "p07.RawData\p07.RawData.csproj", "{302EAB5C-7F15-4DDF-91C8-01F21EB36AF0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p06.CompanyRoaster", "p06.CompanyRoaster\p06.CompanyRoaster.csproj", "{A429F988-598A-484A-B471-2E39A970C9EC}"
 EndProject
@@ -43,14 +47,14 @@ Global
 		{21841DFF-8DAF-42A7-B719-66D7A969881A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21841DFF-8DAF-42A7-B719-66D7A969881A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21841DFF-8DAF-42A7-B719-66D7A969881A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A429F988-598A-484A-B471-2E39A970C9EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A429F988-598A-484A-B471-2E39A970C9EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A429F988-598A-484A-B471-2E39A970C9EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A429F988-598A-484A-B471-2E39A970C9EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7A1E8C98-CFCA-4824-B214-A119FC30391E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A1E8C98-CFCA-4824-B214-A119FC30391E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A1E8C98-CFCA-4824-B214-A119FC30391E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A1E8C98-CFCA-4824-B214-A119FC30391E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBE62CD8-0070-471E-9506-8EDEC59A1EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE62CD8-0070-471E-9506-8EDEC59A1EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE62CD8-0070-471E-9506-8EDEC59A1EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE62CD8-0070-471E-9506-8EDEC59A1EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{302EAB5C-7F15-4DDF-91C8-01F21EB36AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{302EAB5C-7F15-4DDF-91C8-01F21EB36AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{302EAB5C-7F15-4DDF-91C8-01F21EB36AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{302EAB5C-7F15-4DDF-91C8-01F21EB36AF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
