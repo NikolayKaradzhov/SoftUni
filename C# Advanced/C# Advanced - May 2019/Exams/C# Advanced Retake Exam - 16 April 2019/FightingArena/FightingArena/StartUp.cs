@@ -44,7 +44,6 @@ namespace FightingArena
 
             //Prints the arena
             Console.WriteLine(arena);
-
         }
     }
 }
