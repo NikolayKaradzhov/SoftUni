@@ -2,31 +2,32 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace p01.GenericBoxOfString
+namespace p02.GenericBoxOfInt
 {
     class Box<TItem>
     {
-        private List<TItem> boxCollection;
+        private List<TItem> boxOfInt;
 
         public Box()
         {
-            this.boxCollection = new List<TItem>();
+            boxOfInt = new List<TItem>();   
         }
 
         public void Add(TItem item)
         {
-            boxCollection.Add(item);
+            boxOfInt.Add(item);
         }
+
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
 
-            foreach (var item in boxCollection)
+            foreach (var number in boxOfInt)
             {
-                sb.AppendLine($"{item.GetType().FullName}: {item}");
+                sb.AppendLine($"{number.GetType().FullName}: {number}");
             }
 
             return sb.ToString();
         }
-    }       
+    }
 }
