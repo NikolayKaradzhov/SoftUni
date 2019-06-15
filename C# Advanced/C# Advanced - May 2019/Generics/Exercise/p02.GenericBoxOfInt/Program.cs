@@ -1,18 +1,18 @@
 ﻿using System;
 
-namespace p01.GenericBoxOfString
+namespace p02.GenericBoxOfInt
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Box<string> myBox = new Box<string>();
+            Box<int> myBox = new Box<int>();
 
             int count = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < count; i++)
             {
-                string input = Console.ReadLine();
+                int input = int.Parse(Console.ReadLine());
 
                 myBox.Add(input);
             }
