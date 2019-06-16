@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace p09.CustomLinkedList
+namespace p01
 {
     class Program
     {
         static void Main(string[] args)
         {
-
+            
         }
     }
 }
