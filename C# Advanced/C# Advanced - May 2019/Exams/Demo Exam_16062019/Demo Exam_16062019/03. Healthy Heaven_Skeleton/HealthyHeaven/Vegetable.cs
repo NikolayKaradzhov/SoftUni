@@ -17,7 +17,9 @@ namespace HealthyHeaven
 
         public override string ToString()
         {
-            return $"- {this.Name} have {this.Calories} calories";
+			StringBuilder sb = new StringBuilder();
+            sb.AppendLine($" - {this.Name} have {this.Calories} calories");
+            return sb.ToString().TrimEnd();
         }
     }
 }

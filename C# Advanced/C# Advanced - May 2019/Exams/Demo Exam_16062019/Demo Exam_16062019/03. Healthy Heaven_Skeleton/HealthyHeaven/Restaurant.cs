@@ -18,9 +18,7 @@ namespace HealthyHeaven
 
         public int Count => this.data.Count();
 
-        public Salad Calories => this.Calories;
-
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
         public void Add(Salad salad)
         {
@@ -36,19 +34,37 @@ namespace HealthyHeaven
                 data.Remove(data.FirstOrDefault(s => s.Name == name));
                 return true;
             }
+			else
+			{
+				return false;	
+            }
             
-            return false;
         }
 
         public Salad GetHealthiestSalad()
         {
-            return this.data.OrderBy(x => x.GetTotalCalories()).First();
+            //return this.data.OrderBy(x => x.GetTotalCalories()).FirstOrDefault();
+			
+			int min = this.data.Min(s => s.GetTotalCalories());
+
+            return this.data.FirstOrDefault(s => s.GetTotalCalories() == min);
         }
 
         public string GenerateMenu()
         {
-            return $"{this.Name} have {this.Count} salads:{Environment.NewLine}" +
-               $"{string.Join(Environment.NewLine, data)}" ;
+            //return $"{this.Name} have {this.Count} salads:{Environment.NewLine}" +
+               //$"{string.Join(Environment.NewLine, data)}" ;
+			   
+			   StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"{this.Name} have {this.data.Count} salads:");
+
+            foreach (var item in this.data)
+            {
+                sb.AppendLine(item.ToString());
+            }
+
+            return sb.ToString().TrimEnd();
         }
     }
 }
