@@ -5,7 +5,7 @@ using System.Text;
 
 namespace p03.Stack
 {
-    class Stack<T> : IEnumerable<T>
+    public class Stack<T> : IEnumerable<T>
     {
         private Node<T> top;
         public Stack()
