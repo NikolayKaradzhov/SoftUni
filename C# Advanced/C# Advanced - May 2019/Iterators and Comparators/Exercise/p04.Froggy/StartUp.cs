@@ -1,12 +1,18 @@
 ﻿using System;
+using System.Linq;
 
 namespace p04.Froggy
 {
-    class Program
+    public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int[] stones = Console.ReadLine()
+               .Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries)
+               .Select(int.Parse)
+               .ToArray();
+            Lake lake = new Lake(stones);
+            Console.WriteLine(string.Join(", ", lake));
         }
     }
 }
