@@ -54,18 +54,19 @@ namespace p01
                         {
                             if (matrix[rowToHarvest][colToHarvest] == "C")
                             {
+                                matrix[rowToHarvest][colToHarvest] = " ";
                                 carrotsHarvested++;
                             }
                             else if (matrix[rowToHarvest][colToHarvest] == "P")
                             {
+                                matrix[rowToHarvest][colToHarvest] = " ";
                                 potatoHarvested++;
                             }
                             else if (matrix[rowToHarvest][colToHarvest] == "L")
                             {
+                                matrix[rowToHarvest][colToHarvest] = " ";
                                 lettuceHarvested++;
                             }
-
-                            matrix[rowToHarvest][colToHarvest] = " ";
                         }
                     }
                 }
@@ -106,7 +107,7 @@ namespace p01
                                 }
                                 else
                                 {
-                                    NewMethod(matrix, colToHarvest, row);
+                                    matrix[row][colToHarvest] = " ";
                                     harmedVegetables++;
                                 }
                             }
@@ -156,11 +157,6 @@ namespace p01
             Console.WriteLine($"Potatoes: {potatoHarvested}");
             Console.WriteLine($"Lettuce: {lettuceHarvested}");
             Console.WriteLine($"Harmed vegetables: {harmedVegetables}");
-        }
-
-        private static void NewMethod(string[][] matrix, int colToHarvest, int row)
-        {
-            matrix[row][colToHarvest] = " ";
         }
     }
 }
