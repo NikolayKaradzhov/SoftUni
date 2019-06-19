@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "p01.Club Party", "p01.Club 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p02.Tron Racers", "p02.Tron Racers\p02.Tron Racers.csproj", "{2F6011E3-3402-4B83-BED9-17D0D34F1864}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p03.Heroes", "p03.Heroes\p03.Heroes.csproj", "{332CCFE4-A6DF-44C6-88C6-923235F4E561}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2F6011E3-3402-4B83-BED9-17D0D34F1864}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F6011E3-3402-4B83-BED9-17D0D34F1864}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F6011E3-3402-4B83-BED9-17D0D34F1864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{332CCFE4-A6DF-44C6-88C6-923235F4E561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{332CCFE4-A6DF-44C6-88C6-923235F4E561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{332CCFE4-A6DF-44C6-88C6-923235F4E561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{332CCFE4-A6DF-44C6-88C6-923235F4E561}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
