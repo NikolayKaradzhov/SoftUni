@@ -40,7 +40,7 @@ namespace p01
                         || colToHarvest < 0
                         || colToHarvest > matrix[rowToHarvest].Length - 1)
                     {
-
+                        
                     }
                     else
                     {
@@ -77,7 +77,7 @@ namespace p01
                         || colToHarvest < 0
                         || colToHarvest > matrix[rowToHarvest].Length - 1)
                     {
-
+                        
                     }
                     else
                     {
@@ -98,7 +98,7 @@ namespace p01
                         }
                         else if (direction == "down")
                         {
-                            for (int row = 0; row < matrix[colToHarvest].Length; row += 2)
+                            for (int row = rowToHarvest; row < matrix.Length; row += 2)
                             {
 
                                 if (matrix[row][colToHarvest] == " ")
