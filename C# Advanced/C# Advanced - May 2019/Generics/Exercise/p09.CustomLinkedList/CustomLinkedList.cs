@@ -4,58 +4,66 @@ using System.Text;
 
 namespace p09.CustomLinkedList
 {
-    public class DoublyLinkedList
+    public class DoublyLinkedList<T>
+        where T : IComparable<T>
     {
-        private class ListNode
+        private class LinkedNode
         {
-            public ListNode(int value)
+            public T Value { get; set; }
+
+            public LinkedNode NextNode { get; set; }
+
+            public LinkedNode PreviousNode { get; set; }
+
+            public LinkedNode(T value)
             {
                 this.Value = value;
             }
-
-            public int Value { get; set; }
-            public ListNode NextNode { get; set; }
-            public ListNode PreviousNode { get; set; }
         }
 
-        private ListNode head;
-        private ListNode tail;
+        private LinkedNode tail;
+
+        private LinkedNode head;
 
         public int Count { get; private set; }
 
-        public void AddFirst(int element)
+        public void AddFirst(T element)
         {
             if (this.Count == 0)
             {
-                this.head = this.tail = new ListNode(element);
+                this.head = this.tail = new LinkedNode(element);
             }
+
             else
             {
-                var newHead = new ListNode(element);
+                var newHead = new LinkedNode(element);
                 newHead.NextNode = this.head;
-                newHead.PreviousNode = newHead;
-                this.head = newHead;    
+                this.head.PreviousNode = newHead;
+                this.head = newHead;
             }
+
             this.Count++;
         }
 
-        public void AddLast(int element)
+        public void AddLast(T element)
         {
             if (this.Count == 0)
             {
-                this.head = this.tail = new ListNode(element);
+                this.head = this.tail = new LinkedNode(element);
             }
+
             else
             {
-                var newTail = new ListNode(element);
+                var newTail = new LinkedNode(element);
                 newTail.PreviousNode = this.tail;
                 this.tail.NextNode = newTail;
                 this.tail = newTail;
             }
+
             this.Count++;
         }
 
-        public int RemoveFirst(int element)
+        public T RemoveFirst()
         {
             if (this.Count == 0)
             {
@@ -69,6 +77,7 @@ namespace p09.CustomLinkedList
             {
                 this.head.PreviousNode = null;
             }
+
             else
             {
                 this.tail = null;
@@ -78,7 +87,7 @@ namespace p09.CustomLinkedList
             return firstElement;
         }
 
-        public int RemoveLast(int element)
+        public T RemoveLast()
         {
             if (this.Count == 0)
             {
@@ -101,7 +110,7 @@ namespace p09.CustomLinkedList
             return lastElement;
         }
 
-        public void ForEach(Action<int> action)
+        public void ForEach(Action<T> action)
         {
             var currentNode = this.head;
             while (currentNode != null)
@@ -109,11 +118,12 @@ namespace p09.CustomLinkedList
                 action(currentNode.Value);
                 currentNode = currentNode.NextNode;
             }
+
         }
 
-        public int[] ToArray()
+        public T[] ToArray()
         {
-            int[] array = new int[this.Count];
+            T[] array = new T[this.Count];
             int counter = 0;
             var currentNode = this.head;
 
@@ -123,6 +133,7 @@ namespace p09.CustomLinkedList
                 currentNode = currentNode.NextNode;
                 counter++;
             }
+
             return array;
         }
     }
