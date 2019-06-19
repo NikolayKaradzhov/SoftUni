@@ -34,22 +34,20 @@ namespace p01.Club_Party
                         continue;
                     }
 
-                    if (currentCapacity + currentPeople < maxCapacity)
+                    if (currentCapacity + currentPeople > maxCapacity)
+                    {
+                        var currentHall = halls.Dequeue();
+
+                        Console.WriteLine($"{currentHall} -> {string.Join(", ", peopleInHall)}");
+
+                        peopleInHall.Clear();
+                        currentCapacity = 0;
+                    }
+
+                    if (halls.Count > 0)
                     {
                         peopleInHall.Add(currentPeople);
                         currentCapacity += currentPeople;
-                    }
-                    else
-                    {
-                        if (halls.Count > 0)
-                        {
-                            var currentHall = halls.Dequeue();
-
-                            Console.WriteLine($"{currentHall} -> {string.Join(", ", peopleInHall)}");
-
-                            peopleInHall.Clear();
-                            currentCapacity = 0;
-                        }
                     }
                 }
             }
