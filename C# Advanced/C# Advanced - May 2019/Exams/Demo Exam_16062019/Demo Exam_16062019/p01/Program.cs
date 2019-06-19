@@ -33,12 +33,14 @@ namespace p01
                 int rowToHarvest = int.Parse(commands[1]);
                 int colToHarvest = int.Parse(commands[2]);
 
-                if (commands[0] == "Harvest")
-                {
-                    if (rowToHarvest < 0
+                bool isOutsideMatrixBoundaries = rowToHarvest < 0
                         || rowToHarvest > matrix.Length - 1
                         || colToHarvest < 0
-                        || colToHarvest > matrix[rowToHarvest].Length - 1)
+                        || colToHarvest > matrix[rowToHarvest].Length - 1;
+
+                if (commands[0] == "Harvest")
+                {
+                    if (isOutsideMatrixBoundaries)
                     {
                         
                     }
@@ -72,10 +74,7 @@ namespace p01
                 {
                     string direction = commands[3];
 
-                    if (rowToHarvest < 0
-                        || rowToHarvest > matrix.Length - 1
-                        || colToHarvest < 0
-                        || colToHarvest > matrix[rowToHarvest].Length - 1)
+                    if (isOutsideMatrixBoundaries)
                     {
                         
                     }
@@ -107,7 +106,7 @@ namespace p01
                                 }
                                 else
                                 {
-                                    matrix[colToHarvest][row] = " ";
+                                    NewMethod(matrix, colToHarvest, row);
                                     harmedVegetables++;
                                 }
                             }
@@ -116,7 +115,7 @@ namespace p01
                         {
                             for (int col = colToHarvest; col <= 0; col -= 2)
                             {
-                                if (matrix[col][rowToHarvest] == " ")
+                                if (matrix[rowToHarvest][col] == " ")
                                 {
 
                                 }
@@ -129,7 +128,7 @@ namespace p01
                         }
                         else if (direction == "right")
                         {
-                            for (int col = colToHarvest; col <= matrix[colToHarvest].Length; col += 2)
+                            for (int col = colToHarvest; col < matrix[rowToHarvest].Length; col += 2)
                             {
                                 if (matrix[rowToHarvest][col] == " ")
                                 {
@@ -157,6 +156,11 @@ namespace p01
             Console.WriteLine($"Potatoes: {potatoHarvested}");
             Console.WriteLine($"Lettuce: {lettuceHarvested}");
             Console.WriteLine($"Harmed vegetables: {harmedVegetables}");
+        }
+
+        private static void NewMethod(string[][] matrix, int colToHarvest, int row)
+        {
+            matrix[row][colToHarvest] = " ";
         }
     }
 }
