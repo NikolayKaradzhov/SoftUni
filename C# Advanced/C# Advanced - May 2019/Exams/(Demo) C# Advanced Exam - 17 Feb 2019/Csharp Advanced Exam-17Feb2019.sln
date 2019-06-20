@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "p01.Socks", "p01.Socks\p01.Socks.csproj", "{9726298F-278E-4095-9A95-20B924AF5EED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{F05FEC46-C7FC-47A3-859A-1AAF09A9AEAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{F05FEC46-C7FC-47A3-859A-1AAF09A9AEAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p02.ExcelFunctions", "p02.ExcelFunctions\p02.ExcelFunctions.csproj", "{243A692B-1F3C-4BCC-AC4D-010AF09FFFCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F05FEC46-C7FC-47A3-859A-1AAF09A9AEAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F05FEC46-C7FC-47A3-859A-1AAF09A9AEAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F05FEC46-C7FC-47A3-859A-1AAF09A9AEAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{243A692B-1F3C-4BCC-AC4D-010AF09FFFCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{243A692B-1F3C-4BCC-AC4D-010AF09FFFCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{243A692B-1F3C-4BCC-AC4D-010AF09FFFCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{243A692B-1F3C-4BCC-AC4D-010AF09FFFCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
