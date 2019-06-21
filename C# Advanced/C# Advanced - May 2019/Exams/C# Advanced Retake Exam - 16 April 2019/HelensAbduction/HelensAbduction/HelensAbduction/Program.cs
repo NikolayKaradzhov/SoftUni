@@ -6,9 +6,6 @@ namespace HelensAbduction
     {
         static char[][] matrix;
 
-        static int spartanRow;
-        static int spartanCol;
-
         static int parisRow;
         static int parisCol;
 
@@ -37,12 +34,7 @@ namespace HelensAbduction
                 {
                     matrix[row][col] = input[col];
 
-                    if (matrix[row][col] == 'S')
-                    {
-                        spartanRow = row;
-                        spartanCol = col;
-                    }
-                    else if (matrix[row][col] == 'P')
+                    if (matrix[row][col] == 'P')
                     {
                         parisRow = row;
                         parisCol = col;
@@ -53,7 +45,6 @@ namespace HelensAbduction
                 }
             }
 
-            ;
             while (true)
             {
                 string[] commands = Console.ReadLine().Split();
@@ -67,133 +58,51 @@ namespace HelensAbduction
 
                 if (direction == "up")
                 {
-                    parisRow--;
-                    parisEnergy--;
-
-                    isInsideMatrix = parisRow >= 0
-                    || parisRow < matrix.Length
-                    || parisCol >= 0
-                    || parisCol < matrix.Length;
-
-                    if (isInsideMatrix)
+                    if (parisRow - 1 >= 0)
                     {
-                        if (matrix[parisRow][parisCol] == 'S')
-                        {
-                            if (parisEnergy - 2 >= 0)
-                            {
-                                parisEnergy -= 2;
-                                matrix[parisRow][parisCol] = '-';
-                            }
-                        }
-                    }
-                    else
-                    {
-                        parisRow++;
-                    }
-
-                    if (matrix[parisRow][parisCol] == 'H')
-                    {
-                        matrix[parisRow][parisCol] = '-';
-                        break;
+                        parisRow--;
                     }
 
                 }
                 else if (direction == "down")
                 {
-                    parisRow++;
-                    parisEnergy--;
-
-                    isInsideMatrix = parisRow >= 0
-                    && parisRow < matrix.Length
-                    && parisCol >= 0
-                    && parisCol < matrix.Length;
-
-                    if (isInsideMatrix)
+                    if (parisRow + 1 < matrix.Length)
                     {
-                        if (matrix[parisRow][parisCol] == 'S')
-                        {
-                            if (parisEnergy - 2 >= 0)
-                            {
-                                parisEnergy -= 2;
-                                matrix[parisRow][parisCol] = '-';
-                            }
-                        }
-                    }
-                    else
-                    {
-                        parisRow--;
+                        parisRow++;
                     }
 
-                    if (matrix[parisRow][parisCol] == 'H')
-                    {
-                        matrix[parisRow][parisCol] = '-';
-                        break;
-                    }
                 }
                 else if (direction == "left")
                 {
-                    parisCol--;
-                    parisEnergy--;
-
-                    isInsideMatrix = parisRow >= 0
-                    || parisRow < matrix.Length
-                    || parisCol >= 0
-                    || parisCol < matrix.Length;
-
-                    if (isInsideMatrix)
+                    if (parisCol - 1 >= 0)
                     {
-                        if (matrix[parisRow][parisCol] == 'S')
-                        {
-                            if (parisEnergy - 2 >= 0)
-                            {
-                                parisEnergy -= 2;
-                                matrix[parisRow][parisCol] = '-';
-                            }
-                        }
-                    }
-                    else
-                    {
-                        parisCol++;
-                    }
-
-                    if (matrix[parisRow][parisCol] == 'H')
-                    {
-                        matrix[parisRow][parisCol] = '-';
-                        break;
+                        parisCol--;
                     }
 
                 }
                 else if (direction == "right")
                 {
-                    parisCol++;
-                    parisEnergy--;
-
-                    isInsideMatrix = parisRow >= 0
-                    || parisRow < matrix.Length
-                    || parisCol >= 0
-                    || parisCol < matrix.Length;
-
-                    if (isInsideMatrix)
+                    if (parisCol + 1 < matrix[parisRow].Length)
                     {
-                        if (matrix[parisRow][parisCol] == 'S')
-                        {
-                            if (parisEnergy - 2 >= 0)
-                            {
-                                parisEnergy -= 2;
-                                matrix[parisRow][parisCol] = '-';
-                            }
-                        }
+                        parisCol++;
                     }
-                    else
-                    {
-                        parisCol--;
-                    }
+                }
 
-                    if (matrix[parisRow][parisCol] == 'H')
+                parisEnergy--;
+
+                if (matrix[parisRow][parisCol] == 'S')
+                {
+                    if (parisEnergy - 2 >= 0)
                     {
+                        parisEnergy -= 2;
                         matrix[parisRow][parisCol] = '-';
-                        break;
                     }
+                }
+
+                else if (matrix[parisRow][parisCol] == 'H')
+                {
+                    matrix[parisRow][parisCol] = '-';
+                    break;
                 }
 
                 isParisDead = parisEnergy <= 0;
