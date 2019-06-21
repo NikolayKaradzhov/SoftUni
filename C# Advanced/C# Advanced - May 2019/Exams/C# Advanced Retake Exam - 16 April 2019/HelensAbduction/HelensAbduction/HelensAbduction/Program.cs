@@ -9,18 +9,13 @@ namespace HelensAbduction
         static int parisRow;
         static int parisCol;
 
-        static int parisInitialRowPosition;
-        static int parisInitialColPosition;
-
-        static bool isInsideMatrix;
+        static bool won = false;
 
         static void Main(string[] args)
         {
             int parisEnergy = int.Parse(Console.ReadLine());
 
             int rows = int.Parse(Console.ReadLine());
-
-            bool isParisDead = false;
 
             matrix = new char[rows][];
 
@@ -38,14 +33,11 @@ namespace HelensAbduction
                     {
                         parisRow = row;
                         parisCol = col;
-
-                        parisInitialRowPosition = row;
-                        parisInitialColPosition = col;
                     }
                 }
             }
 
-            while (true)
+            while (parisEnergy > 0)
             {
                 string[] commands = Console.ReadLine().Split();
 
@@ -56,13 +48,14 @@ namespace HelensAbduction
 
                 matrix[spartanSpawnRow][spartanSpawnCol] = 'S';
 
+                matrix[parisRow][parisCol] = '-';
+
                 if (direction == "up")
                 {
                     if (parisRow - 1 >= 0)
                     {
                         parisRow--;
                     }
-
                 }
                 else if (direction == "down")
                 {
@@ -70,7 +63,6 @@ namespace HelensAbduction
                     {
                         parisRow++;
                     }
-
                 }
                 else if (direction == "left")
                 {
@@ -78,7 +70,6 @@ namespace HelensAbduction
                     {
                         parisCol--;
                     }
-
                 }
                 else if (direction == "right")
                 {
@@ -90,52 +81,46 @@ namespace HelensAbduction
 
                 parisEnergy--;
 
-                if (matrix[parisRow][parisCol] == 'S')
-                {
-                    if (parisEnergy - 2 >= 0)
-                    {
-                        parisEnergy -= 2;
-                        matrix[parisRow][parisCol] = '-';
-                    }
-                }
+                char symbolOnNextStep = matrix[parisRow][parisCol];
 
-                else if (matrix[parisRow][parisCol] == 'H')
+                if (symbolOnNextStep == 'S')
                 {
+                    parisEnergy -= 2;
+                    matrix[parisRow][parisCol] = '-';
+                }
+                else if (symbolOnNextStep == 'H')
+                {
+                    won = true;
                     matrix[parisRow][parisCol] = '-';
                     break;
                 }
+                else if (symbolOnNextStep == '-')
+                {
+                    matrix[parisRow][parisCol] = 'P';
+                }
 
-                isParisDead = parisEnergy <= 0;
-
-                if (isParisDead)
+                if (parisEnergy <= 0)
                 {
                     matrix[parisRow][parisCol] = 'X';
-
-                    matrix[parisInitialRowPosition][parisInitialColPosition] = '-';
-
                     break;
-                }
+                }        
             }
 
-            if (isParisDead)
+            if (won)
             {
-                Console.WriteLine($"Paris died at {parisRow};{parisCol}.");
-
-                foreach (var item in matrix)
-                {
-                    Console.WriteLine(item);
-                }
+                Console.WriteLine($"Paris has successfully abducted Helen! Energy left: {parisEnergy}");
             }
             else
             {
-                matrix[parisInitialRowPosition][parisInitialColPosition] = '-';
+                Console.WriteLine($"Paris died at {parisRow};{parisCol}.");
+            }
 
-                Console.WriteLine($"Paris has successfully abducted Helen! Energy left: {parisEnergy}");
+            //PrintMatrix
+            for (int row = 0; row < matrix.Length; row++)
+            {
+                char[] currentRow = matrix[row];
 
-                foreach (var item in matrix)
-                {
-                    Console.WriteLine(item);
-                }
+                Console.WriteLine(String.Join("", currentRow));
             }
         }
     }
