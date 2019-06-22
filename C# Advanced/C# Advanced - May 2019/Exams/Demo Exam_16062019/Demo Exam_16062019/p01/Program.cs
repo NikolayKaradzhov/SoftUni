@@ -1,162 +1,187 @@
 ﻿using System;
 
-namespace p01
+namespace p01.The_Garden
 {
     class Program
     {
+        static string[][] matrix;
+
+        static int currentRow;
+        static int currentCol;
+
+        static int harvestedCarrots;
+        static int harvestedPotatoes;
+        static int harvestedLettuce;
+
+        static string direction;
+        static int harmedVegetables;
+
         static void Main(string[] args)
         {
-            int rows = int.Parse(Console.ReadLine());
+            int rowsInput = int.Parse(Console.ReadLine());
 
-            int harmedVegetables = 0;
-            int carrotsHarvested = 0;
-            int lettuceHarvested = 0;
-            int potatoHarvested = 0;
-
-            string[][] matrix = new string[rows][];
+            matrix = new string[rowsInput][];
 
             for (int row = 0; row < matrix.Length; row++)
             {
                 string[] vegetablesInput = Console.ReadLine()
-                    .Split(" ");
+                    .Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
-                matrix[row] = vegetablesInput;
+                matrix[row] = new string[vegetablesInput.Length];
+
+                for (int col = 0; col < vegetablesInput.Length; col++)
+                {
+                    matrix[row][col] = vegetablesInput[col];
+                }
             }
 
             string input = Console.ReadLine();
 
             while (input != "End of Harvest")
             {
-                string[] commands = input
-                .Split(" ");
+                string[] commands = input.Split();
 
-                int rowToHarvest = int.Parse(commands[1]);
-                int colToHarvest = int.Parse(commands[2]);
+                string command = commands[0];
+                currentRow = int.Parse(commands[1]);
+                currentCol = int.Parse(commands[2]);
 
-                bool isOutsideMatrixBoundaries = rowToHarvest < 0
-                        || rowToHarvest > matrix.Length - 1
-                        || colToHarvest < 0
-                        || colToHarvest > matrix[rowToHarvest].Length - 1;
-
-                if (commands[0] == "Harvest")
+                if (command == "Harvest")
                 {
-                    if (isOutsideMatrixBoundaries)
-                    {
-                        
-                    }
-                    else
-                    {
-                        if (matrix[rowToHarvest][colToHarvest] == " ")
-                        {
-
-                        }
-                        else
-                        {
-                            if (matrix[rowToHarvest][colToHarvest] == "C")
-                            {
-                                matrix[rowToHarvest][colToHarvest] = " ";
-                                carrotsHarvested++;
-                            }
-                            else if (matrix[rowToHarvest][colToHarvest] == "P")
-                            {
-                                matrix[rowToHarvest][colToHarvest] = " ";
-                                potatoHarvested++;
-                            }
-                            else if (matrix[rowToHarvest][colToHarvest] == "L")
-                            {
-                                matrix[rowToHarvest][colToHarvest] = " ";
-                                lettuceHarvested++;
-                            }
-                        }
-                    }
+                    Harvest();
                 }
-
-                else if (commands[0] == "Mole")
+                else if (command == "Mole")
                 {
-                    string direction = commands[3];
+                    direction = commands[3];
 
-                    if (isOutsideMatrixBoundaries)
-                    {
-                        
-                    }
-                    else
-                    {
-                        if (direction == "up")
-                        {
-                            for (int row = rowToHarvest; row >= 0; row -= 2)
-                            {
-                                if (matrix[row][colToHarvest] == " ")
-                                {
-
-                                }
-                                else
-                                {
-                                    matrix[row][colToHarvest] = " ";
-                                    harmedVegetables++;
-                                }
-                            }
-                        }
-                        else if (direction == "down")
-                        {
-                            for (int row = rowToHarvest; row < matrix.Length; row += 2)
-                            {
-
-                                if (matrix[row][colToHarvest] == " ")
-                                {
-
-                                }
-                                else
-                                {
-                                    matrix[row][colToHarvest] = " ";
-                                    harmedVegetables++;
-                                }
-                            }
-                        }
-                        else if (direction == "left")
-                        {
-                            for (int col = colToHarvest; col <= 0; col -= 2)
-                            {
-                                if (matrix[rowToHarvest][col] == " ")
-                                {
-
-                                }
-                                else
-                                {
-                                    matrix[rowToHarvest][col] = " ";
-                                    harmedVegetables++;
-                                }
-                            }
-                        }
-                        else if (direction == "right")
-                        {
-                            for (int col = colToHarvest; col < matrix[rowToHarvest].Length; col += 2)
-                            {
-                                if (matrix[rowToHarvest][col] == " ")
-                                {
-
-                                }
-                                else
-                                {
-                                    matrix[rowToHarvest][col] = " ";
-                                    harmedVegetables++;
-                                }
-                            }
-                        }
-                    }
+                    Mole();
                 }
 
                 input = Console.ReadLine();
             }
 
-            foreach (var item in matrix)
-            {
-                Console.WriteLine(string.Join(" ", item));
-            }
+            PrintMatrix();
 
-            Console.WriteLine($"Carrots: {carrotsHarvested}");
-            Console.WriteLine($"Potatoes: {potatoHarvested}");
-            Console.WriteLine($"Lettuce: {lettuceHarvested}");
+            Console.WriteLine($"Carrots: {harvestedCarrots}");
+            Console.WriteLine($"Potatoes: {harvestedPotatoes}");
+            Console.WriteLine($"Lettuce: {harvestedLettuce}");
+
             Console.WriteLine($"Harmed vegetables: {harmedVegetables}");
+        }
+
+        private static void PrintMatrix()
+        {
+            for (int row = 0; row < matrix.Length; row++)
+            {
+                for (int col = 0; col < matrix[row].Length; col++)
+                {
+                    Console.Write(matrix[row][col] + " ");
+                }
+
+                Console.WriteLine();
+            }
+        }
+
+        private static void Mole()
+        {
+            if (currentRow > matrix.Length - 1 || currentRow < 0
+                || currentCol < 0 || currentCol > matrix[currentRow].Length - 1)
+            {
+
+            }
+            else
+            {
+                if (direction == "up")
+                {
+                    for (int row = currentRow; row >= 0; row -= 2)
+                    {
+                        if (matrix[row][currentCol] == " ")
+                        {
+
+                        }
+                        else
+                        {
+                            matrix[row][currentCol] = " ";
+                            harmedVegetables++;
+                        }
+                    }
+                }
+                else if (direction == "down")
+                {
+                    for (int row = currentRow; row <= matrix.Length; row += 2)
+                    {
+                        if (matrix[row][currentCol] == " ")
+                        {
+
+                        }
+                        else
+                        {
+                            matrix[row][currentCol] = " ";
+                            harmedVegetables++;
+                        }
+                    }
+                }
+                else if (direction == "left")
+                {
+                    for (int col = currentCol; col >= 0; col -= 2)
+                    {
+                        if (matrix[currentRow][col] == " ")
+                        {
+
+                        }
+                        else
+                        {
+                            matrix[currentRow][col] = " ";
+                            harmedVegetables++;
+                        }
+                    }
+                }
+                else if (direction == "right")
+                {
+                    for (int col = currentCol; col <= matrix[currentRow].Length; col += 2)
+                    {
+                        if (matrix[currentRow][col] == " ")
+                        {
+
+                        }
+                        else
+                        {
+                            matrix[currentRow][col] = " ";
+                            harmedVegetables++;
+                        }
+                    }
+                }
+            }
+        }
+
+        private static void Harvest()
+        {
+            if (currentRow > matrix.Length - 1 || currentRow < 0
+                || currentCol < 0 || currentCol > matrix[currentRow].Length - 1)
+            {
+
+            }
+            else
+            {
+                if (matrix[currentRow][currentCol] == "C")
+                {
+                    matrix[currentRow][currentCol] = " ";
+                    harvestedCarrots++;
+                }
+                else if (matrix[currentRow][currentCol] == "P")
+                {
+                    matrix[currentRow][currentCol] = " ";
+                    harvestedPotatoes++;
+                }
+                else if (matrix[currentRow][currentCol] == "L")
+                {
+                    matrix[currentRow][currentCol] = " ";
+                    harvestedLettuce++;
+                }
+                else
+                {
+
+                }
+            }
         }
     }
 }
