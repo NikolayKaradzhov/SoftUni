@@ -54,11 +54,8 @@ namespace p02
                     }
                 }
             }
-            ;
 
             MoveStephen();
-
-
 
             if (energyCollected >= 50)
             {
@@ -82,8 +79,6 @@ namespace p02
                 Console.WriteLine();
             }
         }
-
-
         private static void MoveStephen()
         {
             while (true)
@@ -113,7 +108,8 @@ namespace p02
                         {
                             break;
                         }
-                        else if (matrix[stephenPositionRow][stephenPositionCol] != 'O' && matrix[stephenPositionRow][stephenPositionCol] != '-')
+                        else if (matrix[stephenPositionRow][stephenPositionCol] != 'O' 
+                            && matrix[stephenPositionRow][stephenPositionCol] != '-')
                         {
                             currentChar = matrix[stephenPositionRow][stephenPositionCol].ToString();
 
@@ -146,7 +142,8 @@ namespace p02
                         {
                             break;
                         }
-                        else if (matrix[stephenPositionRow][stephenPositionCol] != 'O' && matrix[stephenPositionRow][stephenPositionCol] != '-')
+                        else if (matrix[stephenPositionRow][stephenPositionCol] != 'O' 
+                            && matrix[stephenPositionRow][stephenPositionCol] != '-')
                         {
                             currentChar = matrix[stephenPositionRow][stephenPositionCol].ToString();
 
@@ -178,7 +175,8 @@ namespace p02
                         {
                             break;
                         }
-                        else if (matrix[stephenPositionRow][stephenPositionCol] != 'O' && matrix[stephenPositionRow][stephenPositionCol] != '-')
+                        else if (matrix[stephenPositionRow][stephenPositionCol] != 'O' 
+                            && matrix[stephenPositionRow][stephenPositionCol] != '-')
                         {
                             currentChar = matrix[stephenPositionRow][stephenPositionCol].ToString();
 
@@ -210,7 +208,8 @@ namespace p02
                         {
                             break;
                         }
-                        else if (matrix[stephenPositionRow][stephenPositionCol] != 'O' && matrix[stephenPositionRow][stephenPositionCol] != '-')
+                        else if (matrix[stephenPositionRow][stephenPositionCol] != 'O' 
+                            && matrix[stephenPositionRow][stephenPositionCol] != '-')
                         {
                             currentChar = matrix[stephenPositionRow][stephenPositionCol].ToString();
 
