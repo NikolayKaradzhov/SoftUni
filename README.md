@@ -204,8 +204,8 @@ Nikolay Karadzhov
      <tbody>
       <tr>
         <th align="center" width="50%">C# Advanced - May-June 2019</th>
-        <th width = "50%">Grade: Currently taking this course</th>
-        <th width = "20%"><a href = "">...</a></th>
+        <th width = "50%">Grade: 6.00/6.00</th>
+        <th width = "20%"><a href = "">Certificate</a></th>
         </tr>
     </table>
   
@@ -254,7 +254,6 @@ Nikolay Karadzhov
        <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11625">Workshop pt.1</a></td>
         <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11626">Workshop pt.2</a></td>
@@ -268,27 +267,11 @@ Nikolay Karadzhov
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11629">Iterators and Comparators</a></td>
         <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Iterators%20and%20Comparators/Exercise">Link</a></td>
       </tr>
       <tr>
-        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11631">Exam Preparation pt.1</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
-      </tr>
-       <tr>
-        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11632">Exam Preparation pt.2</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
-      </tr>
-      <tr>
-        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11633">Workshop pt.3</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
-      </tr>
-      <tr>
-        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11634">Exam</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11634">Exams Training</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Exams">Link</a></td>
       </tr>
       </tbody>
   </table>
