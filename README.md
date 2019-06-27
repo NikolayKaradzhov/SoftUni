@@ -224,7 +224,7 @@ Nikolay Karadzhov
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11613">Stacks and Queues</a></td>
         <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Stacks%20and%20Queues/Lab">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Stacks%20and%20Queues/Exercise">Link</a></td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11615">Multidimentional Arrays</a></td>
