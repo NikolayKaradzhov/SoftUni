@@ -204,7 +204,7 @@ Nikolay Karadzhov
      <tbody>
       <tr>
         <th align="center" width="50%">C# Advanced - May-June 2019</th>
-        <th width = "50%">Grade: 6.00/6.00</th>
+        <th width = "50%">Grade: 6.00 out of 6.00</th>
         <th width = "20%"><a href = "">Certificate</a></th>
         </tr>
     </table>
