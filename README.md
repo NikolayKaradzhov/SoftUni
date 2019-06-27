@@ -205,7 +205,7 @@ Nikolay Karadzhov
       <tr>
         <th align="center" width="50%">C# Advanced - May-June 2019</th>
         <th width = "50%">Grade: 6.00 out of 6.00</th>
-        <th width = "20%"><a href = "">Certificate</a></th>
+        <th width = "20%"><a href = "https://softuni.bg/certificates/details/67849/a1c071af">Certificate</a></th>
         </tr>
     </table>
   
