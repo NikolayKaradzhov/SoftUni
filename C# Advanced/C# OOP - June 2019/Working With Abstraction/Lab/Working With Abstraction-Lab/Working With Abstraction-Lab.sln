@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p01.RhombusOfStars", "p01.R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p02.PointInRectangle", "p02.PointInRectangle\p02.PointInRectangle.csproj", "{05799351-A321-42B4-83BD-AEE4E7A8FA09}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "p03.StudentSystem", "p03.StudentSystem\p03.StudentSystem.csproj", "{35ABA118-FEB3-4105-89C0-BD9C89920D01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{05799351-A321-42B4-83BD-AEE4E7A8FA09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05799351-A321-42B4-83BD-AEE4E7A8FA09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05799351-A321-42B4-83BD-AEE4E7A8FA09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35ABA118-FEB3-4105-89C0-BD9C89920D01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35ABA118-FEB3-4105-89C0-BD9C89920D01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35ABA118-FEB3-4105-89C0-BD9C89920D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35ABA118-FEB3-4105-89C0-BD9C89920D01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

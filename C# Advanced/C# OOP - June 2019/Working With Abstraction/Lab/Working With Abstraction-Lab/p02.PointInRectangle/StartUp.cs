@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace p02.PointInRectangle
 {
-    class StartUp
+    public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             List<double> coordinates = Console.ReadLine()
                 .Split()
