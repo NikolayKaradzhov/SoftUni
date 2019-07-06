@@ -204,8 +204,8 @@ Nikolay Karadzhov
      <tbody>
       <tr>
         <th align="center" width="50%">C# Advanced - May-June 2019</th>
-        <th width = "50%">Grade: Currently taking this course</th>
-        <th width = "20%"><a href = "">...</a></th>
+        <th width = "50%">Grade: 6.00 out of 6.00</th>
+        <th width = "20%"><a href = "https://softuni.bg/certificates/details/67849/a1c071af">Certificate</a></th>
         </tr>
     </table>
   
@@ -224,72 +224,54 @@ Nikolay Karadzhov
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11613">Stacks and Queues</a></td>
         <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Stacks%20and%20Queues/Lab">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Stacks%20and%20Queues/Exercise">Link</a></td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11615">Multidimentional Arrays</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Multidimentional%20Arrays/Lab">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Multidimentional%20Arrays/Exercise">Link</a></td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11617">Sets And Dictionaries Advanced</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Sets%20And%20Dictionaries%20Advanced/Lab">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Sets%20And%20Dictionaries%20Advanced/Exercise">Link</a></td>
       </tr>
        <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11619">Streams, Files and Directories</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Streams%2C%20Files%20And%20Directories/Lab">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Streams%2C%20Files%20And%20Directories/Exercise">Link</a></td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11621">Functional Programming</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Functional%20Programming/Lab">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Functional%20Programming/Exercise">Link</a></td>
       </tr>
        <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11623">Defining Classes</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Defining%20Classes/Lab">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Defining%20Classes/Exercise">Link</a></td>
       </tr>
        <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11625">Workshop pt.1</a></td>
         <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11626">Workshop pt.2</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Workshop-pt.2">Link</a></td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11627">Generics</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Generics/Lab">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Generics/Exercise">Link</a></td>
       </tr>
       <tr>
         <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11629">Iterators and Comparators</a></td>
         <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Iterators%20and%20Comparators/Exercise">Link</a></td>
       </tr>
       <tr>
-        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11631">Exam Preparation pt.1</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
-      </tr>
-       <tr>
-        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11632">Exam Preparation pt.2</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
-      </tr>
-      <tr>
-        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11633">Workshop pt.3</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
-      </tr>
-      <tr>
-        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11634">Exam</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://softuni.bg/trainings/2348/csharp-advanced-may-2019#lesson-11634">Exams Training</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20Advanced%20-%20May%202019/Exams">Link</a></td>
       </tr>
       </tbody>
   </table>
