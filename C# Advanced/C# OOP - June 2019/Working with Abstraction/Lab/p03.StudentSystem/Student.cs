@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace p03.StudentSystem
+﻿namespace p03.StudentSystem
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
     public class Student
     {
         public Student(string name, int age, double grade)

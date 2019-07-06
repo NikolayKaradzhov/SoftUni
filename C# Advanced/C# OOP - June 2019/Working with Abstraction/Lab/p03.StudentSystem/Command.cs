@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace p03.StudentSystem
+﻿namespace p03.StudentSystem
 {
     public class Command
     {
