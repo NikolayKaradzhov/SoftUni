@@ -21,7 +21,7 @@ namespace p01.RawData
             for (int i = 0; i < lines; i++)
             {
                 string[] parameters = Console.ReadLine()
-                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                    ?.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
                 Car car = this.CreateCar(parameters);
 
