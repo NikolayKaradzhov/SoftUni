@@ -1,4 +1,6 @@
-﻿namespace p02.CarsSalesman
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace p02.CarsSalesman
 {
     using System;
     using System.Collections.Generic;
@@ -29,6 +31,7 @@
             }
 
             int carCount = int.Parse(Console.ReadLine());
+
 
             for (int i = 0; i < carCount; i++)
             {
