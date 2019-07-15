@@ -14,11 +14,7 @@
 
                 Box box = new Box(length, width, height);
 
-                Console.WriteLine($"Surface Area - {box.CalculateSurfaceArea():F2}");
-
-                Console.WriteLine($"Lateral Surface Area - {box.CalculateLateralSurfaceArea():F2}");
-
-                Console.WriteLine($"Volume - {box.CalculateVolume():F2}");
+                Console.WriteLine(box.ToString());
             }
             catch (Exception ex)
             {

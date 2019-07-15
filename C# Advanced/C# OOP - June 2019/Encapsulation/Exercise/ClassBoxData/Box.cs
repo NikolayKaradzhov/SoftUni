@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http.Headers;
+using System.Text;
 
 namespace ClassBoxData
 {
@@ -24,10 +25,7 @@ namespace ClassBoxData
 
             private set
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentException("Length cannot be zero or negative.");
-                }
+                ValidateBoxSide(value, "Length");
 
                 this.length = value;
             }
@@ -39,10 +37,7 @@ namespace ClassBoxData
 
             private set
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentException("Width cannot be zero or negative.");
-                }
+                ValidateBoxSide(value, "Width");
 
                 this.width = value;
             }
@@ -54,10 +49,7 @@ namespace ClassBoxData
 
             private set
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentException("Height cannot be zero or negative.");
-                }
+                ValidateBoxSide(value, "Height");
 
                 this.height = value;
             }
@@ -87,6 +79,25 @@ namespace ClassBoxData
                             * this.Height;
 
             return result;
+        }
+
+        private void ValidateBoxSide(double value, string nameProperty)
+        {
+            if (value <= 0)
+            {
+                throw new ArgumentException($"{nameProperty} cannot be zero or negative.");
+            }
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"Surface Area - {CalculateSurfaceArea():F2}");
+            sb.AppendLine($"Lateral Surface Area - {CalculateLateralSurfaceArea():F2}");
+            sb.AppendLine($"Volume - {CalculateVolume():F2}");
+
+            return sb.ToString().TrimEnd();
         }
     }
 }
