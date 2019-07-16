@@ -13,7 +13,7 @@
             IIdentifiable identifiable = new Citizen(name, age, id, birthdate);
             IBirthable birthable = new Citizen(name, age, id, birthdate);
             Console.WriteLine(identifiable.Id);
-            Console.WriteLine(birthable.BirthDate);
+            Console.WriteLine(birthable.Birthdate);
         }
     }
 }

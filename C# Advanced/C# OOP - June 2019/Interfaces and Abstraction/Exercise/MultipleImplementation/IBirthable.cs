@@ -2,6 +2,6 @@
 {
     public interface IBirthable
     {
-        string BirthDate { get; set; }
+        string Birthdate { get; set; }
     }
 }
