@@ -6,7 +6,7 @@
         {
             this.Name = name;
             this.Age = age;
-            this.BirthDate = birthDate;
+            this.Birthdate = birthDate;
             this.Id = id;
         }
 
@@ -14,7 +14,7 @@
 
         public int Age { get; set; }
 
-        public string BirthDate { get; set; }
+        public string Birthdate { get; set; }
 
         public string Id { get; set; }
     }
