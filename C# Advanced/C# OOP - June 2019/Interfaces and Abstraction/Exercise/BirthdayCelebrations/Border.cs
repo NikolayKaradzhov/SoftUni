@@ -1,10 +1,10 @@
-﻿namespace BorderControl
+﻿namespace BirthdayCelebrations
 {
-    public abstract class Border
+    public class Border
     {
         private string id;
 
-        protected Border(string id)
+        public Border(string id)
         {
             this.Id = id;
         }
@@ -13,7 +13,7 @@
         {
             get => this.id;
 
-            private set => this.id = value;
+            set => this.id = value;
         }
     }
 }
