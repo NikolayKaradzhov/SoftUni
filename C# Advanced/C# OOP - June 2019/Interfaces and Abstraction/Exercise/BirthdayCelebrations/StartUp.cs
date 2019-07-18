@@ -1,4 +1,4 @@
-﻿namespace BirthdayCelebrations
+﻿namespace FoodShortage
 {
     using System;
     using System.Collections.Generic;
