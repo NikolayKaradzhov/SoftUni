@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Text;
+using Logger.Models.Contracts;
 
 namespace Logger.Models.Layouts
 {
-    using Logger.Models.Contracts;
-
     public class XmlLayout : ILayout
     {
         public string Format => GetFormat();
