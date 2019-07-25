@@ -1,32 +1,31 @@
-﻿namespace Logger.Models.Files
+﻿using System;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using Logger.Models.Contracts;
+using Logger.Models.Contracts.Enumerations;
+using Logger.Models.IOManagement;
+
+namespace Logger.Models.Files
 {
-    using Logger.Models.Contracts;
-    using System;
-    using System.IO;
-    using System.Linq;
-    using Logger.Models.Contracts.Enumerations;
-    using Logger.Models.IOManagement;
-    using System.Globalization;
-
-
     public class LogFile : IFile
     {
-        private const string dateFormat = "M/dd/yyyy H:mm:ss tt";
+        private const string dateFormat = "M/dd/yyyy h:mm:ss tt";
 
         private const string currentDirectory = "\\logs\\";
         private const string currentFile = "log.txt";
 
-        private string currentPath;
         private IIOManager IOManager;
 
         public LogFile()
         {
             this.IOManager = new IOManager(currentDirectory, currentFile);
-            this.currentPath = this.IOManager.CurrentFilePath;
+            this.Path = this.IOManager.GetCurrentPath();
             this.IOManager.EnsureDirectoryAndFileExists();
+            this.Path = Path + currentDirectory + currentFile;
         }
 
-        public string Path => this.currentPath;
+        public string Path { get; }
 
         public ulong Size => GetFileSize();
 
