@@ -50,7 +50,10 @@
             string message = error.Message;
             Level level = error.Level;
 
-            string formattedMessage = String.Format(format, dateTime.ToString(dateFormat, CultureInfo.InvariantCulture), level.ToString(), message);
+            string formattedMessage = String.Format(format, 
+                dateTime.ToString(dateFormat, CultureInfo.InvariantCulture), 
+                level.ToString(), 
+                message);
 
             return formattedMessage;
         }
