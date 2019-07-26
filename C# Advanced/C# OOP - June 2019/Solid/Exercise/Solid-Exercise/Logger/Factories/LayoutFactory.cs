@@ -1,4 +1,6 @@
-﻿using Logger.Exceptions;
+﻿using System;
+using System.Reflection;
+using Logger.Exceptions;
 using Logger.Models.Contracts;
 using Logger.Models.Layouts;
 
