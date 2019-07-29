@@ -1,26 +1,55 @@
 ﻿namespace MuOnline.Models.Inventories
 {
+    using System;
+    using System.Linq;
     using System.Collections.Generic;
+    
     using Contracts;
     using Items.Contracts;
 
     public class Inventory : IInventory
     {
-        public IReadOnlyCollection<IItem> Items { get; set; }
+        private readonly List<IItem> items;
+
+        public Inventory()
+        {
+            this.items = new List<IItem>();
+        }
+
+        public IReadOnlyCollection<IItem> Items => this.items.AsReadOnly();
 
         public void AddItem(IItem item)
         {
-            throw new System.NotImplementedException();
+            if (item == null)
+            {
+                throw new ArgumentNullException("Item cannot be null!");
+            }
+
+            this.items.Add(item);
         }
 
         public bool RemoveItem(IItem item)
         {
-            throw new System.NotImplementedException();
+            if (item == null)
+            {
+                throw new ArgumentNullException("Item cannot be null!");
+            }
+
+            var isRemove = this.items.Remove(item);
+
+            return isRemove;
         }
 
         public IItem GetItem(string item)
         {
-            throw new System.NotImplementedException();
+            if (item == null)
+            {
+                throw new ArgumentNullException("Item cannot be null!");
+            }
+
+            var targetItem = this.items.FirstOrDefault(i => i.GetType().Name == item);
+
+            return targetItem;
         }
     }
 }

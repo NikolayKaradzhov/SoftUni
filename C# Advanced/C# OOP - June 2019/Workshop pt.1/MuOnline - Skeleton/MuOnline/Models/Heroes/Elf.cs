@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MuOnline.Models.Heroes
+﻿namespace MuOnline.Models.Heroes
 {
-    public class Elf
+    public class Elf : Hero
     {
+        public Elf(string username)
+            : base (username, strength, agility, stamina, energy)
+        {
+        }
+
         private const int strength = 15;
         private const int agility = 30;
         private const int stamina = 60;
