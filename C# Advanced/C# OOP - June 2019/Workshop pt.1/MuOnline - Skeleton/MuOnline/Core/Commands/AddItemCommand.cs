@@ -18,7 +18,7 @@
 
         public string Execute(string[] inputArgs)
         {
-            var itemType = inputArgs[0].ToLower();
+            var itemType = inputArgs[0];
 
             var item = this.itemFactory.Create(itemType);
 

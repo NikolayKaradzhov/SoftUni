@@ -2,8 +2,13 @@
 {
     public class SecretScepter : Item
     {
-        public SecretScepter(int strength, int agility, int stamina, int energy) 
-            : base(strength, agility, stamina, energy)
+        private const int strengthPoints = 10;
+        private const int agilityPoints = 10;
+        private const int energyPoints = 50;
+        private const int staminaPoints = 20;
+
+        public SecretScepter() 
+            : base(strengthPoints, agilityPoints, energyPoints, staminaPoints)
         {
         }
     }

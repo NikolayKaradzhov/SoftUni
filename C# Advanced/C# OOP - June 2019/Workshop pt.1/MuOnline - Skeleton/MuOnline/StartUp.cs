@@ -1,4 +1,13 @@
-﻿namespace MuOnline
+﻿using Microsoft.Extensions.DependencyInjection;
+using MuOnline.Core.Factories;
+using MuOnline.Core.Factories.Contracts;
+using MuOnline.Models.Heroes.HeroContracts;
+using MuOnline.Models.Items.Contracts;
+using MuOnline.Models.Monsters.Contracts;
+using MuOnline.Repositories;
+using MuOnline.Repositories.Contracts;
+
+namespace MuOnline
 {
     using System;
     using Core;
@@ -15,7 +24,24 @@
 
         private static IServiceProvider ConfigureServices()
         {
-            throw new NotImplementedException();
+            //DI(Dependency Injection => following Open/Close principles in SOLID)
+            //Repositories and Factories to be loaded.
+
+            var serviceCollection = new ServiceCollection();
+
+            serviceCollection.AddTransient<IItemFactory, ItemFactory>();
+            serviceCollection.AddTransient<IMonsterFactory, MonsterFactory>();
+            serviceCollection.AddTransient<IHeroFactory, HeroFactory>();
+            serviceCollection.AddTransient<ICommandInterpreter, CommandInterpreter>();
+
+            serviceCollection.AddSingleton<IRepository<IHero>, HeroRepository>();
+            serviceCollection.AddSingleton<IRepository<IMonster>, MonsterRepository>();
+            serviceCollection.AddSingleton<IRepository<IItem>, ItemRepository>();
+
+            var serviceProvider = serviceCollection.BuildServiceProvider();
+
+            return serviceProvider;
+
         }
     }
 }
