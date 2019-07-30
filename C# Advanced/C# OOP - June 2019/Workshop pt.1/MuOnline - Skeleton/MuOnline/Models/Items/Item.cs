@@ -27,7 +27,7 @@ namespace MuOnline.Models.Items
             }
             private set
             {
-                if (value <= 0)
+                if (value < 0)
                 {
                     throw new ArgumentException("Strength cannot be less than zero");
                 }
@@ -44,7 +44,7 @@ namespace MuOnline.Models.Items
             }
             private set
             {
-                if (value <= 0)
+                if (value < 0)
                 {
                     throw new ArgumentException("Agility cannot be less than zero");
                 }
@@ -61,7 +61,7 @@ namespace MuOnline.Models.Items
             }
             private set
             {
-                if (value <= 0)
+                if (value < 0)
                 {
                     throw new ArgumentException("Stamina cannot be less than zero");
                 }
@@ -78,7 +78,7 @@ namespace MuOnline.Models.Items
             }
             private set
             {
-                if (value <= 0)
+                if (value < 0)
                 {
                     throw new ArgumentException("Energy cannot be less than zero");
                 }
