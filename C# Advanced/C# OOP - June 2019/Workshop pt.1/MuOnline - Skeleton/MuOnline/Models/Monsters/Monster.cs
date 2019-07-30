@@ -49,6 +49,7 @@
             }
 
             var exp = Math.Abs(this.VitalityPoints - attackPoints);
+            this.VitalityPoints -= attackPoints;
 
             return exp;
         }
