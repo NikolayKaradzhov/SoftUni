@@ -5,7 +5,7 @@ namespace MuOnline.Core.Factories
 {
     public class MonsterFactory : IMonsterFactory
     {
-        public IMonster Create(string monsterType, int attackPoints, int defensePoints)
+        public IMonster Create(string monsterType)
         {
             throw new System.NotImplementedException();
         }
