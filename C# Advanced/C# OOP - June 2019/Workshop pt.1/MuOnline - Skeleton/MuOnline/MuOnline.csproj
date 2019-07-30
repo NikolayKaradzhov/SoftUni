@@ -7,10 +7,8 @@
 
   <ItemGroup>
     <Folder Include="Models\Items\Sets\DarkKnightSets\DoomSet\" />
-    <Folder Include="Models\Items\Sets\ElfSets\BuffSet\" />
     <Folder Include="Models\Items\Sets\SoulMasterSets\MagicSet\" />
     <Folder Include="Models\Items\Sets\SoulMasterSets\PosionSet\" />
-    <Folder Include="Models\Items\Weapons\Scipters\" />
     <Folder Include="Utilities\" />
   </ItemGroup>
 

@@ -3,10 +3,10 @@
     public class BudgeDragon : Monster
     {
         private const int attackPoints = 20;
-        private const int defensePoints = 50;
+        private const int vitalityPoints = 50;
 
         public BudgeDragon()
-            : base(attackPoints, defensePoints)
+            : base(attackPoints, vitalityPoints)
         {
         }
     }

@@ -35,9 +35,9 @@ namespace MuOnline.Repositories
                 throw new ArgumentNullException("Hero cannot be null!");
             }
 
-            bool isRemoved = this.heroes.Remove(hero);
+            bool isHeroRemoved = this.heroes.Remove(hero);
 
-            return isRemoved;
+            return isHeroRemoved;
         }
 
         public IHero Get(string hero)
