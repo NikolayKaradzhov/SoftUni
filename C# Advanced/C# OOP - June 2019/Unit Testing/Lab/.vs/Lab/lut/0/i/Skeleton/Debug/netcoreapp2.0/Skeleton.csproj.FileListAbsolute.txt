@@ -1,8 +1,10 @@
+C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\b\Skeleton\Debug\netcoreapp2.0\NUnit3.TestAdapter.dll
+C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\b\Skeleton\Debug\netcoreapp2.0\NUnit3.TestAdapter.pdb
+C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\b\Skeleton\Debug\netcoreapp2.0\nunit.engine.netstandard.dll
 C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\b\Skeleton\Debug\netcoreapp2.0\Skeleton.deps.json
 C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\b\Skeleton\Debug\netcoreapp2.0\Skeleton.runtimeconfig.json
 C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\b\Skeleton\Debug\netcoreapp2.0\Skeleton.runtimeconfig.dev.json
 C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\b\Skeleton\Debug\netcoreapp2.0\Skeleton.dll
-C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\i\Skeleton\Debug\netcoreapp2.0\Skeleton.csprojAssemblyReference.cache
 C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\i\Skeleton\Debug\netcoreapp2.0\Skeleton.csproj.CoreCompileInputs.cache
 C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\i\Skeleton\Debug\netcoreapp2.0\Skeleton.AssemblyInfoInputs.cache
 C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\i\Skeleton\Debug\netcoreapp2.0\Skeleton.AssemblyInfo.cs
