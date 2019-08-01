@@ -10,7 +10,7 @@ namespace UnitTest
 
         public BankAccount(decimal balance)
         {
-            this.Balance = 50;
+            this.Balance = balance;
         }
 
         public decimal Balance
@@ -40,7 +40,7 @@ namespace UnitTest
             this.Balance += sum;
         }
 
-        public void WithDraw(decimal sum)
+        public decimal WithDraw(decimal sum)
         {
             if (sum <= 0)
             {
@@ -48,6 +48,8 @@ namespace UnitTest
             }
 
             this.Balance -= sum;
+
+            return sum;
         }
     }
 }
