@@ -23,7 +23,7 @@ namespace UnitTest
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException("Value cannot be less than 0");
+                    throw new ArgumentException("Balance cannot be less than 0");
                 }
 
                 this.balance = value;
@@ -49,7 +49,7 @@ namespace UnitTest
 
             this.Balance -= sum;
 
-            return sum;
+            return this.Balance;
         }
     }
 }
