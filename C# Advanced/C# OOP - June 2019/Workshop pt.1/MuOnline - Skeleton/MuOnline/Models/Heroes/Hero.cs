@@ -35,12 +35,15 @@
             this.Resets = 0;
 
             this.Inventory = new Inventory();
+
+            this.totalStaminaPoints = GetTotalStaminaPoints();
+            this.totalAgilityPoints = GetTotalAgilityPoints();
         }
 
         public IInventory Inventory { get; }
 
         public bool IsAlive
-            => this.totalStaminaPoints > 0;
+            => this.TotalStaminaPoints > 0;
 
         public string Username
         {
@@ -239,8 +242,12 @@
             }
             private set
             {
-                this.totalAgilityPoints = this.Agility +
-                                          this.Inventory.Items.Sum(x => x.Agility);
+                if (value < 0)
+                {
+                    throw new ArgumentException("Total agility cannot be less than 0!");
+                }
+
+                this.totalAgilityPoints = value;
             }
         }
 
@@ -252,9 +259,23 @@
             }
             private set
             {
-                this.totalStaminaPoints = this.Stamina +
-                    this.Inventory.Items.Sum(x => x.Stamina);
+                if (value < 0)
+                {
+                    throw new ArgumentException("Total stamina cannot be less than 0!");
+                }
+
+                this.totalStaminaPoints = value;
             }
+        }
+
+        private int GetTotalStaminaPoints()
+        {
+            return this.Stamina + this.Inventory.Items.Sum(x => x.Stamina);
+        }
+
+        private int GetTotalAgilityPoints()
+        {
+            return this.Agility + this.Inventory.Items.Sum(x => x.Agility);
         }
     }
 }

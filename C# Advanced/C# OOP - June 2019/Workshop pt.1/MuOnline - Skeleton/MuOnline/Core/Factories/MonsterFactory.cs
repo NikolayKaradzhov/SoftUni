@@ -15,6 +15,7 @@ namespace MuOnline.Core.Factories
             var monsterType = Assembly
                 .GetExecutingAssembly()
                 .GetTypes()
+                .Where(x => typeof(IMonster).IsAssignableFrom(x))
                 .FirstOrDefault(m => m.Name.ToLower() == monsterTypeNameLowerCase);
 
             if (monsterType == null)
