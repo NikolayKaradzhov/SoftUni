@@ -14,3 +14,4 @@ Settings.StyleCop
 *.Cache
 *.pdb
 *.dll
+.vs/
