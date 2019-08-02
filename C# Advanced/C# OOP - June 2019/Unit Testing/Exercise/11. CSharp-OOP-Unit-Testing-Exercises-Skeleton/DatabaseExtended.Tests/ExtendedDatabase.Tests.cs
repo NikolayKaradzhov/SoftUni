@@ -1,14 +1,12 @@
 using System;
-using System.Collections.Generic;
 using NUnit.Framework;
-using ExtendedDatabase;
 
 namespace Tests
 {
     public class ExtendedDatabaseTests
     {
         private Person person;
-        private ExtendedDatabase.ExtendedDatabase database;
+        private ExtendedDatabase database;
 
         [SetUp]
         public void Setup()
@@ -22,7 +20,7 @@ namespace Tests
                 people[i] = new Person(i, $"Name{i}");
             }
 
-            this.database = new ExtendedDatabase.ExtendedDatabase(people);
+            this.database = new ExtendedDatabase(people);
         }
 
         [Test]
@@ -46,7 +44,7 @@ namespace Tests
             Person[] people = new Person[17];
 
             Assert.
-                Throws<ArgumentException>(() => this.database = new ExtendedDatabase.ExtendedDatabase(people));
+                Throws<ArgumentException>(() => this.database = new ExtendedDatabase(people));
         }
 
         [Test]
@@ -75,6 +73,57 @@ namespace Tests
             Person testPerson = new Person(1, "Kristyan");
 
             Assert.Throws<InvalidOperationException>(() => database.Add(testPerson));
+        }
+
+        [Test]
+        public void TestRemoveMethodWorksCorrectly()
+        {
+            int expectedCount = database.Count;
+
+            for (int i = 0; i < expectedCount; i++)
+            {
+                database.Remove();
+            }
+
+            Assert.Throws<InvalidOperationException>(() => database.Remove());
+        }
+
+        [Test]
+        public void TestFindByUsernameMethodFirstException()
+        {
+            Assert.Throws<ArgumentNullException>(() => database.FindByUsername(null));
+        }
+
+        [Test]
+        public void TestFindByUsernameMethodSecondException()
+        {
+            Assert.Throws<InvalidOperationException>(() => database.FindByUsername("asdf"));
+        }
+
+        [Test]
+        public void TestFindByUsernameMethodWorksCorrectly()
+        {
+            Assert.AreEqual(1, this.database.FindByUsername("Name1").Id);
+            Assert.AreEqual("Name1", this.database.FindByUsername("Name1").UserName);
+        }
+
+        [Test]
+        public void TestFindByIdMethodFirstException()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => database.FindById(-1));
+        }
+
+        [Test]
+        public void TestFindByIdMethodSecondException()
+        {
+            Assert.Throws<InvalidOperationException>(() => database.FindById(123));
+        }
+
+        [Test]
+        public void TestFindByIdReturnsCorrectResult()
+        {
+            Assert.AreEqual(1, this.database.FindById(1).Id);
+            Assert.AreEqual("Name1", this.database.FindById(1).UserName);
         }
     }
 }
