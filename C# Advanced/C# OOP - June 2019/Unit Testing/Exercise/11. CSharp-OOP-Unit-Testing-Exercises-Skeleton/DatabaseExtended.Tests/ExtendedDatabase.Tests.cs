@@ -62,9 +62,7 @@ namespace Tests
         {
             this.database.Remove();
 
-            Person person = new Person(23, "Name19");
-
-            database.Add(person);
+            Person person = new Person(23, "Name1");
 
             Assert.Throws<InvalidOperationException>(() => database.Add(person));
         }
@@ -74,9 +72,7 @@ namespace Tests
         {
             database.Remove();
 
-            Person testPerson = new Person(18, "Kristyan");
-
-            database.Add(testPerson);
+            Person testPerson = new Person(1, "Kristyan");
 
             Assert.Throws<InvalidOperationException>(() => database.Add(testPerson));
         }
