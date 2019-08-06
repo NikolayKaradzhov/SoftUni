@@ -4,6 +4,8 @@
 
     public interface IHotel
     {
-       //Implement me
+        void Accommodate(IAnimal animal);
+
+        void Adopt(string animalName, string owner);
     }
 }

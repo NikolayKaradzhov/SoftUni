@@ -1,7 +1,11 @@
-﻿namespace AnimalCentre.Models.Contracts
+﻿using System;
+
+namespace AnimalCentre.Models.Contracts
 {
     public interface IProcedure
     {
-       //Implement me
+        string History();
+
+        void DoService(IAnimal animal, int procedureTime);
     }
 }
