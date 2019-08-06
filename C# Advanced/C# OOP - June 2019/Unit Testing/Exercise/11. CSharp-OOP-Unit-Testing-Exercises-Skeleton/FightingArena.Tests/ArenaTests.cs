@@ -1,5 +1,4 @@
 ﻿using System;
-using FightingArena;
 using NUnit.Framework;
 
 namespace Tests
