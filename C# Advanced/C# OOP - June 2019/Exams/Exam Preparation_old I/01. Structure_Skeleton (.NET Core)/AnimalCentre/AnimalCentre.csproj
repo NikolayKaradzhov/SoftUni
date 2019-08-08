@@ -5,4 +5,19 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="..\..\01. Structure_Skeleton %2528.NET Core%2529\AnimalCentre\Models\Animals\Animal.cs" />
+    <Compile Include="..\..\01. Structure_Skeleton %2528.NET Core%2529\AnimalCentre\Models\Animals\Cat.cs" />
+    <Compile Include="..\..\01. Structure_Skeleton %2528.NET Core%2529\AnimalCentre\Models\Animals\Dog.cs" />
+    <Compile Include="..\..\01. Structure_Skeleton %2528.NET Core%2529\AnimalCentre\Models\Animals\Lion.cs" />
+    <Compile Include="..\..\01. Structure_Skeleton %2528.NET Core%2529\AnimalCentre\Models\Animals\Pig.cs" />
+    <Compile Include="..\..\01. Structure_Skeleton %2528.NET Core%2529\AnimalCentre\Models\Procedures\Chip.cs" />
+    <Compile Include="..\..\01. Structure_Skeleton %2528.NET Core%2529\AnimalCentre\Models\Procedures\DentalCare.cs" />
+    <Compile Include="..\..\01. Structure_Skeleton %2528.NET Core%2529\AnimalCentre\Models\Procedures\Fitness.cs" />
+    <Compile Include="..\..\01. Structure_Skeleton %2528.NET Core%2529\AnimalCentre\Models\Procedures\NailTrim.cs" />
+    <Compile Include="..\..\01. Structure_Skeleton %2528.NET Core%2529\AnimalCentre\Models\Procedures\Play.cs" />
+    <Compile Include="..\..\01. Structure_Skeleton %2528.NET Core%2529\AnimalCentre\Models\Procedures\Procedure.cs" />
+    <Compile Include="..\..\01. Structure_Skeleton %2528.NET Core%2529\AnimalCentre\Models\Procedures\Vaccinate.cs" />
+  </ItemGroup>
+
 </Project>
