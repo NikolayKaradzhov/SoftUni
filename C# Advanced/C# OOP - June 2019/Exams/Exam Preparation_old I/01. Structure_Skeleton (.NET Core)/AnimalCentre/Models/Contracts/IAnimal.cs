@@ -8,14 +8,14 @@
 
         int Energy { get; set; }
 
-        int ProcedureTime { get; }
+        int ProcedureTime { get; set; }
 
-        string Owner { get; }
+        string Owner { get; set; }
 
-        bool IsAdopt { get; }
+        bool IsAdopt { get; set; }
 
         bool IsChipped { get; set; }
 
-        bool IsVaccinated { get; }
+        bool IsVaccinated { get; set; }
     }
 }
