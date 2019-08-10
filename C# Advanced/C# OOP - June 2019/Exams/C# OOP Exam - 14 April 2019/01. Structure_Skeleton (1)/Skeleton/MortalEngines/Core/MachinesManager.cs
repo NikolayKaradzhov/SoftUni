@@ -13,13 +13,11 @@ namespace MortalEngines.Core
     {
         private IList<IPilot> pilots;
         private IList<IMachine> machines;
-        private IList<ITank> tanks;
 
         public MachinesManager()
         {
             this.pilots = new List<IPilot>();
             this.machines = new List<IMachine>();
-            this.tanks = new List<ITank>();
         }
 
         public string HirePilot(string name)
@@ -38,43 +36,98 @@ namespace MortalEngines.Core
 
         public string ManufactureTank(string name, double attackPoints, double defensePoints)
         {
-
-            //Change TO MACHINES
-            if (this.tanks.Any(t => t.Name == name))
+            if (this.machines.Any(t => t.Name == name))
             {
                 return $"Machine {name} is manufactured already";
             }
 
-            ITank tank = new Tank(name, attackPoints, defensePoints);
+            IMachine tank = new Tank(name, attackPoints, defensePoints);
 
-            tanks.Add(tank);
+            machines.Add(tank);
 
-            return $"Tank {name} manufactured - attack: {attackPoints}; defense: {defensePoints}";
+            return $"Tank {name} manufactured - attack: {tank.AttackPoints:f2}; defense: {tank.DefensePoints:f2}";
         }
 
         public string ManufactureFighter(string name, double attackPoints, double defensePoints)
         {
-            throw new System.NotImplementedException();
+            if (machines.Any(m => m.Name == name))
+            {
+                return $"Machine {name} is manufactured already";
+            }
+
+            IMachine fighter = new Fighter(name, attackPoints, defensePoints);
+
+            this.machines.Add(fighter);
+
+            return $"Fighter {name} manufactured - attack: {fighter.AttackPoints:f2}; defense: {fighter.DefensePoints:f2}; aggressive: ON";
         }
 
         public string EngageMachine(string selectedPilotName, string selectedMachineName)
         {
-            throw new System.NotImplementedException();
+            IPilot pilot = this.pilots.FirstOrDefault(p => p.Name == selectedPilotName);
+
+            if (pilot == null)
+            {
+                return $"Pilot {selectedPilotName} could not be found";
+            }
+
+            IMachine machine = this.machines.FirstOrDefault(m => m.Name == selectedMachineName);
+
+            if (machine == null)
+            {
+                return $"Machine {selectedMachineName} could not be found";
+            }
+
+            if (machine.Pilot != null)
+            {
+                return $"Machine {selectedMachineName} is already occupied";
+            }
+
+            pilot.AddMachine(machine);
+            machine.Pilot = pilot;
+
+            return $"Pilot {selectedPilotName} engaged machine {selectedMachineName}";
         }
 
         public string AttackMachines(string attackingMachineName, string defendingMachineName)
         {
-            throw new System.NotImplementedException();
+            IMachine attackingMachine = this.machines.FirstOrDefault(m => m.Name == attackingMachineName);
+
+            if (attackingMachine == null)
+            {
+                return $"Machine {attackingMachineName} could not be found";
+            }
+
+            IMachine defendingMachine = this.machines.FirstOrDefault(m => m.Name == defendingMachineName);
+
+            if (defendingMachine == null)
+            {
+                return $"Machine {defendingMachineName} could not be found";
+            }
+
+            if (attackingMachine.HealthPoints <= 0)
+            {
+                return $"Dead machine {attackingMachineName} cannot attack or be attacked";
+            }
+
+            if (defendingMachine.HealthPoints <= 0)
+            {
+                return $"Dead machine {defendingMachineName} cannot attack or be attacked";
+            }
+
+            attackingMachine.Attack(defendingMachine);
+
+            return $"Machine {defendingMachineName} was attacked by machine {attackingMachineName} - current health: {defendingMachine.HealthPoints:f2}";
         }
 
         public string PilotReport(string pilotReporting)
         {
             var pilot = this.pilots.FirstOrDefault(p => p.Name == pilotReporting);
 
-            //if (pilot == null)
-            //{
-                
-            //}
+            if (pilot == null)
+            {
+                return $"Pilot {pilotReporting} could not be found";
+            }
 
             return pilot.Report();
         }
@@ -88,14 +141,34 @@ namespace MortalEngines.Core
 
         public string ToggleFighterAggressiveMode(string fighterName)
         {
-            throw new System.NotImplementedException();
+            IMachine machine = this.machines.FirstOrDefault(m => m.Name == fighterName);
+
+            if (machine == null)
+            {
+                return $"Machine {fighterName} could not be found";
+            }
+
+            IFighter fighter = (IFighter) machine;
+
+            fighter.ToggleAggressiveMode();
+
+            return $"Fighter {fighterName} toggled aggressive mode";
         }
 
         public string ToggleTankDefenseMode(string tankName)
         {
-            var tank = this.tanks.FirstOrDefault(t => t.Name == tankName);
+            //CChange to IMachine
+            IMachine machine = this.machines.FirstOrDefault(t => t.Name == tankName);
 
+            if (machine == null)
+            {
+                return $"Machine {tankName} could not be found";
+            }
 
+            ITank tank = (ITank) machine;
+            tank.ToggleDefenseMode();
+
+            return $"Tank {tankName} toggled defense mode";
         }
     }
 }
