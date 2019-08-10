@@ -38,6 +38,8 @@ namespace MortalEngines.Core
 
         public string ManufactureTank(string name, double attackPoints, double defensePoints)
         {
+
+            //Change TO MACHINES
             if (this.tanks.Any(t => t.Name == name))
             {
                 return $"Machine {name} is manufactured already";
@@ -91,7 +93,9 @@ namespace MortalEngines.Core
 
         public string ToggleTankDefenseMode(string tankName)
         {
-            throw new System.NotImplementedException();
+            var tank = this.tanks.FirstOrDefault(t => t.Name == tankName);
+
+
         }
     }
 }
