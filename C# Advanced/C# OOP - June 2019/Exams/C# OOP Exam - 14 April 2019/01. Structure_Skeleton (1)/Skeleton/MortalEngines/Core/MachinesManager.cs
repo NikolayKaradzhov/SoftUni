@@ -157,7 +157,6 @@ namespace MortalEngines.Core
 
         public string ToggleTankDefenseMode(string tankName)
         {
-            //CChange to IMachine
             IMachine machine = this.machines.FirstOrDefault(t => t.Name == tankName);
 
             if (machine == null)
