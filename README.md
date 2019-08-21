@@ -347,11 +347,9 @@ Nikolay Karadzhov
 	  <tr>
         <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11653">Workshop pt.1</a></td>
         <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
         <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11654">Workshop pt.2</a></td>
-        <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
@@ -367,11 +365,9 @@ Nikolay Karadzhov
 	  <tr>
         <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11659">Exam Preparation pt.1</a></td>
         <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
         <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11660">Exam Preparation pt.2</a></td>
-        <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
