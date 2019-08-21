@@ -299,7 +299,7 @@ Nikolay Karadzhov
       <tr>
         <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11637">Working With Abstraction</a></td>
         <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20OOP%20-%20June%202019/Working%20with%20Abstraction/Exercise">Link</a></td>
       </tr>
 	  <tr>
         <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11641">Inheritance</a></td>
