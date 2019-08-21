@@ -447,6 +447,16 @@ Nikolay Karadzhov
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
+	  <tr>
+        <td><a href = "https://softuni.bg/trainings/2456/ms-sql-september-2019#lesson-12947">Exam Preparation pt.1</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>
+	  <tr>
+        <td><a href = "https://softuni.bg/trainings/2456/ms-sql-september-2019#lesson-12948">Exam Preparation pt.2</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>
       </tbody>
   </table>
 	
