@@ -314,7 +314,7 @@ Nikolay Karadzhov
 	  <tr>
         <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11643">Interfaces And Abstraction</a></td>
         <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20OOP%20-%20June%202019/Interfaces%20and%20Abstraction/Exercise">Link</a></td>
       </tr>  
 	  <tr>
         <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11645">Polymorphism</a></td>
@@ -324,12 +324,12 @@ Nikolay Karadzhov
 	  <tr>
         <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11647">SOLID</a></td>
         <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20OOP%20-%20June%202019/Solid/Exercise/Solid-Exercise">Link</a></td>
       </tr>
 	  <tr>
         <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11649">Reflection And Attributes</a></td>
         <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20OOP%20-%20June%202019/Reflection%20and%20Attributes/Exercise">Link</a></td>
       </tr>
 	  <tr>
         <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11651">Exceptions And Error Handling</a></td>
@@ -343,7 +343,7 @@ Nikolay Karadzhov
       </tr>
 	  <tr>
         <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11653">Workshop pt.1</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20OOP%20-%20June%202019/Workshop%20pt.1/MuOnline%20-%20Skeleton">Link</a></td>
       </tr>
 	  <tr>
         <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11654">Workshop pt.2</a></td>
@@ -351,8 +351,8 @@ Nikolay Karadzhov
       </tr>
 	  <tr>
         <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11655">Unit Testing</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20OOP%20-%20June%202019/Unit%20Testing/Lab">Link</a></td>
+        <td><a href = "https://github.com/NikolayKaradzhov/SoftUni/tree/master/C%23%20Advanced/C%23%20OOP%20-%20June%202019/Unit%20Testing/Exercise/11.%20CSharp-OOP-Unit-Testing-Exercises-Skeleton">Link</a></td>
       </tr>
 	  <tr>
         <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11657">Test Driven Development</a></td>
