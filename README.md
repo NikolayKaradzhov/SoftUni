@@ -285,7 +285,7 @@ Nikolay Karadzhov
      <tbody>
       <tr>
         <th align="center" width="50%">C# OOP - June-August 2019</th>
-        <th width = "50%">Grade: Currently taking this course</th>
+        <th width = "50%">Grade: 4.73 out of 6.00</th>
         <th width = "20%"><a href = "">...</a></th>
         </tr>
     </table>
