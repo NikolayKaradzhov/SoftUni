@@ -392,7 +392,7 @@ Nikolay Karadzhov
   <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
      <tbody>
       <tr>
-        <th align="center" width="50%">C# OOP - June-August 2019</th>
+        <th align="center" width="50%">MSSQL - September 2019</th>
         <th width = "50%">Grade: Currently taking this course</th>
         <th width = "20%"><a href = "">...</a></th>
         </tr>
@@ -408,82 +408,42 @@ Nikolay Karadzhov
     </thead>
     <tbody>
       <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11637">Working With Abstraction</a></td>
+        <td><a href = "https://softuni.bg/trainings/2456/ms-sql-september-2019#lesson-12930">Databases Introduction. Data Definition And Datatypes</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11641">Inheritance</a></td>
+        <td><a href = "https://softuni.bg/trainings/2456/ms-sql-september-2019#lesson-12932">Basic CRUD</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11639">Encapsulation</a></td>
+        <td><a href = "https://softuni.bg/trainings/2456/ms-sql-september-2019#lesson-12934">Built-In Functions</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11643">Interfaces And Abstraction</a></td>
+        <td><a href = "https://softuni.bg/trainings/2456/ms-sql-september-2019#lesson-12937">Data Aggregation</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>  
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11645">Polymorphism</a></td>
+        <td><a href = "https://softuni.bg/trainings/2456/ms-sql-september-2019#lesson-12940">Table Relations</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11647">SOLID</a></td>
+        <td><a href = "https://softuni.bg/trainings/2456/ms-sql-september-2019#lesson-12942">Subqueries and Joins</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11649">Reflection And Attributes</a></td>
+        <td><a href = "https://softuni.bg/trainings/2456/ms-sql-september-2019#lesson-12944">Database Programmability and Transactions</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11651">Exceptions And Error Handling</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
-      </tr>
-	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11652">Debugging Techniques</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
-      </tr>
-	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11653">Workshop pt.1</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
-      </tr>
-	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11654">Workshop pt.2</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
-      </tr>
-	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11655">Unit Testing</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
-      </tr>
-	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11657">Test Driven Development</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
-      </tr>
-	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11659">Exam Preparation pt.1</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
-      </tr>
-	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11660">Exam Preparation pt.2</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
-      </tr>
-	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11661">Exam</a></td>
+        <td><a href = "https://softuni.bg/trainings/2456/ms-sql-september-2019#lesson-12946">Triggers and Transactions</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
