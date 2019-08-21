@@ -278,9 +278,6 @@ Nikolay Karadzhov
   
    <!-- C# OOP - June 2019 START -->
   
-  <summary>
-    <b>C# Advanced(OOP) - June-August 2019</b>
-  </summary>  
   <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
      <tbody>
       <tr>
@@ -373,11 +370,15 @@ Nikolay Karadzhov
 	  <tr>
         <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11661">Exam</a></td>
         <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
       </tr>
       </tbody>
   </table>
  </details>
+ 
+ 
+ 
+ <!--C# DB START START START START START START START START START START START START START -->
+ 
  
  <!-- C# DB MSSQL Start -->
  
@@ -446,11 +447,9 @@ Nikolay Karadzhov
 	  <tr>
         <td><a href = "https://softuni.bg/trainings/2456/ms-sql-september-2019#lesson-12947">Exam Preparation pt.1</a></td>
         <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
         <td><a href = "https://softuni.bg/trainings/2456/ms-sql-september-2019#lesson-12948">Exam Preparation pt.2</a></td>
-        <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
       </tbody>
