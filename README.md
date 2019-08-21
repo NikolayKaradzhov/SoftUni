@@ -384,6 +384,8 @@ Nikolay Karadzhov
  </details>
  
  <!-- C# DB MSSQL Start -->
+ 
+<details>
 <summary>
     <b>C# Advanced(OOP) - June-August 2019</b>
   </summary>  
