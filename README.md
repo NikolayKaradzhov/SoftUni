@@ -489,7 +489,6 @@ Nikolay Karadzhov
       </tr>
       </tbody>
   </table>
- </details>
 	
 <!-- C# DB MSSQL End -->
 
@@ -598,6 +597,8 @@ Nikolay Karadzhov
       </tr>
       </tbody>
   </table>
+  
+   </details>
 
 <!-- C# EF Core End-->
 
