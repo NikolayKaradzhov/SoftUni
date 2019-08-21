@@ -382,7 +382,22 @@ Nikolay Karadzhov
       </tbody>
   </table>
   
-  <!-- C# DB Start -->
+  <!-- C# DB MSSQL Start -->
+  
+  <details>
+  <summary>
+    <b>C# DB - September 2019</b>
+  </summary>  
+  <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+     <tbody>
+      <tr>
+        <th align="center" width="50%">C# Advanced - May-June 2019</th>
+        <th width = "50%">Grade:  out of 6.00</th>
+        <th width = "20%"><a href = "https://softuni.bg/certificates/details/67849/a1c071af">Certificate</a></th>
+        </tr>
+    </table>
+	
+<!-- C# DB MSSQL End -->
   
    <summary>
     <b>C# Advanced(OOP) - June-August 2019</b>
