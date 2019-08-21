@@ -493,5 +493,113 @@ Nikolay Karadzhov
 	
 <!-- C# DB MSSQL End -->
 
+<!-- C# EF Core Start-->
+
+<summary>
+    <b>C# Entity Framework Core - October 2019</b>
+  </summary>  
+  <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+     <tbody>
+      <tr>
+        <th align="center" width="50%">C# OOP - June-August 2019</th>
+        <th width = "50%">Grade: Currently taking this course</th>
+        <th width = "20%"><a href = "">...</a></th>
+        </tr>
+    </table>
+    
+   <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th>Lab</th>
+        <th>Exercise</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11637">Working With Abstraction</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>
+	  <tr>
+        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11641">Inheritance</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>
+	  <tr>
+        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11639">Encapsulation</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>
+	  <tr>
+        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11643">Interfaces And Abstraction</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>  
+	  <tr>
+        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11645">Polymorphism</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>
+	  <tr>
+        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11647">SOLID</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>
+	  <tr>
+        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11649">Reflection And Attributes</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>
+	  <tr>
+        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11651">Exceptions And Error Handling</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>
+	  <tr>
+        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11652">Debugging Techniques</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>
+	  <tr>
+        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11653">Workshop pt.1</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>
+	  <tr>
+        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11654">Workshop pt.2</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>
+	  <tr>
+        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11655">Unit Testing</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>
+	  <tr>
+        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11657">Test Driven Development</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>
+	  <tr>
+        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11659">Exam Preparation pt.1</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>
+	  <tr>
+        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11660">Exam Preparation pt.2</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>
+	  <tr>
+        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11661">Exam</a></td>
+        <td><a href = "">Link</a></td>
+        <td><a href = "">Link</a></td>
+      </tr>
+      </tbody>
+  </table>
+
+<!-- C# EF Core End-->
+
 <hr>
 <hr>
