@@ -459,13 +459,10 @@ Nikolay Karadzhov
 
 <!-- C# EF Core Start-->
 
-<summary>
-    <b>C# Entity Framework Core - October 2019</b>
-  </summary>  
   <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
      <tbody>
       <tr>
-        <th align="center" width="50%">C# OOP - June-August 2019</th>
+        <th align="center" width="50%">C# Entity Framework Core - October 2019</th>
         <th width = "50%">Grade: Currently taking this course</th>
         <th width = "20%"><a href = "">...</a></th>
         </tr>
