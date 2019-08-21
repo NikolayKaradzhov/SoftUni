@@ -478,83 +478,74 @@ Nikolay Karadzhov
     </thead>
     <tbody>
       <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11637">Working With Abstraction</a></td>
+        <td><a href = "https://softuni.bg/trainings/2457/entity-framework-core-october-2019#lesson-12879">DB Apps Introduction</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11641">Inheritance</a></td>
+        <td><a href = "https://softuni.bg/trainings/2457/entity-framework-core-october-2019#lesson-12881">ORM Fundamentals</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11639">Encapsulation</a></td>
+        <td><a href = "https://softuni.bg/trainings/2457/entity-framework-core-october-2019#lesson-12883">Entity Framework Core Introduction</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11643">Interfaces And Abstraction</a></td>
+        <td><a href = "https://softuni.bg/trainings/2457/entity-framework-core-october-2019#lesson-12885">Code First</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>  
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11645">Polymorphism</a></td>
+        <td><a href = "https://softuni.bg/trainings/2457/entity-framework-core-october-2019#lesson-12887">Entity Relations</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11647">SOLID</a></td>
+        <td><a href = "https://softuni.bg/trainings/2457/entity-framework-core-october-2019#lesson-12889">Advanced Querying</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11649">Reflection And Attributes</a></td>
+        <td><a href = "https://softuni.bg/trainings/2457/entity-framework-core-october-2019#lesson-12891">C# Auto Mapping Objects</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11651">Exceptions And Error Handling</a></td>
+        <td><a href = "https://softuni.bg/trainings/2457/entity-framework-core-october-2019#lesson-12893">JSON Processing</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11652">Debugging Techniques</a></td>
+        <td><a href = "https://softuni.bg/trainings/2457/entity-framework-core-october-2019#lesson-12895">XML Processing</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11653">Workshop pt.1</a></td>
+        <td><a href = "https://softuni.bg/trainings/2457/entity-framework-core-october-2019#lesson-12897">Design Patterns</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11654">Workshop pt.2</a></td>
+        <td><a href = "https://softuni.bg/trainings/2457/entity-framework-core-october-2019#lesson-12899">Best Practices and Architecture</a></td>
         <td><a href = "">Link</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11655">Unit Testing</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
-      </tr>
-	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11657">Test Driven Development</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://softuni.bg/trainings/2457/entity-framework-core-october-2019#lesson-12901">Workshop ASP.NET Core pt.1</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11659">Exam Preparation pt.1</a></td>
-        <td><a href = "">Link</a></td>
-        <td><a href = "">Link</a></td>
-      </tr>
-	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11660">Exam Preparation pt.2</a></td>
-        <td><a href = "">Link</a></td>
+        <td><a href = "https://softuni.bg/trainings/2457/entity-framework-core-october-2019#lesson-12902">Workshop ASP.NET Core pt.2</a></td>
         <td><a href = "">Link</a></td>
       </tr>
 	  <tr>
-        <td><a href = "https://softuni.bg/trainings/2349/csharp-oop-june-2019#lesson-11661">Exam</a></td>
+        <td><a href = "https://softuni.bg/trainings/2457/entity-framework-core-october-2019#lesson-12903">Exam Preparation</a></td>
         <td><a href = "">Link</a></td>
+      </tr>
+	  <tr>
+        <td><a href = "">Exam</a></td>
         <td><a href = "">Link</a></td>
       </tr>
       </tbody>
