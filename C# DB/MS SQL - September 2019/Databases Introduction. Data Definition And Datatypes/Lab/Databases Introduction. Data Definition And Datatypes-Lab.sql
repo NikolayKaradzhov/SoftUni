@@ -1,4 +1,4 @@
--- 02.Create Tables --
+-- 02.Create Tables.02 --
 
 CREATE TABLE Clients (
 Id INT PRIMARY KEY IDENTITY,
@@ -20,7 +20,7 @@ Balance DECIMAL(15, 2) NOT NULL DEFAULT(0),
 ClientId INT FOREIGN KEY REFERENCES Clients(Id)
 )
 
---03.Insert Sample Data into Database--
+--03.Insert Sample Data into Database.03--
 
 INSERT INTO Clients(FirstName, LastName)
 VALUES
@@ -44,7 +44,7 @@ VALUES
 (4, 1, 40.30),
 (4, 2, 375.50)
 
---04.Create a Function--
+--04.Create a Function.04--
 
 CREATE FUNCTION f_CalculateTotalBalance(@ClientId INT)
 RETURNS DECIMAL(15,2)
@@ -60,3 +60,45 @@ END
 
 --Show result for ClientId = 4
 SELECT dbo.f_CalculateTotalBalance(4) AS Balance
+
+
+--05.Create Procedures.05--
+
+--Create Deposit Procedure
+CREATE PROC p_AddAccount @ClientId INT, @AccountTypeId INT AS
+INSERT INTO Accounts(ClientId, AccountTypeId)
+VALUES(@ClientId, @AccountTypeId)
+
+--Test AddAccount Procedure--
+p_AddAccount 2, 2
+
+--Prove that the procedure AccAccount works with Simple Select--
+SELECT * FROM Accounts
+
+
+--Create Withdraw Proceure--
+CREATE PROC p_Withdraw @AccountId INT, @Amount DECIMAL(15, 2) AS
+BEGIN
+	DECLARE @OldBalance DECIMAL(15, 2) 
+	SELECT @OldBalance = Balance FROM Accounts WHERE Id = @AccountId
+	IF (@OldBalance - @Amount >= 0)
+		BEGIN
+			UPDATE Accounts
+			SET Balance -= @Amount
+			WHERE Id = @AccountId
+		END
+	ELSE
+	BEGIN
+		RAISERROR ('Insufficient funds', 10, 1)
+	END
+END
+
+--06.splits the files incorrectly by moving the tag signature to the Msg tag.06--
+CREATE TABLE Transactions (
+Id INT PRIMARY KEY IDENTITY,
+AccountId INT FOREIGN KEY REFERENCES Accounts(Id),
+OldBalance DECIMAL(15, 2) NOT NULL,
+NewBalance DECIMAL(15, 2) NOT NULL,
+Amount AS NewBalance - OldBalance,
+[DateTime] DATETIME2
+)
