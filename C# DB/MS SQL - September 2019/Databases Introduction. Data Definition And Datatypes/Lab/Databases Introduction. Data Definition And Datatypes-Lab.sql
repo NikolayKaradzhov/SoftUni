@@ -64,7 +64,7 @@ SELECT dbo.f_CalculateTotalBalance(4) AS Balance
 
 --05.Create Procedures.05--
 
---Create Deposit Procedure
+--Create AddAccount Procedure--
 CREATE PROC p_AddAccount @ClientId INT, @AccountTypeId INT AS
 INSERT INTO Accounts(ClientId, AccountTypeId)
 VALUES(@ClientId, @AccountTypeId)
@@ -74,6 +74,12 @@ p_AddAccount 2, 2
 
 --Prove that the procedure AccAccount works with Simple Select--
 SELECT * FROM Accounts
+
+--Create Deposit Procedure--
+CREATE PROC p_Deposit @AccountId INT, @Amount DECIMAL(15, 2) AS
+UPDATE Accounts
+SET Balance += @Amount
+WHERE Id = @AccountId
 
 
 --Create Withdraw Proceure--
@@ -102,3 +108,25 @@ NewBalance DECIMAL(15, 2) NOT NULL,
 Amount AS NewBalance - OldBalance,
 [DateTime] DATETIME2
 )
+
+--Create trigger--
+CREATE TRIGGER tr_Transaction ON Accounts
+AFTER UPDATE
+AS
+INSERT INTO Transactions (AccountId, OldBalance, NewBalance, [DateTime])
+SELECT inserted.Id, deleted.Balance, inserted.Balance, GETDATE() FROM inserted
+JOIN deleted ON inserted.Id = deleted.Id
+
+--Use the trigger--
+p_Deposit 1, 25.00
+GO
+p_Deposit 1, 40.00
+GO
+p_Deposit 2, 40.00
+GO
+p_Withdraw 2, 200.00
+GO
+p_Deposit 4, 180.00
+GO
+
+SELECT * FROM Transactions
