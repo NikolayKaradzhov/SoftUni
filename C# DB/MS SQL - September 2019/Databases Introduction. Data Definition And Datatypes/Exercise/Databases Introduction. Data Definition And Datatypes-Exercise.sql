@@ -82,3 +82,37 @@ SET LastLoginTime = GETDATE()
 ALTER TABLE Users
 ADD CONSTRAINT Username_Lenght_Check
 CHECK(DATALENGTH(Username)>=3)
+
+--13.Create Database Movies.13--
+CREATE DATABASE Movies
+
+--Create the tables--
+CREATE TABLE Directors (
+Id INT PRIMARY KEY IDENTITY,
+DirectorName NVARCHAR(255) NOT NULL,
+Notes NVARCHAR(255))
+
+CREATE TABLE Genres (
+Id INT PRIMARY KEY IDENTITY,
+GenreName NVARCHAR(30),
+Notes NVARCHAR(255))
+
+CREATE TABLE Categories (
+Id INT PRIMARY KEY IDENTITY,
+CategoryName NVARCHAR(30),
+Notes NVARCHAR(255))
+
+CREATE TABLE Movies (
+Id INT PRIMARY KEY IDENTITY,
+Title NVARCHAR(255) NOT NULL,
+DirectorId INT FOREIGN KEY REFERENCES Directors(Id),
+CopyrightYear DATETIME NOT NULL,
+[Length] INT NOT NULL,
+GenreId INT FOREIGN KEY REFERENCES Genres(Id) NOT NULL,
+CategoryId INT FOREIGN KEY REFERENCES Categories(Id) NOT NULL,
+Rating FLOAT CHECK(Rating >= 1 AND Rating <= 5),
+Notes NVARCHAR(255))
+
+--Insert Data into tables--
+INSERT INTO Directors ()
+VALUES ()
