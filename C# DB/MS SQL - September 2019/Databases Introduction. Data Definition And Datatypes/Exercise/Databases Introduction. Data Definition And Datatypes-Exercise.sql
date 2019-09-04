@@ -88,7 +88,7 @@ CREATE DATABASE Movies
 
 --Create the tables--
 CREATE TABLE Directors (
-Id INT PRIMARY KEY IDENTITY,
+Id INT PRIMARY KEY IDENTITY (1,1),
 DirectorName NVARCHAR(255) NOT NULL,
 Notes NVARCHAR(255))
 
@@ -114,5 +114,127 @@ Rating FLOAT CHECK(Rating >= 1 AND Rating <= 5),
 Notes NVARCHAR(255))
 
 --Insert Data into tables--
-INSERT INTO Directors ()
-VALUES ()
+INSERT INTO Directors (DirectorName, Notes)
+VALUES 
+('Stephen Speilberg', NULL),
+('Martin Scorseze', 'Very good director'),
+('Peter Jackson', NULL),
+('Quentin Tarantino', NULL),
+('Ridley Scott', NULL)
+
+INSERT INTO Genres(GenreName, Notes)
+VALUES
+('Comedy', NULL),
+('Drama', NULL),
+('Action', NULL),
+('Fantasy', NULL),
+('Musical', NULL)
+
+INSERT INTO Categories(CategoryName, Notes)
+VALUES
+('Documentary', NULL),
+('Erotic', NULL),
+('Horror', NULL),
+('Fantasy', NULL),
+('Western', NULL)
+
+INSERT INTO Movies(Title, DirectorId, CopyrightYear, Length, GenreId, CategoryId, Rating, Notes)
+VALUES
+('Fantastic Four', 1, GETDATE(), 90, 2, 3, 3.2, NULL),
+('Avengers', 2, GETDATE(), 91, 2, 3, 4.5, NULL),
+('Lethal Weapon', 4, GETDATE(), 92, 2, 3, 2.3, NULL),
+('The Office', 5, GETDATE(), 93, 2, 3, 3.2, NULL),
+('Training day', 3, GETDATE(), 95, 2, 3, 3.5, NULL)
+
+
+--14.Car Rental Database.14--
+
+CREATE DATABASE CarRental
+
+--Create Tables--
+
+CREATE TABLE Categories (
+Id INT PRIMARY KEY IDENTITY(1,1),
+CategoryName NVARCHAR(255) NOT NULL,
+DailyRate FLOAT,
+WeeklyRate FLOAT,
+MonthlyRate FLOAT,
+WeekendRate FLOAT)
+
+CREATE TABLE Cars (
+Id INT PRIMARY KEY IDENTITY(1,1),
+PlateNumber NVARCHAR(30) NOT NULL,
+Manifacturer NVARCHAR(30) NOT NULL,
+Model NVARCHAR(30) NOT NULL,
+CarYear DATETIME NOT NULL,
+CategoryId INT FOREIGN KEY REFERENCES Categories(Id),
+Doors INT CHECK(Doors between 1 and 5),
+Picture IMAGE,
+Condition NVARCHAR(30),
+Available BIT)
+
+CREATE TABLE Employees (
+Id INT PRIMARY KEY IDENTITY(1,1),
+FirstName NVARCHAR(30) NOT NULL,
+LastName NVARCHAR(30),
+Title NVARCHAR(255),
+Notes NVARCHAR(255))
+
+CREATE TABLE Customers (
+Id INT PRIMARY KEY IDENTITY(1,1),
+DriverLicenceNumber NVARCHAR(32) NOT NULL,
+FullName NVARCHAR(255) NOT NULL,
+[Address] NVARCHAR(255) NOT NULL,
+City NVARCHAR(30) NOT NULL,
+ZipCode INT NOT NULL,
+Notes NVARCHAR(255))
+
+CREATE TABLE RentalOrders (
+Id INT PRIMARY KEY IDENTITY(1,1),
+EmployeeId INT FOREIGN KEY REFERENCES Employees(Id),
+CustomerId INT FOREIGN KEY REFERENCES Customers(Id),
+CarId INT FOREIGN KEY REFERENCES Cars(Id),
+TankLevel TINYINT NOT NULL, 
+KilometrageStart BIGINT NOT NULL,
+KilometrageEnd BIGINT NOT NULL,
+TotalKilometrage AS KilometrageEnd - KilometrageStart,
+StartDate DATETIME NOT NULL,
+EndDate DATETIME NOT NULL,
+TotalDays AS DATEDIFF (d, StartDate, EndDate),
+RateApplied BIT,
+TaxRate MONEY,
+OrderStatus NVARCHAR(30),
+Notes NVARCHAR(255))
+
+--Insert Data Into Tables--
+INSERT INTO Categories(CategoryName)
+VALUES
+('SportCar'),
+('CityCar'),
+('HighwayCruiser')
+
+INSERT INTO Cars(PlateNumber, Manifacturer, Model, CarYear)
+VALUES
+('CB5351KX', 'Seat', 'Ibiza', 1999),
+('CB1111KX', 'VW', 'Golf', 2009),
+('CB222KX', 'BMW', 'E90', 2007)
+
+INSERT INTO Employees(FirstName)
+VALUES
+('Gosho'),
+('Ivan'),
+('Petkan')
+
+INSERT INTO Customers(DriverLicenceNumber, FullName, Address, City, ZipCode)
+VALUES
+('1111111111', 'Georgi Ivanov', 'Druzhba 1', 'Sofia', 1000),
+('2222222222', 'Ivaylo Georgiew', 'Druzhba 2', 'Pernik', 2222),
+('3333333333', 'Martin Kostov', 'Mladost 1', 'Sofia', 3333)
+
+INSERT INTO RentalOrders(TankLevel, KilometrageStart, KilometrageEnd, StartDate, EndDate)
+VALUES
+(123, 123333, 123455, GETDATE(), GETDATE()),
+(12, 111111, 333333, GETDATE(), GETDATE()),
+(23, 222222, 555555, GETDATE(), GETDATE())
+
+
