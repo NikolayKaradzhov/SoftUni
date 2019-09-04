@@ -16,11 +16,19 @@ ALTER TABLE Minions
 ADD TownId INT FOREIGN KEY REFERENCES Towns(Id)
 
 --04.Insert Records in Both Tables.04--
-INSERT INTO Towns(Id, Name)
-VALUES (1, 'Sofia'), (2, 'Plovdiv'), (3, 'Varna')
+INSERT INTO
+    Towns(Name)
+VALUES
+       ('Sofia'),
+       ('Plovdiv'),
+       ('Varna')
 
-INSERT INTO Minions(Id, Name, Age, TownId)
-VALUES (1, 'Kevin', 22, 1), (2, 'Bob', 15, 3), (3, 'Steward', NULL, 2)
+INSERT INTO
+    Minions(Name, Age, TownId)
+VALUES
+       ('Kevin', 22, 1),
+       ('Bob', 15, 3),
+       ('Steward', NULL, 2)
 
 --05.Truncate Table Minions.05--
 TRUNCATE TABLE Minions
@@ -108,8 +116,8 @@ Title NVARCHAR(255) NOT NULL,
 DirectorId INT FOREIGN KEY REFERENCES Directors(Id),
 CopyrightYear DATETIME NOT NULL,
 [Length] INT NOT NULL,
-GenreId INT FOREIGN KEY REFERENCES Genres(Id) NOT NULL,
-CategoryId INT FOREIGN KEY REFERENCES Categories(Id) NOT NULL,
+GenreId INT FOREIGN KEY REFERENCES Genres(Id),
+CategoryId INT FOREIGN KEY REFERENCES Categories(Id),
 Rating FLOAT CHECK(Rating >= 1 AND Rating <= 5),
 Notes NVARCHAR(255))
 
