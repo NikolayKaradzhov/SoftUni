@@ -10,3 +10,4 @@ C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\i\Skele
 C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\i\Skeleton\Debug\netcoreapp2.0\Skeleton.AssemblyInfo.cs
 C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\i\Skeleton\Debug\netcoreapp2.0\Skeleton.csproj.CopyComplete
 C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\i\Skeleton\Debug\netcoreapp2.0\Skeleton.dll
+C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\i\Skeleton\Debug\netcoreapp2.0\Skeleton.csprojAssemblyReference.cache
