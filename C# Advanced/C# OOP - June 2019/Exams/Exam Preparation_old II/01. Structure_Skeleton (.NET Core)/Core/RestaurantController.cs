@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using SoftUniRestaurant.Models.Drinks.Contracts;
 using SoftUniRestaurant.Models.Drinks.Factories;
 using SoftUniRestaurant.Models.Foods.Contracts;
@@ -59,7 +60,18 @@ namespace SoftUniRestaurant.Core
 
         public string ReserveTable(int numberOfPeople)
         {
-            throw new NotImplementedException();
+            ITable table = tables.FirstOrDefault(t => !t.IsReserved && t.Capacity >= numberOfPeople);
+
+            if (table == null)
+            {
+                return $"No available table for {numberOfPeople} people";
+            }
+
+            int tableNumber = table.TableNumber;
+
+            table.Reserve(numberOfPeople);
+
+            return $"Table {tableNumber} has been reserved for {numberOfPeople} people";
         }
 
         public string OrderFood(int tableNumber, string foodName)
