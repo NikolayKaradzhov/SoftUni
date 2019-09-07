@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using SoftUniRestaurant.Models.Drinks.Contracts;
 using SoftUniRestaurant.Models.Drinks.Factories;
 using SoftUniRestaurant.Models.Foods.Contracts;
@@ -20,6 +21,7 @@ namespace SoftUniRestaurant.Core
         private FoodFactory foodFactory;
         private DrinkFactory drinkFactory;
         private TableFactory tableFactory;
+        private decimal totalIncome;
 
         public RestaurantController(IList<IFood> menu, IList<IDrink> drinks, IList<ITable> tables)
         {
@@ -76,32 +78,85 @@ namespace SoftUniRestaurant.Core
 
         public string OrderFood(int tableNumber, string foodName)
         {
-            throw new NotImplementedException();
+            ITable table = tables.FirstOrDefault(t => t.TableNumber == tableNumber);
+            IFood food = menu.FirstOrDefault(f => f.Name == foodName);
+
+            if (table == null)
+            {
+                return $"Could not find table with {tableNumber}";
+            }
+
+            if (food == null)
+            {
+                return $"No {foodName} in the menu";
+            }
+
+            table.OrderFood(food);
+
+            return $"Table {tableNumber} ordered {foodName}";
         }
 
         public string OrderDrink(int tableNumber, string drinkName, string drinkBrand)
         {
-            throw new NotImplementedException();
+            ITable table = tables.FirstOrDefault(t => t.TableNumber == tableNumber);
+
+            if (table == null)
+            {
+                return $"Could not find table with {tableNumber}";
+            }
+
+            IDrink drink = drinks.FirstOrDefault(d => d.Name == drinkName && d.Brand == drinkBrand);
+
+            if (drink == null)
+            {
+                return $"There is no {drinkName} {drinkBrand} available";
+            }
+
+            table.OrderDrink(drink);
+
+            return $"Table {tableNumber} ordered {drinkName} {drinkBrand}";
         }
 
         public string LeaveTable(int tableNumber)
         {
-            throw new NotImplementedException();
+            ITable table = tables.FirstOrDefault(t => t.TableNumber == tableNumber);
+
+            decimal bill = table.GetBill();
+            table.Clear();
+
+            totalIncome += bill;
+
+            return $"Table: {tableNumber}" + Environment.NewLine +
+                   $"Bill: {bill:f2}";
         }
 
         public string GetFreeTablesInfo()
         {
-            throw new NotImplementedException();
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var table in tables.Where(t => !t.IsReserved))
+            {
+                sb.AppendLine(table.GetFreeTableInfo());
+            }
+
+            return sb.ToString().TrimEnd();
         }
 
         public string GetOccupiedTablesInfo()
         {
-            throw new NotImplementedException();
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var table in tables.Where(t => t.IsReserved))
+            {
+                sb.AppendLine(table.GetOccupiedTableInfo());
+            }
+
+            return sb.ToString().TrimEnd();
         }
 
         public string GetSummary()
         {
-            throw new NotImplementedException();
+            return $"Total income: {totalIncome:F2}lv";
         }
     }
 }
