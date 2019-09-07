@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection.PortableExecutable;
+using System.Text;
 using MortalEngines.Entities.Contracts;
 
 namespace MortalEngines.Entities
@@ -9,6 +10,15 @@ namespace MortalEngines.Entities
     {
         private string name;
         private IPilot pilot;
+
+        public BaseMachine(string name, double attackPoints, double defensePoints, double healthPoints)
+        {
+            this.Name = name;
+            this.AttackPoints = attackPoints;
+            this.DefensePoints = defensePoints;
+            this.HealthPoints = healthPoints;
+            this.Targets = new List<string>();
+        }
 
         public string Name
         {
@@ -20,7 +30,7 @@ namespace MortalEngines.Entities
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentNullException("Machine name cannot be null or empty.");
+                    throw new ArgumentNullException($"Machine name cannot be null or empty.");
                 }
 
                 this.name = value;
@@ -37,7 +47,7 @@ namespace MortalEngines.Entities
             }
             set
             {
-                if (pilot == null)
+                if (value == null)
                 {
                     throw new NullReferenceException("Pilot cannot be null.");
                 }
@@ -46,9 +56,9 @@ namespace MortalEngines.Entities
             }
         }
 
-        public double AttackPoints { get; }
+        public double AttackPoints { get; protected set; }
 
-        public double DefensePoints { get; }
+        public double DefensePoints { get; protected set; }
 
         public IList<string> Targets { get; }
 
@@ -59,7 +69,7 @@ namespace MortalEngines.Entities
                 throw new NullReferenceException("Target cannot be null");
             }
 
-            double difference = Math.Abs(this.AttackPoints - target.HealthPoints);
+            double difference = Math.Abs(this.AttackPoints - target.DefensePoints);
 
             if (target.HealthPoints < 0)
             {
@@ -71,6 +81,22 @@ namespace MortalEngines.Entities
             }
 
             this.Targets.Add(target.Name);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            string targetsOutput = this.Targets.Count > 0 ? String.Join(",", this.Targets) : "None";
+
+            sb.AppendLine($"- {this.Name}")
+                .AppendLine($" *Type: {this.GetType().Name}")
+                .AppendLine($" *Health: {this.HealthPoints:F2}")
+                .AppendLine($" *Attack: {this.AttackPoints:F2}")
+                .AppendLine($" *Defense: {this.DefensePoints:F2}")
+                .AppendLine($" *Targets: {targetsOutput}");
+
+            return sb.ToString().TrimEnd();
         }
     }
 }
