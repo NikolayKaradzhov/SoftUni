@@ -44,7 +44,8 @@ namespace MortalEngines.Core
 
             machines.Add(tankMachine);
 
-            return $"Tank {tankMachine.Name} manufactured - attack: {tankMachine.AttackPoints:F2}; defense: {tankMachine.DefensePoints:F2}";
+            return
+                $"Tank {tankMachine.Name} manufactured - attack: {tankMachine.AttackPoints:F2}; defense: {tankMachine.DefensePoints:F2}";
         }
 
         public string ManufactureFighter(string name, double attackPoints, double defensePoints)
