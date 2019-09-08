@@ -2,27 +2,32 @@
 {
     public class Rifle : Gun
     {
-        private const int BULLETS_PER_BARREL = 50;
-        private const int TOTAL_BULLETS = 500;
-        private int totalShots = 0;
+        private const int InitialBulletsPerBarrel = 50;
+        private const int InitialTotalBullets = 500;
+        private const int InitialRifleDamage = 5;
 
         public Rifle(string name) 
-            : base(name, BULLETS_PER_BARREL, TOTAL_BULLETS)
+            : base(name, InitialBulletsPerBarrel, InitialTotalBullets)
         {
         }
 
         public override int Fire()
         {
-            if (this.BulletsPerBarrel <= 0)
+            if (this.BulletsPerBarrel - InitialRifleDamage <= 0 && this.TotalBullets > 0)
             {
-                this.TotalBullets -= BULLETS_PER_BARREL;
-                this.BulletsPerBarrel += BULLETS_PER_BARREL;
+                this.BulletsPerBarrel -= InitialRifleDamage;
+                this.BulletsPerBarrel = InitialBulletsPerBarrel;
+                this.TotalBullets -= InitialBulletsPerBarrel;
+                return InitialRifleDamage;
             }
 
-            this.BulletsPerBarrel -= 5;
-            totalShots++;
+            if (this.CanFire == true)
+            {
+                this.BulletsPerBarrel -= InitialRifleDamage;
+                return InitialRifleDamage;
+            }
 
-            return totalShots;
+            return 0;
         }
     }
 }
