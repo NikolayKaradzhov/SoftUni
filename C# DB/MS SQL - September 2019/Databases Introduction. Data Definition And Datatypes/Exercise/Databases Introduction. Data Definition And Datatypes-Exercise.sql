@@ -17,18 +17,18 @@ ADD TownId INT FOREIGN KEY REFERENCES Towns(Id)
 
 --04.Insert Records in Both Tables.04--
 INSERT INTO
-    Towns(Name)
+	Towns(Id, Name)
 VALUES
-       ('Sofia'),
-       ('Plovdiv'),
-       ('Varna')
+	(1, 'Sofia'),
+	(2, 'Plovdiv'),
+	(3, 'Varna')
 
 INSERT INTO
-    Minions(Name, Age, TownId)
+	Minions(Id, Name, Age, TownId)
 VALUES
-       ('Kevin', 22, 1),
-       ('Bob', 15, 3),
-       ('Steward', NULL, 2)
+	(1, 'Kevin', 22, 1),
+	(2, 'Bob', 15, 3),
+	(3, 'Steward', NULL, 2)
 
 --05.Truncate Table Minions.05--
 TRUNCATE TABLE Minions
@@ -122,37 +122,41 @@ Rating FLOAT CHECK(Rating >= 1 AND Rating <= 5),
 Notes NVARCHAR(255))
 
 --Insert Data into tables--
-INSERT INTO Directors (DirectorName, Notes)
+INSERT INTO
+    Directors (DirectorName, Notes)
 VALUES 
-('Stephen Speilberg', NULL),
-('Martin Scorseze', 'Very good director'),
-('Peter Jackson', NULL),
-('Quentin Tarantino', NULL),
-('Ridley Scott', NULL)
+    ('Stephen Speilberg', NULL),
+    ('Martin Scorseze', 'Very good director'),
+    ('Peter Jackson', NULL),
+    ('Quentin Tarantino', NULL),
+    ('Ridley Scott', NULL)
 
-INSERT INTO Genres(GenreName, Notes)
+INSERT INTO
+    Genres(GenreName, Notes)
 VALUES
-('Comedy', NULL),
-('Drama', NULL),
-('Action', NULL),
-('Fantasy', NULL),
-('Musical', NULL)
+    ('Comedy', NULL),
+    ('Drama', NULL),
+    ('Action', NULL),
+    ('Fantasy', NULL),
+    ('Musical', NULL)
 
-INSERT INTO Categories(CategoryName, Notes)
+INSERT INTO
+    Categories(CategoryName, Notes)
 VALUES
-('Documentary', NULL),
-('Erotic', NULL),
-('Horror', NULL),
-('Fantasy', NULL),
-('Western', NULL)
+    ('Documentary', NULL),
+    ('Erotic', NULL),
+    ('Horror', NULL),
+    ('Fantasy', NULL),
+    ('Western', NULL)
 
-INSERT INTO Movies(Title, DirectorId, CopyrightYear, Length, GenreId, CategoryId, Rating, Notes)
+INSERT INTO
+    Movies(Title, DirectorId, CopyrightYear, Length, GenreId, CategoryId, Rating, Notes)
 VALUES
-('Fantastic Four', 1, GETDATE(), 90, 2, 3, 3.2, NULL),
-('Avengers', 2, GETDATE(), 91, 2, 3, 4.5, NULL),
-('Lethal Weapon', 4, GETDATE(), 92, 2, 3, 2.3, NULL),
-('The Office', 5, GETDATE(), 93, 2, 3, 3.2, NULL),
-('Training day', 3, GETDATE(), 95, 2, 3, 3.5, NULL)
+    ('Fantastic Four', 1, GETDATE(), 90, 2, 3, 3.2, NULL),
+    ('Avengers', 2, GETDATE(), 91, 2, 3, 4.5, NULL),
+    ('Lethal Weapon', 4, GETDATE(), 92, 2, 3, 2.3, NULL),
+    ('The Office', 5, GETDATE(), 93, 2, 3, 3.2, NULL),
+    ('Training day', 3, GETDATE(), 95, 2, 3, 3.5, NULL)
 
 
 --14.Car Rental Database.14--
@@ -215,32 +219,37 @@ OrderStatus NVARCHAR(30),
 Notes NVARCHAR(255))
 
 --Insert Data Into Tables--
-INSERT INTO Categories(CategoryName)
+INSERT INTO
+    Categories(CategoryName)
 VALUES
-('SportCar'),
-('CityCar'),
-('HighwayCruiser')
+    ('SportCar'),
+    ('CityCar'),
+    ('HighwayCruiser')
 
-INSERT INTO Cars(PlateNumber, Manifacturer, Model, CarYear)
+INSERT INTO
+    Cars(PlateNumber, Manifacturer, Model, CarYear)
 VALUES
-('CB5351KX', 'Seat', 'Ibiza', 1999),
-('CB1111KX', 'VW', 'Golf', 2009),
-('CB222KX', 'BMW', 'E90', 2007)
+    ('CB5351KX', 'Seat', 'Ibiza', 1999),
+    ('CB1111KX', 'VW', 'Golf', 2009),
+    ('CB222KX', 'BMW', 'E90', 2007)
 
-INSERT INTO Employees(FirstName)
+INSERT INTO
+    Employees(FirstName)
 VALUES
-('Gosho'),
-('Ivan'),
-('Petkan')
+    ('Gosho'),
+    ('Ivan'),
+    ('Petkan')
 
-INSERT INTO Customers(DriverLicenceNumber, FullName, Address, City, ZipCode)
+INSERT INTO
+    Customers(DriverLicenceNumber, FullName, Address, City, ZipCode)
 VALUES
-('1111111111', 'Georgi Ivanov', 'Druzhba 1', 'Sofia', 1000),
-('2222222222', 'Ivaylo Georgiew', 'Druzhba 2', 'Pernik', 2222),
-('3333333333', 'Martin Kostov', 'Mladost 1', 'Sofia', 3333)
+    ('1111111111', 'Georgi Ivanov', 'Druzhba 1', 'Sofia', 1000),
+    ('2222222222', 'Ivaylo Georgiew', 'Druzhba 2', 'Pernik', 2222),
+    ('3333333333', 'Martin Kostov', 'Mladost 1', 'Sofia', 3333)
 
-INSERT INTO RentalOrders(TankLevel, KilometrageStart, KilometrageEnd, StartDate, EndDate)
+INSERT INTO
+    RentalOrders(TankLevel, KilometrageStart, KilometrageEnd, StartDate, EndDate)
 VALUES
-(123, 123333, 123455, GETDATE(), GETDATE()),
-(12, 111111, 333333, GETDATE(), GETDATE()),
-(23, 222222, 555555, GETDATE(), GETDATE())
+    (123, 123333, 123455, GETDATE(), GETDATE()),
+    (12, 111111, 333333, GETDATE(), GETDATE()),
+    (23, 222222, 555555, GETDATE(), GETDATE())
