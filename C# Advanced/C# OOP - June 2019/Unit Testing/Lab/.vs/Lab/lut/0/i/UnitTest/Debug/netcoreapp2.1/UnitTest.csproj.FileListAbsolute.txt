@@ -7,3 +7,4 @@ C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\i\UnitT
 C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\i\UnitTest\Debug\netcoreapp2.1\UnitTest.AssemblyInfo.cs
 C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\i\UnitTest\Debug\netcoreapp2.1\UnitTest.csproj.CopyComplete
 C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\i\UnitTest\Debug\netcoreapp2.1\UnitTest.dll
+C:\SoftUni\C# Advanced\C# OOP - June 2019\Unit Testing\Lab\.vs\Lab\lut\0\i\UnitTest\Debug\netcoreapp2.1\UnitTest.csprojAssemblyReference.cache

@@ -35,7 +35,7 @@ namespace ViceCity.Models.Guns
         {
             get { return this.bulletsPerBarrel; }
 
-            set
+            protected set
             {
                 if (value < 0)
                 {
@@ -50,7 +50,7 @@ namespace ViceCity.Models.Guns
         {
             get { return this.totalBullets; }
 
-            set
+            protected set
             {
                 if (value < 0)
                 {
@@ -61,7 +61,7 @@ namespace ViceCity.Models.Guns
             }
         }
 
-        public bool CanFire { get; set; }
+        public bool CanFire => this.bulletsPerBarrel > 0;
 
         public abstract int Fire();
     }
