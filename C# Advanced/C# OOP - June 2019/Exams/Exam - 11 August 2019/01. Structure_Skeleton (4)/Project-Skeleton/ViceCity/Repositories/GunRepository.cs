@@ -9,16 +9,19 @@ namespace ViceCity.Repositories
     {
         private IList<IGun> guns;
 
+        public GunRepository()
+        {
+            this.guns = new List<IGun>();
+        }
+
         public IReadOnlyCollection<IGun> Models { get; }
 
         public void Add(IGun model)
         {
-            if (guns.Contains(model))
+            if (!this.guns.Any(g => g.Name == model.Name))
             {
-
+                guns.Add(model);
             }
-
-            this.guns.Add(model);
         }
 
         public bool Remove(IGun model)
