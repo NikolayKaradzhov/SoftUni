@@ -1,6 +1,1 @@
-SELECT
-    [Name]
-FROM
-    Characters
-ORDER BY
-    Name ASC
+SELECT len('asdfff     ') AS ExtractString;
