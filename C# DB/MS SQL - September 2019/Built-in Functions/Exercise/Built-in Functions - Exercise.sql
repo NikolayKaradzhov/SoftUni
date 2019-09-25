@@ -196,3 +196,10 @@ FROM
 ORDER BY
     Game ASC, Duration ASC, [Part of the day]
 
+
+--18. Orders Table.18--
+
+SELECT
+    ProductName, OrderDate, DATEADD(DAY, 3, OrderDate) AS [Pay Due], DATEADD(MONTH, 1, ORderDate) AS [Deliver Due]
+FROM
+    Orders
