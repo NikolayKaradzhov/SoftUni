@@ -140,3 +140,37 @@ WHERE
     RIGHT(PeakName, 1) = LEFT(RiverName, 1)
 ORDER BY
     Mix
+
+
+--14. Games From 2011 and 2012 Year.14--
+
+SELECT TOP 50
+    Name, FORMAT(Start, 'yyyy-MM-dd') AS Start
+FROM
+    Games
+WHERE
+     DATEPART(YEAR, Start) BETWEEN 2011 AND 2012
+ORDER BY
+    Start ASC
+
+
+--15. User Email Providers.15--
+
+SELECT
+    Username, RIGHT(Email, LEN(Email) - CHARINDEX('@', Email)) AS [Email Provider]
+FROM
+    Users
+ORDER BY
+    [Email Provider] ASC, Username
+
+
+--16.Get Users with IPAddress Like Pattern.16-
+
+SELECT
+    Username, IpAddress
+FROM
+    Users
+WHERE
+    IpAddress LIKE '___.1%.%.___'
+ORDER BY
+    Username ASC
