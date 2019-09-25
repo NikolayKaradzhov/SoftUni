@@ -4,34 +4,26 @@ using System.Linq;
 using ViceCity.Core.Contracts;
 using ViceCity.Models.Guns;
 using ViceCity.Models.Guns.Contracts;
-using ViceCity.Models.Neghbourhoods;
 using ViceCity.Models.Players;
 using ViceCity.Models.Players.Contracts;
-using ViceCity.Repositories;
 using ViceCity.Repositories.Contracts;
 
 namespace ViceCity.Core
 {
     public class Controller : IController
     {
-        private const string MainPlayerNameKey = "Vercetti";
-        private const string FullNameMainPlayer = "Tommy Vercetti";
-        private const int InitialMainPlayerHealthPoints = 100;
-        private readonly List<IPlayer> players;
-        private readonly GunRepository gunRepository;
-        private readonly GangNeighbourhood gangNeighbourhood;
+        private List<IPlayer> players;
+        private List<IGun> guns;
 
         public Controller()
         {
-            this.players = new List<IPlayer>();
-            this.players.Add(new MainPlayer());
-            this.gunRepository = new GunRepository();
-            this.gangNeighbourhood = new GangNeighbourhood();
+            players = new List<IPlayer>();
+            guns = new List<IGun>();
         }
 
         public string AddPlayer(string name)
         {
-            IPlayer player = (CivilPlayer)players.FirstOrDefault(p => p.Name == name);
+            var player = players.FirstOrDefault(p => p.Name == name);
 
             players.Add(player);
 
@@ -40,28 +32,14 @@ namespace ViceCity.Core
 
         public string AddGun(string type, string name)
         {
-            if (type != nameof(Pistol) && type != nameof(Rifle))
+            var gun = guns.FirstOrDefault(g => g.GetType().Name == type);
+
+            if (gun == null)
             {
                 return $"Invalid gun type!";
             }
 
-            IGun gun = null;
-
-            switch (type)
-            {
-                case "Rifle":
-                    gun = new Rifle(name);
-                    break;
-
-                case "Pistol":
-                    gun = new Pistol(name);
-                    break;
-
-                default:
-                    break;
-            }
-
-            this.gunRepository.Add(gun);
+            guns.Add(gun);
 
             return $"Successfully added {gun.Name} of type: {gun.GetType().Name}";
         }
@@ -92,7 +70,9 @@ namespace ViceCity.Core
 
         public string Fight()
         {
-            return $"";
+            var mainPlayer = players.FirstOrDefault(p => p.Name == "Vercetti");
+
+            mainPlayer.tak
         }
     }
 }

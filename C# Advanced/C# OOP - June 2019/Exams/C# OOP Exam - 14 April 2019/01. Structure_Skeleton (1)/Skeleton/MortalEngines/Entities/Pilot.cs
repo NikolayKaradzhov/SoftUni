@@ -8,12 +8,12 @@ namespace MortalEngines.Entities
 {
     public class Pilot : IPilot
     {
-        private string name;
+        private string _name;
         private IList<IMachine> machines;
 
         public Pilot(string name)
         {
-            this.Name = name;   
+            this.Name = _name;
             this.machines = new List<IMachine>();
         }
 
@@ -21,7 +21,7 @@ namespace MortalEngines.Entities
         {
             get
             {
-                return this.name;
+                return this._name;
             }
 
             private set
@@ -31,7 +31,7 @@ namespace MortalEngines.Entities
                     throw new ArgumentNullException("Pilot name cannot be null or empty string.");
                 }
 
-                this.name = value;
+                this._name = value;
             }
         }
 
@@ -51,7 +51,7 @@ namespace MortalEngines.Entities
 
             sb.AppendLine($"{this.Name} - {this.machines.Count} machines");
 
-            foreach (IMachine machine in this.machines)
+            foreach (var machine in machines)
             {
                 sb.AppendLine(machine.ToString());
             }
