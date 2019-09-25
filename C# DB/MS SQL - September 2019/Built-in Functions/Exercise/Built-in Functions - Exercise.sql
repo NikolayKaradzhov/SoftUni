@@ -59,7 +59,7 @@ SELECT
 FROM
     Towns
 WHERE
-    [Name] LIKE 'M%' OR [Name] LIKE 'K%' OR [Name] LIKE 'B%' OR [Name] LIKE 'E%'
+    [Name] LIKE 'M%' OR [Name] LIKE 'K%' OR [Name] LIKE 'B%' OR [Name] LIKE 'E%' --[MKBE]%--
 ORDER BY
     [Name] ASC
 
@@ -129,3 +129,14 @@ WHERE
 ORDER BY
     IsoCode ASC
 
+
+--13. Mix of Peak and River Names--
+
+SELECT
+    PeakName, RiverName, LOWER(LEFT(PeakName, LEN(PeakName) - 1) + RiverName) AS Mix
+FROM
+    Peaks, Rivers
+WHERE
+    RIGHT(PeakName, 1) = LEFT(RiverName, 1)
+ORDER BY
+    Mix
