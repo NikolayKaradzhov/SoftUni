@@ -5,10 +5,10 @@ namespace MortalEngines.Entities
 {
     public class Fighter : BaseMachine, IFighter
     {
-        private const double InitialHealthPoints = 200;
+        private const double Fighter_Initial_Health_Points = 200;
 
         public Fighter(string name, double attackPoints, double defensePoints) 
-            : base(name, attackPoints, defensePoints, InitialHealthPoints)
+            : base(name, attackPoints, defensePoints, Fighter_Initial_Health_Points)
         {
             this.ToggleAggressiveMode();
         }
@@ -35,11 +35,11 @@ namespace MortalEngines.Entities
 
         public override string ToString()
         {
-            string agressiveModeOutput = this.AggressiveMode == true ? "ON" : "OFF";
+            string aggressiveModeOnOrOff = this.AggressiveMode ? "ON" : "OFF";
 
-            return base.ToString() +
-                   Environment.NewLine +
-                   $" *Aggressive: {agressiveModeOutput}";
+            return base.ToString()
+                   + Environment.NewLine
+                   + $" *Aggressive: {aggressiveModeOnOrOff}";
         }
     }
 }

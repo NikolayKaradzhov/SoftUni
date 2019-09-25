@@ -5,15 +5,15 @@ namespace MortalEngines.Entities
 {
     public class Tank : BaseMachine, ITank
     {
-        private const double InitialHealthPoints = 100;
+        private const double Tank_Initial_Health_Points = 100;
 
         public Tank(string name, double attackPoints, double defensePoints) 
-            : base(name, attackPoints, defensePoints, InitialHealthPoints)
+            : base(name, attackPoints, defensePoints, Tank_Initial_Health_Points)
         {
             this.ToggleDefenseMode();
         }
 
-        public bool DefenseMode { get; protected set; }
+        public bool DefenseMode { get; private set; }
 
         public void ToggleDefenseMode()
         {
@@ -35,11 +35,11 @@ namespace MortalEngines.Entities
 
         public override string ToString()
         {
-            string deffenceModeOutput = this.DefenseMode == true ? "ON" : "OFF";
+            string defenseModeOnOrOff = this.DefenseMode ? "ON" : "OFF";
 
-            return base.ToString() +
-                   Environment.NewLine +
-                   $" *Defense: {deffenceModeOutput}";
+            return base.ToString()
+                   + Environment.NewLine
+                   + $" * Defense: {defenseModeOnOrOff}";
         }
     }
 }

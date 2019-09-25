@@ -37,8 +37,6 @@ namespace Skeleton
             Axe axe = new Axe(1, 1);
             Dummy dummy = new Dummy(100, 100);
 
-            axe.Attack(dummy);
-
             Assert.That(() => axe.Attack(dummy),
                 Throws.InvalidOperationException.With.Message.EqualTo("Axe is broken."));
         }

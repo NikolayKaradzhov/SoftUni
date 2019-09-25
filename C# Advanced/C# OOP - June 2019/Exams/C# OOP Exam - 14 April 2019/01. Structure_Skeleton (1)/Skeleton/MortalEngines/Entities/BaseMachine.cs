@@ -10,14 +10,20 @@ namespace MortalEngines.Entities
     {
         private string name;
         private IPilot pilot;
+        private IList<string> targets;
+
+        private BaseMachine()
+        {
+            this.targets = new List<string>();
+        }
 
         public BaseMachine(string name, double attackPoints, double defensePoints, double healthPoints)
+            :this()
         {
             this.Name = name;
             this.AttackPoints = attackPoints;
             this.DefensePoints = defensePoints;
             this.HealthPoints = healthPoints;
-            this.Targets = new List<string>();
         }
 
         public string Name
@@ -26,25 +32,22 @@ namespace MortalEngines.Entities
             {
                 return this.name;
             }
+
             private set
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentNullException($"Machine name cannot be null or empty.");
+                    throw new ArgumentNullException("Machine name cannot be null or empty.");
                 }
 
                 this.name = value;
             }
         }
 
-        public double HealthPoints { get; set; }
-
         public IPilot Pilot
         {
-            get
-            {
-                return this.pilot;
-            }
+            get { return this.pilot; }
+
             set
             {
                 if (value == null)
@@ -56,11 +59,18 @@ namespace MortalEngines.Entities
             }
         }
 
-        public double AttackPoints { get; protected set; }
+        public double HealthPoints { get;  set; }
 
-        public double DefensePoints { get; protected set; }
+        public double AttackPoints { get; set; }
 
-        public IList<string> Targets { get; }
+        public double DefensePoints { get; set; }
+
+        public IList<string> Targets
+        {
+            get { return this.targets; }
+
+            private set { this.targets = value; }
+        }
 
         public void Attack(IMachine target)
         {
@@ -69,32 +79,31 @@ namespace MortalEngines.Entities
                 throw new NullReferenceException("Target cannot be null");
             }
 
-            double difference = Math.Abs(this.AttackPoints - target.DefensePoints);
+            double hpDifference = 
+                this.AttackPoints - target.DefensePoints;
+
+            target.HealthPoints -= hpDifference;
 
             if (target.HealthPoints < 0)
             {
                 target.HealthPoints = 0;
             }
-            else
-            {
-                target.HealthPoints -= difference;
-            }
 
-            this.Targets.Add(target.Name);
+            this.targets.Add(target.Name);
         }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
 
-            string targetsOutput = this.Targets.Count > 0 ? String.Join(",", this.Targets) : "None";
+            string targetsOutput = this.targets.Count > 0 ? String.Join(",", this.targets) : "None";
 
-            sb.AppendLine($"- {this.Name}")
-                .AppendLine($" *Type: {this.GetType().Name}")
-                .AppendLine($" *Health: {this.HealthPoints:F2}")
-                .AppendLine($" *Attack: {this.AttackPoints:F2}")
-                .AppendLine($" *Defense: {this.DefensePoints:F2}")
-                .AppendLine($" *Targets: {targetsOutput}");
+            sb.AppendLine($"- {this.Name}");
+            sb.AppendLine($" *Type: {this.GetType().Name}");
+            sb.AppendLine($" *Health: {this.HealthPoints:f2}");
+            sb.AppendLine($" *Attack: {this.AttackPoints:f2}");
+            sb.AppendLine($" *Defense: {this.DefensePoints:f2}");
+            sb.AppendLine($" *Targets: {targetsOutput}");
 
             return sb.ToString().TrimEnd();
         }
