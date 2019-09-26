@@ -57,3 +57,37 @@ WHERE
 GROUP BY
     DepositGroup
 
+
+--07. Deposits Filter.07--
+
+SELECT
+    DepositGroup, SUM(DepositAmount) AS [Total Sum]
+FROM
+    WizzardDeposits
+WHERE
+    MagicWandCreator = 'Ollivander family'
+GROUP BY
+    DepositGroup
+HAVING
+    SUM(DepositAmount) < 150000
+ORDER BY
+    [Total Sum] DESC
+
+
+--08. Deposit Charge.08--
+
+SELECT
+    DepositGroup, MagicWandCreator, MIN(DepositCharge) AS [Min Deposit]
+FROM
+    WizzardDeposits
+GROUP BY
+    DepositGroup, MagicWandCreator
+ORDER BY
+    MagicWandCreator, DepositGroup ASC
+
+
+--09. Age Groups.09--
+
+SELECT
+    CASE
+        WHEN
