@@ -44,3 +44,16 @@ FROM
     WizzardDeposits
 GROUP BY
     DepositGroup
+
+
+--06. Deposits Sum for Ollivander Family.06--
+
+SELECT
+    DepositGroup, SUM(DepositAmount) AS [Total Sum]
+FROM
+    WizzardDeposits
+WHERE
+    MagicWandCreator = 'Ollivander family'
+GROUP BY
+    DepositGroup
+
