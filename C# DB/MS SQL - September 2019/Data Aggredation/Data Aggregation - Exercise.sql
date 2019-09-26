@@ -34,3 +34,13 @@ GROUP BY
     DepositGroup
 ORDER BY
     AVG(MagicWandSize)
+
+
+--05. Deposits Sum.05--
+
+SELECT
+    DepositGroup, SUM(DepositAmount) AS [Total Sum]
+FROM
+    WizzardDeposits
+GROUP BY
+    DepositGroup
