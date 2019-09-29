@@ -132,3 +132,43 @@ GROUP BY
 ORDER BY
     DepositGroup DESC, IsDepositExpired ASC
 
+
+--12.Rich Wizard, Poor Wizard.12--
+
+SELECT SUM(Difference) AS [SumDifference] FROM (
+    SELECT
+    FirstName AS [Host Wizard],
+    DepositAmount AS [Host Wizard Deposit],
+    LEAD(FirstName) over (ORDER BY Id) [Guest Wizard],
+    LEAD(DepositAmount) over (ORDER BY Id) [Guest Wizard Deposit],
+    DepositAmount - LEAD(DepositAmount) over (ORDER BY Id) AS [Difference]
+FROM
+    WizzardDeposits ) AS DiffTable
+
+
+--13.Departments Total Salaries.13--
+
+USE SoftUni
+
+SELECT
+    DepartmentID, SUM(Salary) AS [TotalSalary]
+FROM
+    Employees
+GROUP BY
+    DepartmentID
+ORDER BY
+    DepartmentID ASC
+
+
+--14.Employees Minimum Salaries.14--
+
+SELECT
+    DepartmentID, MIN(Salary) AS [MinimumSalary]
+FROM
+    Employees
+WHERE
+    DepartmentID IN (2,5,7)
+    AND
+        HireDate > CONVERT(DATETIME, '01/01/2000')
+GROUP BY
+    DepartmentID
