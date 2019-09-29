@@ -118,3 +118,17 @@ GROUP BY
 ORDER BY
     FirstLetter ASC
 
+
+--11.Average Interest.11--
+
+SELECT
+    DepositGroup, IsDepositExpired, AVG(DepositInterest)
+FROM
+    WizzardDeposits
+WHERE
+    DepositStartDate > CONVERT(DATETIME, '01/01/1985')
+GROUP BY
+    DepositGroup, IsDepositExpired
+ORDER BY
+    DepositGroup DESC, IsDepositExpired ASC
+
