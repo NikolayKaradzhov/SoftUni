@@ -172,3 +172,53 @@ WHERE
         HireDate > CONVERT(DATETIME, '01/01/2000')
 GROUP BY
     DepartmentID
+
+
+--15. Employees Average Salaries.15--
+
+SELECT * INTO NewEmployeesTable
+FROM
+    Employees
+WHERE
+    Salary > 30000
+
+DELETE FROM
+    NewEmployeesTable
+WHERE
+    ManagerID = 42
+
+UPDATE
+    NewEmployeesTable
+SET
+    Salary += 5000
+WHERE
+    DepartmentID = 1
+
+SELECT
+    DepartmentID, AVG(Salary) AS [AverageSalary]
+FROM
+    NewEmployeesTable
+GROUP BY
+    DepartmentID
+
+
+--16. Employees Maximum Salaries.16--
+
+SELECT
+    DepartmentID, MAX(Salary) AS [MaxSalary]
+FROM
+    Employees
+GROUP BY
+    DepartmentID
+HAVING
+    MAX(Salary) NOT BETWEEN 30000 AND 70000
+
+
+--17. Employees Count Salaries.17--
+
+SELECT
+    COUNT(Salary) AS [Count]
+FROM
+    Employees
+WHERE
+    ManagerID IS NULL
