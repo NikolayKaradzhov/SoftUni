@@ -244,3 +244,8 @@ CREATE TABLE Agenda
 
 --09.Peaks in Rila*.09--
 
+SELECT MountainRange, PeakName, Elevation
+  FROM Mountains AS M
+           JOIN Peaks P ON M.Id = P.MountainId
+ WHERE MountainRange = 'Rila'
+ ORDER BY Elevation DESC
