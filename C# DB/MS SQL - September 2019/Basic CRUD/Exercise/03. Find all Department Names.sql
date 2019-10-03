@@ -1,4 +1,0 @@
-SELECT
-	Name
-FROM 
-	Departments
