@@ -1,1 +1,0 @@
-SELECT len('asdfff     ') AS ExtractString;
