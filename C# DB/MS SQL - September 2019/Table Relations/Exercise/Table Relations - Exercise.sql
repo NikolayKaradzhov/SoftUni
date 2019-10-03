@@ -199,3 +199,7 @@ CREATE TABLE OrderItems
     ItemID INT FOREIGN KEY REFERENCES Items(ItemID) NOT NULL ,
     CONSTRAINT PK_OrderItems PRIMARY KEY (OrderID, ItemID)
 )
+
+
+--06.University Database.06--
+
