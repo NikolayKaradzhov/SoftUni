@@ -89,8 +89,28 @@ ORDER BY E.EmployeeID
 
 --08. Employee 24--
 
+SELECT E.EmployeeID, E.FirstName,
+       CASE
+           WHEN YEAR(p.StartDate) >= 2005 THEN NULL
+           ELSE P.Name
+       END AS [ProjectName]
+FROM Employees AS E
+JOIN EmployeesProjects AS EP ON E.EmployeeID = EP.EmployeeID
+JOIN Projects AS P ON EP.ProjectID = P.ProjectID
+WHERE E.EmployeeID = 24
+
+
 
 --09. Employee Manager--
+
+SELECT E.EmployeeID, E.FirstName, E.ManagerID, MG.FirstName
+FROM Employees AS E
+JOIN Employees AS MG ON MG.EmployeeID = E.ManagerID
+WHERE E.ManagerID IN (3,7)
+ORDER BY E.EmployeeID ASC
+
+
+
 
 
 --10. Employees Summary--
