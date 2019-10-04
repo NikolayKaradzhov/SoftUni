@@ -85,11 +85,9 @@ SELECT FirstName, LastName, HireDate, D.Name
 
 SELECT
    TOP 5
-     E.EmployeeID
-     ,
-     E.FirstName
-     ,
-     P.Name
+        E.EmployeeID,
+        E.FirstName,
+        P.Name
   FROM Employees AS E
            JOIN EmployeesProjects AS EP ON E.EmployeeID = EP.EmployeeID
            JOIN Projects AS P ON EP.ProjectID = P.ProjectID
@@ -176,9 +174,8 @@ SELECT CountryCode, COUNT(MountainRange) AS [MountainRages]
 
 SELECT
    TOP 5
-CountryName
-     ,
-     R.RiverName
+        CountryName,
+        R.RiverName
   FROM Countries AS C
            LEFT JOIN CountriesRivers AS CR ON CR.CountryCode = C.CountryCode
            LEFT JOIN Rivers AS R ON CR.RiverId = R.Id
@@ -213,11 +210,9 @@ SELECT COUNT(C.CountryName) AS Count
 
 SELECT
    TOP 5
-     C.CountryName
-     ,
-   MAX(p.Elevation) AS [HighestPeakElevation]
-     ,
-   MAX(R.Length) AS [LongestRiverLength]
+        C.CountryName,
+        MAX(p.Elevation) AS [HighestPeakElevation],
+        MAX(R.Length) AS [LongestRiverLength]
   FROM Countries AS C
            JOIN MountainsCountries MC ON C.CountryCode = MC.CountryCode
            JOIN Mountains M ON MC.MountainId = M.Id
