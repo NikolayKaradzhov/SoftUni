@@ -3,13 +3,10 @@ USE SoftUni
 
 SELECT
    TOP 5
-EmployeeID
-     ,
-JobTitle
-     ,
-     A.AddressID
-     ,
-AddressText
+        EmployeeID,
+        JobTitle,
+        A.AddressID,
+        AddressText
   FROM Employees E
            JOIN Addresses A ON E.AddressID = A.AddressID
  ORDER BY AddressID
@@ -19,13 +16,10 @@ AddressText
 
 SELECT
    TOP 50
-FirstName
-     ,
-LastName
-     ,
-     T.Name
-     ,
-     A.AddressText
+        FirstName,
+        LastName,
+        T.Name,
+        A.AddressText
   FROM Employees AS E
            JOIN Addresses AS A ON E.AddressID = A.AddressID
            JOIN Towns T ON A.TownID = T.TownID
@@ -46,13 +40,10 @@ SELECT EmployeeID, FirstName, LastName, D.Name
 
 SELECT
    TOP 5
-EmployeeID
-     ,
-FirstName
-     ,
-Salary
-     ,
-     D.Name
+        EmployeeID,
+        FirstName,
+        Salary,
+        D.Name
   FROM Employees AS E
            JOIN Departments AS D ON E.DepartmentID = D.DepartmentID
  WHERE Salary > 15000
@@ -63,9 +54,8 @@ Salary
 
 SELECT
    TOP 3
-     E.EmployeeID
-     ,
-     E.FirstName
+        E.EmployeeID,
+        E.FirstName
   FROM Employees AS E
            FULL JOIN EmployeesProjects AS EP ON E.EmployeeID = EP.EmployeeID
  WHERE EP.ProjectID IS NULL
@@ -85,11 +75,9 @@ SELECT FirstName, LastName, HireDate, D.Name
 
 SELECT
    TOP 5
-     E.EmployeeID
-     ,
-     E.FirstName
-     ,
-     P.Name
+        E.EmployeeID,
+        E.FirstName,
+        P.Name
   FROM Employees AS E
            JOIN EmployeesProjects AS EP ON E.EmployeeID = EP.EmployeeID
            JOIN Projects AS P ON EP.ProjectID = P.ProjectID
@@ -102,6 +90,7 @@ SELECT
 
 SELECT E.EmployeeID,
        E.FirstName,
+       --IIF(YEAR(p.StartDate) >= 2005, NULL, P.Name) AS [ProjectName]--
        CASE
            WHEN YEAR(p.StartDate) >= 2005 THEN NULL
            ELSE P.Name
@@ -125,13 +114,10 @@ SELECT E.EmployeeID, E.FirstName, E.ManagerID, MG.FirstName AS ManagerName
 
 SELECT
    TOP 50
-     E.EmployeeID
-     ,
-CONCAT(E.FirstName, ' ', E.LastName) AS [EmployeeName]
-     ,
-CONCAT(MG.FirstName, ' ', MG.LastName) AS [ManagerName]
-     ,
-     D.Name AS [DepartmentName]
+        E.EmployeeID,
+        CONCAT(E.FirstName, ' ', E.LastName) AS [EmployeeName],
+        CONCAT(MG.FirstName, ' ', MG.LastName) AS [ManagerName],
+        D.Name AS [DepartmentName]
   FROM Employees AS E
            JOIN Employees AS MG ON MG.EmployeeID = E.ManagerID
            JOIN Departments AS D ON D.DepartmentID = E.DepartmentID
@@ -147,6 +133,7 @@ SELECT
            JOIN Employees AS E ON E.DepartmentID = D.DepartmentID
  GROUP BY D.Name
  ORDER BY [MinAverageSalary] ASC
+
 
 SELECT MIN(A.AverageSalary) AS MinAverageSalary
   FROM (SELECT E.DepartmentID, AVG(E.Salary) AS AverageSalary
@@ -176,8 +163,9 @@ SELECT CountryCode, COUNT(MountainRange) AS [MountainRages]
 --14. Countries With or Without Rivers--
 
 SELECT
-   TOP 5 CountryName,
-         R.RiverName
+   TOP 5
+        CountryName,
+        R.RiverName
   FROM Countries AS C
            LEFT JOIN CountriesRivers AS CR ON CR.CountryCode = C.CountryCode
            LEFT JOIN Rivers AS R ON CR.RiverId = R.Id
@@ -185,14 +173,33 @@ SELECT
  ORDER BY C.CountryName
 
 
-
---15. Continents and Currencies--
+--15*. Continents and Currencies--
 
 
 --16. Countries Without any Mountains--
 
+SELECT COUNT(C.CountryName) AS Count
+  FROM Countries AS C
+           LEFT JOIN MountainsCountries MC ON C.CountryCode = MC.CountryCode
+ WHERE MC.MountainId IS NULL
+
 
 --17. Highest Peak and Longest River by Country--
+
+SELECT
+    TOP 5 C.CountryName,
+          MAX(p.Elevation) AS [HighestPeakElevation],
+          MAX(R.Length) AS [LongestRiverLength]
+FROM Countries AS C
+JOIN MountainsCountries MC ON C.CountryCode = MC.CountryCode
+JOIN Mountains M ON MC.MountainId = M.Id
+JOIN Peaks P ON M.Id = P.MountainId
+JOIN CountriesRivers CR ON C.CountryCode = CR.CountryCode
+JOIN Rivers R ON CR.RiverId = R.Id
+GROUP BY C.CountryName
+ORDER BY [HighestPeakElevation] DESC,
+         [LongestRiverLength] DESC,
+         C.CountryName
 
 
 --18. Highest Peak Name and Elevation by Country--
