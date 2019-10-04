@@ -3,13 +3,10 @@ USE SoftUni
 
 SELECT
    TOP 5
-EmployeeID
-     ,
-JobTitle
-     ,
-     A.AddressID
-     ,
-AddressText
+        EmployeeID,
+        JobTitle,
+        A.AddressID,
+        AddressText
   FROM Employees E
            JOIN Addresses A ON E.AddressID = A.AddressID
  ORDER BY AddressID
@@ -19,13 +16,10 @@ AddressText
 
 SELECT
    TOP 50
-FirstName
-     ,
-LastName
-     ,
-     T.Name
-     ,
-     A.AddressText
+        FirstName,
+        LastName,
+        T.Name,
+        A.AddressText
   FROM Employees AS E
            JOIN Addresses AS A ON E.AddressID = A.AddressID
            JOIN Towns T ON A.TownID = T.TownID
@@ -46,13 +40,10 @@ SELECT EmployeeID, FirstName, LastName, D.Name
 
 SELECT
    TOP 5
-EmployeeID
-     ,
-FirstName
-     ,
-Salary
-     ,
-     D.Name
+        EmployeeID,
+        FirstName,
+        Salary,
+        D.Name
   FROM Employees AS E
            JOIN Departments AS D ON E.DepartmentID = D.DepartmentID
  WHERE Salary > 15000
@@ -63,9 +54,8 @@ Salary
 
 SELECT
    TOP 3
-     E.EmployeeID
-     ,
-     E.FirstName
+        E.EmployeeID,
+        E.FirstName
   FROM Employees AS E
            FULL JOIN EmployeesProjects AS EP ON E.EmployeeID = EP.EmployeeID
  WHERE EP.ProjectID IS NULL
