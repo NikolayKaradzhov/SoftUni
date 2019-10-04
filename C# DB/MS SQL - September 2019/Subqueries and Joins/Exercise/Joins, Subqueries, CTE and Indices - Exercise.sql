@@ -165,6 +165,11 @@ SELECT MC.CountryCode, M.MountainRange, P.PeakName, P.Elevation
 
 --13. Count Mountain Ranges--
 
+SELECT CountryCode, COUNT(MountainRange) AS [MountainRages]
+  FROM Mountains AS M
+           JOIN MountainsCountries AS MC ON MC.MountainId = M.Id
+ WHERE MC.CountryCode IN ('BG', 'RU', 'US')
+ GROUP BY CountryCode
 
 --14. Countries With or Without Rivers--
 
