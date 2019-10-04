@@ -42,84 +42,117 @@ SELECT EmployeeID, FirstName, LastName, D.Name
  ORDER BY EmployeeID ASC
 
 
-
 --04. Employee Departments--
 
 SELECT
-    TOP 5
-        EmployeeID, FirstName, Salary, D.Name
-FROM Employees AS E
-JOIN Departments AS D ON E.DepartmentID = D.DepartmentID
-WHERE Salary > 15000
-ORDER BY D.DepartmentID
-
+   TOP 5
+EmployeeID
+     ,
+FirstName
+     ,
+Salary
+     ,
+     D.Name
+  FROM Employees AS E
+           JOIN Departments AS D ON E.DepartmentID = D.DepartmentID
+ WHERE Salary > 15000
+ ORDER BY D.DepartmentID
 
 
 --05. Employees Without Projects--
 
 SELECT
-    TOP 3
-        E.EmployeeID, E.FirstName
-FROM Employees AS E
-FULL JOIN EmployeesProjects AS EP ON E.EmployeeID = EP.EmployeeID
-WHERE EP.ProjectID IS NULL
-ORDER BY E.EmployeeID
+   TOP 3
+     E.EmployeeID
+     ,
+     E.FirstName
+  FROM Employees AS E
+           FULL JOIN EmployeesProjects AS EP ON E.EmployeeID = EP.EmployeeID
+ WHERE EP.ProjectID IS NULL
+ ORDER BY E.EmployeeID
 
 --06. Employees Hired After--
 
 SELECT FirstName, LastName, HireDate, D.Name
-FROM Employees
-JOIN Departments D ON Employees.DepartmentID = D.DepartmentID
-WHERE D.Name IN ('Sales', 'Finance') AND HireDate > '1.1.1999'
-ORDER BY HireDate
-
+  FROM Employees
+           JOIN Departments D ON Employees.DepartmentID = D.DepartmentID
+ WHERE D.Name IN ('Sales', 'Finance') AND
+       HireDate > '1.1.1999'
+ ORDER BY HireDate
 
 
 --07. Employees With Project--
 
 SELECT
-    TOP 5
-        E.EmployeeID, E.FirstName, P.Name
-FROM Employees AS E
-JOIN EmployeesProjects AS EP ON E.EmployeeID = EP.EmployeeID
-JOIN Projects AS P ON EP.ProjectID = P.ProjectID
-WHERE P.StartDate > '2002.08.13' AND P.EndDate IS NULL
-ORDER BY E.EmployeeID
+   TOP 5
+     E.EmployeeID
+     ,
+     E.FirstName
+     ,
+     P.Name
+  FROM Employees AS E
+           JOIN EmployeesProjects AS EP ON E.EmployeeID = EP.EmployeeID
+           JOIN Projects AS P ON EP.ProjectID = P.ProjectID
+ WHERE P.StartDate > '2002.08.13' AND
+       P.EndDate IS NULL
+ ORDER BY E.EmployeeID
 
 
 --08. Employee 24--
 
-SELECT E.EmployeeID, E.FirstName,
+SELECT E.EmployeeID,
+       E.FirstName,
        CASE
            WHEN YEAR(p.StartDate) >= 2005 THEN NULL
            ELSE P.Name
        END AS [ProjectName]
-FROM Employees AS E
-JOIN EmployeesProjects AS EP ON E.EmployeeID = EP.EmployeeID
-JOIN Projects AS P ON EP.ProjectID = P.ProjectID
-WHERE E.EmployeeID = 24
-
+  FROM Employees AS E
+           JOIN EmployeesProjects AS EP ON E.EmployeeID = EP.EmployeeID
+           JOIN Projects AS P ON EP.ProjectID = P.ProjectID
+ WHERE E.EmployeeID = 24
 
 
 --09. Employee Manager--
 
-SELECT E.EmployeeID, E.FirstName, E.ManagerID, MG.FirstName
-FROM Employees AS E
-JOIN Employees AS MG ON MG.EmployeeID = E.ManagerID
-WHERE E.ManagerID IN (3,7)
-ORDER BY E.EmployeeID ASC
-
-
-
+SELECT E.EmployeeID, E.FirstName, E.ManagerID, MG.FirstName AS ManagerName
+  FROM Employees AS E
+           JOIN Employees AS MG ON MG.EmployeeID = E.ManagerID
+ WHERE E.ManagerID IN (3, 7)
+ ORDER BY E.EmployeeID ASC
 
 
 --10. Employees Summary--
 
+SELECT
+    TOP 50
+           E.EmployeeID,
+           CONCAT(E.FirstName, ' ', E.LastName) AS [EmployeeName],
+           CONCAT(MG.FirstName, ' ', MG.LastName) AS [ManagerName],
+           D.Name AS [DepartmentName]
+  FROM Employees AS E
+           JOIN Employees AS MG ON MG.EmployeeID = E.ManagerID
+           JOIN Departments AS D ON D.DepartmentID = E.DepartmentID
+ORDER BY E.EmployeeID
+
+
 
 --11. Min Average Salary--
 
+ SELECT TOP(1) AVG(e.Salary) AS [MinAverageSalary]
+    FROM Departments AS D
+    JOIN Employees AS E ON E.DepartmentID = D.DepartmentID
+GROUP BY D.Name
+ORDER BY [MinAverageSalary] ASC
+
+SELECT MIN(A.AverageSalary) AS MinAverageSalary
+FROM
+(SELECT E.DepartmentID, AVG(E.Salary) AS AverageSalary
+   FROM Employees AS E
+  GROUP BY E.DepartmentID
+) AS A
 
 --12. Highest Peaks in Bulgaria--
+
 
 
 --13. Count Mountain Ranges--
