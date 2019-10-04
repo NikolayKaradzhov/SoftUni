@@ -126,13 +126,10 @@ SELECT E.EmployeeID, E.FirstName, E.ManagerID, MG.FirstName AS ManagerName
 
 SELECT
    TOP 50
-     E.EmployeeID
-     ,
-CONCAT(E.FirstName, ' ', E.LastName) AS [EmployeeName]
-     ,
-CONCAT(MG.FirstName, ' ', MG.LastName) AS [ManagerName]
-     ,
-     D.Name AS [DepartmentName]
+        E.EmployeeID,
+        CONCAT(E.FirstName, ' ', E.LastName) AS [EmployeeName],
+        CONCAT(MG.FirstName, ' ', MG.LastName) AS [ManagerName],
+        D.Name AS [DepartmentName]
   FROM Employees AS E
            JOIN Employees AS MG ON MG.EmployeeID = E.ManagerID
            JOIN Departments AS D ON D.DepartmentID = E.DepartmentID
