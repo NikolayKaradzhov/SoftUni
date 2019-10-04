@@ -1,5 +1,12 @@
 --01.Employee Address--
+USE SoftUni
 
+SELECT
+    TOP 5
+        EmployeeID, JobTitle, A.AddressID, AddressText
+FROM Employees E
+JOIN Addresses A ON E.AddressID = A.AddressID
+ORDER BY AddressID
 
 
 
