@@ -153,6 +153,14 @@ FROM
 
 --12. Highest Peaks in Bulgaria--
 
+SELECT MC.CountryCode, M.MountainRange, P.PeakName, P.Elevation
+  FROM Mountains AS M
+           JOIN Peaks AS P ON M.Id = P.MountainId
+           JOIN MountainsCountries AS MC ON MC.MountainId = M.Id
+ WHERE P.Elevation > 2835 AND
+       CountryCode = 'BG'
+ ORDER BY P.Elevation DESC
+
 
 
 --13. Count Mountain Ranges--
