@@ -124,32 +124,34 @@ SELECT E.EmployeeID, E.FirstName, E.ManagerID, MG.FirstName AS ManagerName
 --10. Employees Summary--
 
 SELECT
-    TOP 50
-           E.EmployeeID,
-           CONCAT(E.FirstName, ' ', E.LastName) AS [EmployeeName],
-           CONCAT(MG.FirstName, ' ', MG.LastName) AS [ManagerName],
-           D.Name AS [DepartmentName]
+   TOP 50
+     E.EmployeeID
+     ,
+CONCAT(E.FirstName, ' ', E.LastName) AS [EmployeeName]
+     ,
+CONCAT(MG.FirstName, ' ', MG.LastName) AS [ManagerName]
+     ,
+     D.Name AS [DepartmentName]
   FROM Employees AS E
            JOIN Employees AS MG ON MG.EmployeeID = E.ManagerID
            JOIN Departments AS D ON D.DepartmentID = E.DepartmentID
-ORDER BY E.EmployeeID
-
+ ORDER BY E.EmployeeID
 
 
 --11. Min Average Salary--
 
- SELECT TOP(1) AVG(e.Salary) AS [MinAverageSalary]
-    FROM Departments AS D
-    JOIN Employees AS E ON E.DepartmentID = D.DepartmentID
-GROUP BY D.Name
-ORDER BY [MinAverageSalary] ASC
+SELECT
+   TOP (1)
+   AVG(e.Salary) AS [MinAverageSalary]
+  FROM Departments AS D
+           JOIN Employees AS E ON E.DepartmentID = D.DepartmentID
+ GROUP BY D.Name
+ ORDER BY [MinAverageSalary] ASC
 
 SELECT MIN(A.AverageSalary) AS MinAverageSalary
-FROM
-(SELECT E.DepartmentID, AVG(E.Salary) AS AverageSalary
-   FROM Employees AS E
-  GROUP BY E.DepartmentID
-) AS A
+  FROM (SELECT E.DepartmentID, AVG(E.Salary) AS AverageSalary
+          FROM Employees AS E
+         GROUP BY E.DepartmentID) AS A
 
 --12. Highest Peaks in Bulgaria--
 
@@ -162,7 +164,6 @@ SELECT MC.CountryCode, M.MountainRange, P.PeakName, P.Elevation
  ORDER BY P.Elevation DESC
 
 
-
 --13. Count Mountain Ranges--
 
 SELECT CountryCode, COUNT(MountainRange) AS [MountainRages]
@@ -171,7 +172,18 @@ SELECT CountryCode, COUNT(MountainRange) AS [MountainRages]
  WHERE MC.CountryCode IN ('BG', 'RU', 'US')
  GROUP BY CountryCode
 
+
 --14. Countries With or Without Rivers--
+
+SELECT
+   TOP 5 CountryName,
+         R.RiverName
+  FROM Countries AS C
+           LEFT JOIN CountriesRivers AS CR ON CR.CountryCode = C.CountryCode
+           LEFT JOIN Rivers AS R ON CR.RiverId = R.Id
+ WHERE C.ContinentCode = 'AF'
+ ORDER BY C.CountryName
+
 
 
 --15. Continents and Currencies--
