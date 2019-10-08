@@ -54,7 +54,7 @@ END
 
 --05.Salary Level Function--
 
-CREATE FUNCTION ufn_GetSalaryLevel(@salary DECIMAL(18,4))
+CREATE FUNCTION ufn_GetSalaryLevel(@Salary DECIMAL(18,4))
 RETURNS NVARCHAR(10)
 AS
 BEGIN
@@ -69,4 +69,41 @@ BEGIN
     RETURN @result
 END
 
-EXEC ufn_GetSalaryLevel 70000.00
+
+
+--06.Employees by Salary Level--
+
+CREATE PROCEDURE usp_EmployeesBySalaryLevel (@Level NVARCHAR(20)) AS
+BEGIN
+    SELECT FirstName, LastName
+    FROM Employees AS e
+    WHERE dbo.ufn_GetSalaryLevel(Salary) = @Level
+END
+
+GO
+
+--07.Define Function--
+
+CREATE FUNCTION ufn_IsWordComprised(@setOfLetters NVARCHAR(50), @word NVARCHAR(50))
+RETURNS BIT                         --OFIAS--
+AS
+    BEGIN
+        DECLARE @result BIT
+        DECLARE @count INT = 1
+
+        WHILE @count <= LEN(@word)
+        BEGIN
+            DECLARE @currentSymbol NVARCHAR(1) = SUBSTRING(@word, @count, 1)
+                                                          --Sofia--
+            IF CHARINDEX(@currentSymbol, @setOfLetters) > 0
+                BEGIN   --S>o>f>i>a--      --OFIAS--
+                    SET @result = 1
+                    SET @count += 1
+                END
+            ELSE
+                BEGIN
+                    SET @result = 0
+                END
+        END
+        RETURN @result
+    END
