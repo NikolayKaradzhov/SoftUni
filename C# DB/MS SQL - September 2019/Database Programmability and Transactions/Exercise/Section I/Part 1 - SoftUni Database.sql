@@ -67,6 +67,8 @@ GO
         RETURN @result
     END
 
+SELECT Salary, dbo.ufn_GetSalaryLevel(Salary) AS Level
+  FROM Employees
 GO
 
 --06.Employees by Salary Level--
