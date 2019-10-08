@@ -116,5 +116,5 @@ GO
 
 CREATE PROCEDURE usp_DeleteEmployeesFromDepartment (@departmentId INT) AS
 BEGIN
-    
+
 END
