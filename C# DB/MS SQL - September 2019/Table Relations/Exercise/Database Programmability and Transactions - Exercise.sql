@@ -107,3 +107,14 @@ AS
         END
         RETURN @result
     END
+
+
+GO
+
+
+--08.Delete Employees and Departments--
+
+CREATE PROCEDURE usp_DeleteEmployeesFromDepartment (@departmentId INT) AS
+BEGIN
+    
+END
