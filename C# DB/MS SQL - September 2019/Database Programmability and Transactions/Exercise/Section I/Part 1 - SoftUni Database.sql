@@ -6,7 +6,8 @@
 
 USE SoftUni
 
-CREATE PROCEDURE usp_GetEmployeesSalaryAbove35000 AS
+CREATE PROCEDURE usp_GetEmployeesSalaryAbove35000
+AS
 BEGIN
     SELECT FirstName, LastName
       FROM Employees AS e
@@ -17,7 +18,8 @@ GO
 
 --02.Employees with Salary Above Number--
 
-CREATE PROCEDURE usp_GetEmployeesSalaryAboveNumber(@Salary DECIMAL(18, 4)) AS
+CREATE PROCEDURE usp_GetEmployeesSalaryAboveNumber(@Salary DECIMAL(18, 4))
+AS
 BEGIN
     SELECT FirstName, LastName
       FROM Employees AS e
@@ -28,69 +30,74 @@ GO
 
 --03.Town Names Starting With--
 
-CREATE PROCEDURE usp_GetTownsStartingWith(@StartLetter VARCHAR(10)) AS
+CREATE PROCEDURE usp_GetTownsStartingWith(@StartLetter VARCHAR(10))
+AS
 BEGIN
     SELECT t.Name AS Town
       FROM Towns AS t
      WHERE t.Name LIKE @StartLetter + '%'
-END EXEC usp_GetTownsStartingWith b
+END
+
+
+    EXEC usp_GetTownsStartingWith b
 
 GO
 
 --04.Employees from Town--
 
-CREATE PROCEDURE usp_GetEmployeesFromTown(@TownName NVARCHAR(20)) AS
+CREATE PROCEDURE usp_GetEmployeesFromTown(@TownName NVARCHAR(20))
+AS
 BEGIN
     SELECT e.FirstName, e.LastName
       FROM Employees AS e
                JOIN Addresses AS a ON a.AddressID = e.AddressID
                JOIN Towns AS t ON t.TownID = a.TownID
      WHERE @TownName = t.Name
-END
-
-    EXEC usp_GetEmployeesFromTown Sofia
+END EXEC usp_GetEmployeesFromTown Sofia
 
 GO
 
 --05.Salary Level Function--
 
-    CREATE FUNCTION ufn_GetSalaryLevel(@Salary DECIMAL(18, 4)) RETURNS NVARCHAR(10) AS
+CREATE FUNCTION ufn_GetSalaryLevel(@Salary DECIMAL(18, 4)) RETURNS NVARCHAR(10) AS
+BEGIN
+    DECLARE @result NVARCHAR(20)
     BEGIN
-        DECLARE @result NVARCHAR(20)
-        BEGIN
-            IF (@salary < 30000)
-                SET @result = 'Low'
-            ELSE IF (@salary BETWEEN 30000 AND 50000)
-                SET @result = 'Average'
-            ELSE IF (@salary > 50000) SET @result = 'High'
-        END
-        RETURN @result
+        IF (@salary < 30000)
+            SET @result = 'Low'
+        ELSE IF (@salary BETWEEN 30000 AND 50000) SET @result = 'Average' ELSE IF (@salary > 50000) SET @result = 'High'
     END
+    RETURN @result
+END
 
 SELECT Salary, dbo.ufn_GetSalaryLevel(Salary) AS Level
   FROM Employees
+
 GO
 
 --06.Employees by Salary Level--
 
-CREATE PROCEDURE usp_EmployeesBySalaryLevel(@Level NVARCHAR(20)) AS
- BEGIN
+CREATE PROCEDURE usp_EmployeesBySalaryLevel(@Level NVARCHAR(20))
+AS
+BEGIN
     SELECT FirstName, LastName
       FROM Employees AS e
      WHERE dbo.ufn_GetSalaryLevel(Salary) = @Level
- END
+END
 
 GO
 
 --07.Define Function--
 
-CREATE FUNCTION ufn_IsWordComprised(@setOfLetters NVARCHAR(50), @word NVARCHAR(50)) RETURNS BIT --OFIAS--
+CREATE FUNCTION ufn_IsWordComprised(@setOfLetters NVARCHAR(50), @word NVARCHAR(50))
+RETURNS BIT
 AS
 BEGIN
     DECLARE @result BIT
     DECLARE @count INT = 1
 
-    WHILE @count <= LEN(@word) BEGIN
+    WHILE @count <= LEN(@word)
+    BEGIN
         DECLARE @currentSymbol NVARCHAR(1) = SUBSTRING(@word, @count, 1)
         --Sofia--
         IF CHARINDEX(@currentSymbol, @setOfLetters) > 0
@@ -115,5 +122,37 @@ GO
 
 CREATE PROCEDURE usp_DeleteEmployeesFromDepartment(@departmentId INT) AS
 BEGIN
+    DELETE
+      FROM EmployeesProjects
+     WHERE EmployeeID IN (SELECT EmployeeID
+                            FROM Employees
+                           WHERE DepartmentID = @departmentId)
 
+    UPDATE Employees
+       SET ManagerID = NULL
+     WHERE ManagerID IN (SELECT EmployeeID
+                           FROM Employees
+                          WHERE DepartmentID = @departmentId)
+
+    ALTER TABLE Departments ALTER COLUMN ManagerID INT
+
+    UPDATE Departments
+       SET ManagerID = NULL
+     WHERE DepartmentID = @departmentId
+
+    DELETE
+      FROM Employees
+     WHERE DepartmentID = @departmentId
+
+    DELETE
+      FROM Departments
+     WHERE DepartmentID = @departmentId
+
+    SELECT COUNT(*)
+      FROM Employees
+     WHERE DepartmentID = @departmentId
 END
+
+    EXEC usp_DeleteEmployeesFromDepartment 1
+
+GO
