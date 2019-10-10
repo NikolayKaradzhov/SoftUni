@@ -35,11 +35,30 @@ GO
 
 --11. Future Value Function--
 
-CREATE FUNCTION ufn_CalculateFutureValue(@sum DECIMAL(15,2), @yearlyInterestRate FLOAT, @numberOfYears INT)
-RETURNS DECIMAL(15,4)
+CREATE FUNCTION ufn_CalculateFutureValue(@sum DECIMAL(15, 2), @yearlyInterestRate FLOAT, @numberOfYears INT)
+RETURNS DECIMAL(15, 4)
 AS
 BEGIN
     RETURN @sum * (POWER(1 + @yearlyInterestRate, @numberOfYears))
 END
 
 SELECT dbo.ufn_CalculateFutureValue(1000, 0.1, 5) AS [Output]
+
+
+--12. Calculating interest--
+
+CREATE PROCEDURE usp_CalculateFutureValueForAccount(@accountId INT, @yearlyInterestRate DECIMAL(15, 2)) AS
+BEGIN
+    DECLARE @years INT = 5
+
+    SELECT a.Id,
+           ah.FirstName,
+           ah.LastName,
+           a.Balance AS [Current Balance],
+           dbo.ufn_CalculateFutureValue(a.Balance, @yearlyInterestRate, @years) AS [Balance in 5 years]
+      FROM Accounts AS a
+               JOIN AccountHolders AS ah ON a.AccountHolderId = ah.Id
+     WHERE a.Id = @accountId
+END
+
+    EXEC usp_CalculateFutureValueForAccount 1, 0.1
