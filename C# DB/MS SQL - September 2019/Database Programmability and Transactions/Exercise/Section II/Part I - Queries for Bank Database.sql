@@ -89,4 +89,26 @@ END
 
 
 
---17.
+--17.Withdraw Money--
+
+CREATE PROCEDURE usp_WithdrawMoney (@AccountId INT, @MoneyAmount DECIMAL(18,4))
+AS
+BEGIN
+   DECLARE @targetAccountId INT = (SELECT a.Id FROM Accounts AS a WHERE a.Id = @AccountId)
+
+    IF (@MoneyAmount < 0 OR @MoneyAmount IS NULL)
+    BEGIN
+        ROLLBACK
+        RAISERROR ('Invalid amount of money', 50002, 1)
+    END
+
+    IF (@targetAccountId IS NULL)
+    BEGIN
+        ROLLBACK
+        RAISERROR ('AccountId cannot be null', 50002, 2)
+    END
+
+    UPDATE Accounts
+    SET Balance -= @MoneyAmount
+    WHERE Accounts.Id = @targetAccountId
+END
