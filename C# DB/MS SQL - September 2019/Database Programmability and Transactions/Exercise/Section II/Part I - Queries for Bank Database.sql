@@ -112,3 +112,30 @@ BEGIN
     SET Balance -= @MoneyAmount
     WHERE Accounts.Id = @targetAccountId
 END
+
+
+
+--18.Money Transfer--
+
+CREATE PROC usp_TransferMoney (@SenderId INT, @ReceiverId INT, @Amount DECIMAL(18,4))
+AS
+BEGIN
+
+    DECLARE @targetSender INT = (SELECT Id FROM Accounts WHERE Id = @SenderId)
+    DECLARE @targetReceiver INT = (SELECT Id FROM Accounts WHERE Id = @ReceiverId)
+
+    IF (@targetSender IS NULL OR @targetReceiver IS NULL)
+    BEGIN
+        ROLLBACK
+        RAISERROR ('Invalid Id Parameter', 16, 1)
+    END
+
+    IF (@Amount < 0 OR @Amount IS NULL)
+    BEGIN
+        ROLLBACK
+        RAISERROR ('Amount cannot be less than zero or null', 16, 2)
+    END
+
+    EXEC dbo.usp_WithdrawMoney @targetSender, @Amount
+	EXEC dbo.usp_DepositMoney @targetReceiver, @Amount
+END
