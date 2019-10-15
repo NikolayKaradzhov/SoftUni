@@ -189,7 +189,7 @@ END
 
 DECLARE @tripId INT = (SELECT f.Id FROM Flights AS f
 											  JOIN Tickets AS t ON t.FlightId = f.Id
-											  WHERE Destination = @destination AND Origin = @origin)
+											  WHERE Origin = @origin AND Destination = @destination)
 IF (@tripId IS NULL)
 BEGIN
 	RETURN 'Invalid flight!'
@@ -197,7 +197,7 @@ END
 
 DECLARE @ticketPrice DECIMAL(15,2) = (SELECT t.Price FROM Flights AS f
 											  JOIN Tickets AS t ON t.FlightId = f.Id
-											  WHERE Destination = @destination AND Origin = @origin)
+											  WHERE Origin = @origin AND Destination = @destination)
 
 DECLARE @totalPrice DECIMAL(15, 2) = @ticketPrice * @peoplecount;
 
