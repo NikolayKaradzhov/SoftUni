@@ -203,3 +203,15 @@ DECLARE @totalPrice DECIMAL(15, 2) = @ticketPrice * @peoplecount;
 
 RETURN 'Total price ' + CAST(@totalPrice as VARCHAR(30));
 END
+
+
+CREATE PROC usp_CancelFlights
+AS
+BEGIN
+    UPDATE Flights
+    SET DepartureTime = NULL,
+        ArrivalTime = NULL
+    WHERE CONVERT(DATETIME, ArrivalTime) > CONVERT(DATETIME, DepartureTime)
+END
+
+EXEC usp_CancelFlights
