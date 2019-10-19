@@ -155,3 +155,31 @@ SELECT
  ORDER BY Commits DESC,
           r.Id,
           r.Name
+
+
+--10.User and Files--
+
+SELECT u.Username, AVG(f.Size) AS Size
+  FROM Users AS u
+           JOIN Commits AS c ON u.Id = c.ContributorId
+           JOIN Files AS f ON c.Id = f.CommitId
+ GROUP BY u.Username
+ ORDER BY Size DESC,
+          u.Username
+
+
+--Section 4 - Programmability--
+
+--11.User Total Commits--
+
+CREATE FUNCTION udf_UserTotalCommits(@username NVARCHAR(30)) RETURNS INT AS
+BEGIN
+    DECLARE @result INT = (SELECT COUNT(ContributorId)
+                             FROM Commits AS c
+                                      JOIN Users AS u ON c.ContributorId = u.Id
+                            WHERE u.Username = @username)
+
+    RETURN @result
+END
+
+SELECT dbo.udf_UserTotalCommits('UnderSinduxrein')
