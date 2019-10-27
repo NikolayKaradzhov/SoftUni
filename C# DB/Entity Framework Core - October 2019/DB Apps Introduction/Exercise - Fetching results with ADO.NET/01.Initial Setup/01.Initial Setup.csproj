@@ -6,4 +6,8 @@
     <RootNamespace>Fetching_results_with_ADO.NET</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.3.0" />
+  </ItemGroup>
+
 </Project>
