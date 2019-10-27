@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Minion Names", "03.Minio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Add Project", "04.Add Project\04.Add Project.csproj", "{DE76E925-2187-4E82-99C5-00EFC836961D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Change Town Name Casing", "05.Change Town Name Casing\05.Change Town Name Casing.csproj", "{9C1251E1-B5E2-46EA-BD9A-66F7EEAF5DF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DE76E925-2187-4E82-99C5-00EFC836961D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE76E925-2187-4E82-99C5-00EFC836961D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE76E925-2187-4E82-99C5-00EFC836961D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C1251E1-B5E2-46EA-BD9A-66F7EEAF5DF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1251E1-B5E2-46EA-BD9A-66F7EEAF5DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1251E1-B5E2-46EA-BD9A-66F7EEAF5DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1251E1-B5E2-46EA-BD9A-66F7EEAF5DF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
