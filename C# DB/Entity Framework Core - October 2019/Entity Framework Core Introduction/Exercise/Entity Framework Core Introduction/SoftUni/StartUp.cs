@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+
 using SoftUni.Data;
+using SoftUni.Models;
 
 namespace SoftUni
 {
@@ -11,9 +14,154 @@ namespace SoftUni
         {
             SoftUniContext context = new SoftUniContext();
 
-            string result = GetEmployeesFromResearchAndDevelopment(context);
+            string result = GetEmployee147(context);
 
             Console.WriteLine(result);
+        }
+
+        //9. Employee 147
+        public static string GetEmployee147(SoftUniContext context)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            var employee147 = context.Employees
+                .Select(e => new
+                {
+                    EmployeeId = e.EmployeeId,
+                    EmployeeFullName = e.FirstName + " " + e.LastName,
+                    EmployeeJobTitle = e.JobTitle,
+                    Projects = e.EmployeesProjects
+                        .Select(p => new
+                        {
+                            ProjectName = p.Project.Name
+                        })
+                        .OrderBy(p => p.ProjectName)
+                        .ToList()
+                })
+                .Where(e => e.EmployeeId == 147)
+                .ToList();
+
+            foreach (var e in employee147)
+            {
+                sb.AppendLine($"{e.EmployeeFullName} - {e.EmployeeJobTitle}");
+
+                foreach (var project in e.Projects)
+                {
+                    sb.AppendLine(project.ProjectName);
+                }
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        //8. Addresses by Town
+        public static string GetAddressesByTown(SoftUniContext context)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            var addresses = context.Addresses
+                .Select(a => new
+                {
+                    AddressText = a.AddressText,
+                    TownName = a.Town.Name,
+                    EmployeesCount = a.Employees.Count()
+                })
+                .OrderByDescending(a => a.EmployeesCount)
+                .ThenBy(a => a.TownName)
+                .ThenBy(a => a.AddressText)
+                .Take(10)
+                .ToList();
+
+
+            foreach (var address in addresses)
+            {
+                sb.AppendLine($"{address.AddressText}, {address.TownName} - {address.EmployeesCount} employees");
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        //7. Employees and Projects
+        public static string GetEmployeesInPeriod(SoftUniContext context)
+        {
+            var employees = context.Employees
+                .Where(e => e.EmployeesProjects
+                    .Any(p => p.Project.StartDate.Year >= 2001 && p.Project.StartDate.Year <= 2003))
+                .Select(e => new
+                {
+                    EmployeeName = e.FirstName + " " + e.LastName,
+                    ManagerName = e.Manager.FirstName + " " + e.Manager.LastName,
+                    Projects = e.EmployeesProjects
+                        .Select(p => new
+                        {
+                            ProjectName = p.Project.Name,
+                            StartDate = p.Project.StartDate,
+                            EndDate = p.Project.EndDate
+                        })
+                        .ToList()
+                })
+                .Take(10)
+                .ToList();
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var employee in employees)
+            {
+                sb.AppendLine($"{employee.EmployeeName} - Manager: {employee.ManagerName}");
+
+                foreach (var project in employee.Projects)
+                {
+                    var startDate = project.StartDate
+                        .ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
+
+                    var endDate = project.EndDate == null ?
+                        "not finished" :
+                        project.EndDate.Value.ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
+
+                    sb.AppendLine($"--{project.ProjectName} - {startDate} - {endDate}");
+                }
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        //6. Adding a New Address and Updating Employee
+        public static string AddNewAddressToEmployee(SoftUniContext context)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            Address address = new Address()
+            {
+                AddressText = "Vitoshka 15",
+                TownId = 4
+            };
+
+            context.Addresses.Add(address);
+
+            Employee nakovEmployee = context
+                .Employees
+                .First(e => e.LastName == "Nakov");
+
+            nakovEmployee.Address = address;
+
+            context.SaveChanges();
+
+            var addressTexts = context
+                .Employees
+                .OrderByDescending(e => e.AddressId)
+                .Select(e => new
+                {
+                    AddressText = e.Address.AddressText
+                })
+                .Take(10)
+                .ToList();
+
+            foreach (var a in addressTexts)
+            {
+                sb.AppendLine(a.AddressText);
+            }
+
+            return sb.ToString().TrimEnd();
         }
 
         //5. Employees from Research and Development
