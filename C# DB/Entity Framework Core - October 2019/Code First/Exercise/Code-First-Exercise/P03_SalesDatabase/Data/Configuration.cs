@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace P03_SalesDatabase.Data
+﻿namespace P03_SalesDatabase.Data
 {
-    class Configuration
+    internal static class Configuration
     {
+        public static string ConnectionString = @"Server=.;Database=SalesDatabase;Integrated Security=true;";
     }
 }
