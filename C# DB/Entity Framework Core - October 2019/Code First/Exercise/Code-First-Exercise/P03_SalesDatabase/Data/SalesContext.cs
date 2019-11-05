@@ -110,7 +110,8 @@
                 entity
                     .Property(s => s.Date)
                     .IsRequired(true)
-                    .HasColumnType("DATETIME2");
+                    .HasColumnType("DATETIME2")
+                    .HasDefaultValueSql("GETDATE()");
 
                 entity
                     .HasOne(s => s.Product)
