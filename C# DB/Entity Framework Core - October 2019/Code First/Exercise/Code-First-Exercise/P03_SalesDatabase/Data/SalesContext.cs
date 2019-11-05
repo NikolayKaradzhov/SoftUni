@@ -38,7 +38,7 @@
             base.OnConfiguring(optionsBuilder);
         }
 
-        protected internal virtual void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Product>(entity =>
             {
@@ -59,6 +59,12 @@
                 entity
                     .Property(p => p.Price)
                     .IsRequired(true);
+
+                entity
+                    .Property(p => p.Description)
+                    .HasMaxLength(250)
+                    .IsRequired(false)
+                    .HasDefaultValue("No description"); 
             });
 
             modelBuilder.Entity<Customer>(entity =>
