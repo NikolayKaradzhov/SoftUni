@@ -24,6 +24,7 @@ namespace P01_HospitalDatabase.Data
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Visitation> Visitations { get; set; }
         public DbSet<PatientMedicament> PatientsMedicaments { get; set; }
+        public DbSet<Doctor> Doctors { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -139,6 +140,27 @@ namespace P01_HospitalDatabase.Data
                         k.MedicamentId,
                         k.PatientId
                     });
+            });
+
+            modelBuilder.Entity<Doctor>(entity =>
+            {
+                entity
+                    .HasKey(d => d.DoctorId);
+
+                entity
+                    .Property(d => d.Name)
+                    .HasMaxLength(30)
+                    .IsRequired(true)
+                    .IsUnicode(true);
+
+                entity
+                    .Property(d => d.Specialty)
+                    .IsRequired(true);
+
+                entity
+                    .HasMany(d => d.Visitations)
+                    .WithOne(d => d.Doctor)
+                    .HasForeignKey(v => v.DoctorId);
             });
         }
     }
