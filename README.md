@@ -390,8 +390,8 @@ Nikolay Karadzhov
      <tbody>
       <tr>
         <th align="center" width="50%">MSSQL - September 2019</th>
-        <th width = "50%">Grade: Currently taking this course</th>
-        <th width = "20%"><a href = "">...</a></th>
+        <th width = "50%">Grade: 6.00 out of 6.00</th>
+        <th width = "20%"><a href = "https://softuni.bg/users/profile/certificates?username=nikolaykaradzhov">Certificate</a></th>
         </tr>
     </table>
     
