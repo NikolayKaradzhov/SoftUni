@@ -37,14 +37,19 @@
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new CourseConfiguration());
+            DatabaseSeeder.CoursesSeed(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new HomeworkConfiguration());
+            DatabaseSeeder.HomeworkSeed(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new ResourceConfiguration());
+            DatabaseSeeder.ResourceSeed(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new StudentConfiguration());
+            DatabaseSeeder.StudentSeed(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new StudentCourseConfiguration());
+            DatabaseSeeder.StudentCourseSeed(modelBuilder);
         }
     }
 }
