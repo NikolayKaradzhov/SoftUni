@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace P03_FootballBetting.Data.Models
+﻿namespace P03_FootballBetting.Data.Models
 {
-    class PredictionType
+    public enum PredictionType
     {
+        Draw = 0,
+        HomeTeam = 1,
+        AwayTeam = 2
     }
 }

@@ -1,10 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace P03_FootballBetting.Data.Models
+﻿namespace P03_FootballBetting.Data.Models
 {
-    class Position
+    using System.Collections;
+    using System.Collections.Generic;
+
+    public class Position
     {
+        public int PositionId { get; set; }
+
+        public int Name { get; set; }
+
+        public ICollection<Player> Players { get; set; }
+        = new HashSet<Player>();
     }
 }

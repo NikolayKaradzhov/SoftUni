@@ -1,10 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace P03_FootballBetting.Data.Models
+﻿namespace P03_FootballBetting.Data.Models
 {
-    class PlayerStatistic
+    public class PlayerStatistic
     {
+        public int GameId { get; set; }
+        public Game Game { get; set; }
+
+        public int PlayerId { get; set; }
+        public Player Player { get; set; }
+
+        public int ScoredGoals { get; set; }
+
+        public int Assists { get; set; }
+
+        public int MinutesPlayed { get; set; }  
     }
 }
