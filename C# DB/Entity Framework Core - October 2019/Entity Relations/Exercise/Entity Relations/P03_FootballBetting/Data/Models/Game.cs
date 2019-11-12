@@ -29,7 +29,7 @@
 
         public string Result { get; set; }
 
-        public IEnumerable<PlayerStatistic> PlayerStatistics { get; set; }
+        public ICollection<PlayerStatistic> PlayerStatistics { get; set; }
         = new HashSet<PlayerStatistic>();
 
         public ICollection<Bet> Bets { get; set; }
