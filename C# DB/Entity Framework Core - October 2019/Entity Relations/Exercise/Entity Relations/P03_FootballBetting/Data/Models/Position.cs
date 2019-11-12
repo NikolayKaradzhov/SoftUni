@@ -7,7 +7,7 @@
     {
         public int PositionId { get; set; }
 
-        public int Name { get; set; }
+        public string Name { get; set; }
 
         public ICollection<Player> Players { get; set; }
         = new HashSet<Player>();

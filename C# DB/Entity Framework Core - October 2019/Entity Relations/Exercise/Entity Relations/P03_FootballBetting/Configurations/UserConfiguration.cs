@@ -13,7 +13,7 @@
                 .HasKey(u => u.UserId);
 
             userBuilder
-                .Property(u => u.UserName)
+                .Property(u => u.Username)
                 .HasMaxLength(30)
                 .IsRequired(true)
                 .IsUnicode(true);
