@@ -16,7 +16,7 @@ namespace BookShop
         {
             using (var db = new BookShopContext())
             {
-                //DbInitializer.ResetDatabase(db);
+                DbInitializer.ResetDatabase(db);
 
                 string input = Console.ReadLine();
 
