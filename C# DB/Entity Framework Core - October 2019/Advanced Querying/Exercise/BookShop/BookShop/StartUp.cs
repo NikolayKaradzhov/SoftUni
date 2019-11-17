@@ -16,22 +16,26 @@ namespace BookShop
         {
             using (var db = new BookShopContext())
             {
-                DbInitializer.ResetDatabase(db);
+                //DbInitializer.ResetDatabase(db);
+
+                string input = Console.ReadLine();
+
+                string result = GetBooksByAgeRestriction(db, input);
+
+                Console.WriteLine(result);
             }
         }
 
         //1. Age Restriction
         public static string GetBooksByAgeRestriction(BookShopContext context, string command)
         {
-            var input = Enum.Parse<AgeRestriction>(command, true);
-
             var books = context.Books
+                .Where(b => b.AgeRestriction.ToString().ToLower() == command.ToLower())
                 .Select(b => new
                 {
                     b.Title,
                     b.AgeRestriction
                 })
-                .Where(b => b.AgeRestriction == input)
                 .OrderBy(b => b.Title)
                 .ToList();
 
