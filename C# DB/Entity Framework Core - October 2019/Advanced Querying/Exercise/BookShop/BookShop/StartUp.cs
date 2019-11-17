@@ -64,5 +64,48 @@ namespace BookShop
 
             return sb.ToString().TrimEnd();
         }
+
+        public static string GetBooksByPrice(BookShopContext context)
+        {
+            var books = context.Books
+                .Select(b => new
+                {
+                    b.Title,
+                    b.Price
+                })
+                .Where(b => b.Price > 40)
+                .OrderByDescending(b => b.Price);
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var book in books)
+            {
+                sb.AppendLine($"{book.Title} - ${book.Price:f2}");
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        public static string GetBooksNotReleasedIn(BookShopContext context, int year)
+        {
+            var books = context.Books
+                .Select(b => new
+                {
+                    b.Title,
+                    b.ReleaseDate,
+                    b.BookId
+                })
+                .Where(b => b.ReleaseDate.Value.Year != year)
+                .OrderBy(b => b.BookId);
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var book in books)
+            {
+                sb.AppendLine(book.Title);
+            }
+
+            return sb.ToString().TrimEnd();
+        }
     }
 }
