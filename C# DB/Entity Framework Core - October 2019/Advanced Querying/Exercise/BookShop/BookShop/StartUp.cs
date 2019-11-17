@@ -20,6 +20,7 @@ namespace BookShop
             }
         }
 
+        //1. Age Restriction
         public static string GetBooksByAgeRestriction(BookShopContext context, string command)
         {
             var input = Enum.Parse<AgeRestriction>(command, true);
@@ -44,6 +45,7 @@ namespace BookShop
             return sb.ToString().TrimEnd();
         }
 
+        //2. Golden Books
         public static string GetGoldenBooks(BookShopContext context)
         {
             var goldenBooks = context.Books
@@ -67,6 +69,7 @@ namespace BookShop
             return sb.ToString().TrimEnd();
         }
 
+        //3. Books by Price
         public static string GetBooksByPrice(BookShopContext context)
         {
             var books = context.Books
@@ -88,6 +91,7 @@ namespace BookShop
             return sb.ToString().TrimEnd();
         }
 
+        //4. Not Released In
         public static string GetBooksNotReleasedIn(BookShopContext context, int year)
         {
             var books = context.Books
@@ -110,6 +114,7 @@ namespace BookShop
             return sb.ToString().TrimEnd();
         }
 
+        //5. Book Titles by Category
         public static string GetBooksByCategory(BookShopContext context, string input)
         {
             List<string> items = input
@@ -145,6 +150,7 @@ namespace BookShop
             return sb.ToString().TrimEnd();
         }
 
+        //6. Released Before Date
         public static string GetBooksReleasedBefore(BookShopContext context, string date)
         {
             DateTime dateTime = DateTime.ParseExact(date, "dd-MM-yyyy", CultureInfo.InvariantCulture);
@@ -171,6 +177,7 @@ namespace BookShop
             return sb.ToString().TrimEnd();
         }
 
+        //7. Author Search
         public static string GetAuthorNamesEndingIn(BookShopContext context, string input)
         {
             var authors = context.Authors
@@ -187,6 +194,80 @@ namespace BookShop
             foreach (var author in authors)
             {
                 sb.AppendLine(author.FullName);
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        //8. Book Search
+        public static string GetBookTitlesContaining(BookShopContext context, string input)
+        {
+            var books = context.Books
+                .Where(b => b.Title.IndexOf(input, StringComparison.OrdinalIgnoreCase) >= 0)
+                .Select(b => new
+                {
+                    b.Title
+                })
+                .OrderBy(b => b.Title)
+                .ToList();
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var book in books)
+            {
+                sb.AppendLine(book.Title);
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        //9. Book Search by Author
+        public static string GetBooksByAuthor(BookShopContext context, string input)
+        {
+            var books = context.Books
+                .Where(b => b.Author.LastName.StartsWith(input, StringComparison.InvariantCultureIgnoreCase))
+                .Select(b => new
+                {
+                    b.Title,
+                    AuthorFullName = b.Author.FirstName + " " + b.Author.LastName,
+                    b.BookId
+                })
+                .OrderBy(b => b.BookId)
+                .ToList();
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var book in books)
+            {
+                sb.AppendLine($"{book.Title} ({book.AuthorFullName})");
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        //10. Count Books
+        public static int CountBooks(BookShopContext context, int lengthCheck)
+        {
+            return context.Books.Count(b => b.Title.Length > lengthCheck);
+        }
+
+        //11. Total Book Copies
+        public static string CountCopiesByAuthor(BookShopContext context)
+        {
+            var authors = context.Authors
+                .Select(a => new
+                {
+                    AuthorFullName = a.FirstName + " " + a.LastName,
+                    BooksCount = a.Books.Sum(c => c.Copies)
+                })
+                .OrderByDescending(b => b.BooksCount)
+                .ToList();
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var author in authors)
+            {
+                sb.AppendLine($"{author.AuthorFullName} - {author.BooksCount}");
             }
 
             return sb.ToString().TrimEnd();
