@@ -272,5 +272,95 @@ namespace BookShop
 
             return sb.ToString().TrimEnd();
         }
+
+        //12. Profit by Category
+        public static string GetTotalProfitByCategory(BookShopContext context)
+        {
+            var categories = context.Categories
+                .Select(c => new
+                {
+                    c.Name,
+                    Profit = c.CategoryBooks.Sum(x => x.Book.Price * x.Book.Copies)
+                })
+                .OrderByDescending(b => b.Profit)
+                .ThenBy(c => c.Name)
+                .ToList();
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var category in categories)
+            {
+                sb.AppendLine($"{category.Name} ${category.Profit:F2}");
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        //13. Most Recent Books
+        public static string GetMostRecentBooks(BookShopContext context)
+        {
+            var categories = context.Categories
+                .OrderBy(c => c.Name)
+                .Select(c => new
+                {
+                    c.Name,
+                    BooksNames = c.CategoryBooks
+                        .Select(b => new
+                        {
+                            b.Book.Title,
+                            b.Book.ReleaseDate,
+                            b.Book.ReleaseDate.Value.Year
+                        })
+                        .OrderByDescending(b => b.ReleaseDate)
+                        .Take(3)
+                        .ToList()
+                })
+                .ToList();
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var category in categories)
+            {
+                sb.AppendLine($"--{category.Name}");
+
+                foreach (var book in category.BooksNames)
+                {
+                    sb.AppendLine($"{book.Title} ({book.Year})");
+                }
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        //14.Increase Prices
+        public static void IncreasePrices(BookShopContext context)
+        {
+            var books = context.Books
+                .Where(b => b.ReleaseDate.Value.Year < 2010);
+
+            foreach (var book in books)
+            {
+                book.Price += 5;
+            }
+
+            context.SaveChanges();
+        }
+
+        //15. Remove Books
+        public static int RemoveBooks(BookShopContext context)
+        {
+            var books = context.Books
+                .Where(b => b.Copies < 4200);
+            int booksCount = books.Count();
+
+            foreach (var book in books)
+            {
+                context.Remove(book);
+            }
+
+            context.SaveChanges();
+
+            return booksCount;
+        }
     }
 }
